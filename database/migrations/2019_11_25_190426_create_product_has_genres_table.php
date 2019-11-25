@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateWebsitesTable extends Migration
+class CreateProductHasGenresTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class CreateWebsitesTable extends Migration
      */
     public function up()
     {
-        Schema::create('websites', function (Blueprint $table) {
+        Schema::create('product_has_genres', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('website');
-            $table->enum('rating', ['1','2','3','4','5']);
-            $table->boolean('blacklist');
             $table->foreign('product_id')->references('id')->on('products');
+            $table->foreign('genre_id')->references('id')->on('genres');
             $table->timestamps();
         });
     }
@@ -30,6 +28,6 @@ class CreateWebsitesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('websites');
+        Schema::dropIfExists('product_has_genres');
     }
 }
