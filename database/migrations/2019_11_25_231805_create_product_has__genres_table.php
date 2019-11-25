@@ -13,10 +13,12 @@ class CreateProductHasGenresTable extends Migration
      */
     public function up()
     {
-        Schema::create('product_has_genres', function (Blueprint $table) {
+        Schema::create('product_has__genres', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->foreign('product_id')->references('id')->on('products');
-            $table->foreign('genre_id')->references('id')->on('genres');
+            $table->integer('product_id')->unsigned();
+            $table->integer('genre_id')->unsigned();
+            $table->foreign('product_id')->reference('id')->on('products');
+            $table->foreign('genre_id')->reference('id')->on('genres');
             $table->timestamps();
         });
     }
@@ -28,6 +30,6 @@ class CreateProductHasGenresTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('product_has_genres');
+        Schema::dropIfExists('product_has__genres');
     }
 }
