@@ -14,7 +14,7 @@ class CreateWebsitesTable extends Migration
     public function up()
     {
         Schema::create('websites', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->string('string');
             $table->enum('rating', ['1','2','3','4','5']);
             $table->boolean('blacklist');

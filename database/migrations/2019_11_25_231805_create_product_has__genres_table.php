@@ -14,11 +14,11 @@ class CreateProductHasGenresTable extends Migration
     public function up()
     {
         Schema::create('product_has__genres', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->integer('product_id')->unsigned();
+            $table->foreign('product_id')->references('id')->on('products');
             $table->integer('genre_id')->unsigned();
-            $table->foreign('product_id')->reference('id')->on('products');
-            $table->foreign('genre_id')->reference('id')->on('genres');
+            $table->foreign('genre_id')->references('id')->on('genres');
             $table->timestamps();
         });
     }
