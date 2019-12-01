@@ -111,8 +111,9 @@ body {
 	color: #ed1c24;
 	font-size: 20px;
 	left: 10px;
-	top: 8px;
+	top: 11px;
 	z-index: 10;
+	font-family: FontAwesome;
 }
 
 .input-field-div{
@@ -171,7 +172,7 @@ body {
 
 /* Style all font awesome icons */
 .fa {
-	font-size: 16px !important;
+	font-size: 16px;
 	text-align: center;
 	text-decoration: none;
 	padding-top: 5px;
@@ -193,8 +194,15 @@ body {
 	opacity: 1;
 }
   
-  
-  /* Twitter */
+  /*ICONS*/
+ .fa-user{ 
+	content:"\f007";
+ }
+
+.fa-lock{
+	content:"\f023";
+}
+/* Twitter */
 .fa-twitter {
 	background: #55ACEE;
 }
@@ -204,10 +212,10 @@ body {
 	background: #3B5998;
 }
 	
-  /* Google */
-  .fa-google {
+/* Google */
+.fa-google {
 	background: #dd4b39;
-  }
+}
 
 .bottom-wrapper{
 	background-color: #fff;
