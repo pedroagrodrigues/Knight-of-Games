@@ -1,73 +1,52 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
-
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
-
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
+<div class='authentication-wrapper'>
+    <!-- <a href="{{ url('/') }}">
+        <div class="logo"></div>
+    </a> -->
+    <form action="{{ route('login') }}" class="form-authentication" novalidate="novalidate">
+        <div class="form-inputs">
+            <h1>UChoose</h1>
+            <h2 class="quote">The price finder</h2>
+            <div class="form-inputs-with-icons">
+                <div class="input-with-icon">
+                    <div class="icon">U</div>
+                    <div class="input-field-controler">
+                        <div class="input-field-div">
+                            <input class="input-field" type="text" name="username" placeholder="Username" required>
                         </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
+                    </div>
+                </div>
+                <div class="input-with-icon">
+                    <div class="icon">P</div>
+                    <div class="input-field-controler">
+                        <div class="input-field-div">
+                            <input class="input-field" type="text" name="password" placeholder="Password" required>
                         </div>
-
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
-                                </button>
-
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
-                            </div>
-                        </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
+        <input class="form-submit" type="button" value="Join UChoose">
+    </form>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <div class="social-networks-wrapper">
+        <div class="social-networks-services">
+            <a href="#" class="fa fa-twitter">
+                <div>Twitter</div>
+            </a>
+            <a href="#" class="fa fa-facebook">
+                <div>Facebook</div>
+            </a>
+            <a href="#" class="fa fa-google">
+                <div>Google</div>    
+            </a>
+        </div>
     </div>
+    <div class="bottom-wrapper">
+        <p>Don't have an account? <a href="{{ route('register') }}">Create one!</a></p>
+    </div>
+    
 </div>
 @endsection
