@@ -15,7 +15,7 @@ class CreateWebsitesTable extends Migration
     {
         Schema::create('websites', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('string');
+            $table->string('website');
             $table->enum('rating', ['1','2','3','4','5']);
             $table->boolean('blacklist');
             $table->integer('product_id')->unsigned()->index();
