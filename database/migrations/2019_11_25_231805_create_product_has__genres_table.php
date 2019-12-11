@@ -13,7 +13,7 @@ class CreateProductHasGenresTable extends Migration
      */
     public function up()
     {
-        Schema::create('product_has__genres', function (Blueprint $table) {
+        Schema::create('product_has_genres', function (Blueprint $table) {
             $table->integer('product_id')->unsigned()->index();
             $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
             $table->integer('genre_id')->unsigned()->index();

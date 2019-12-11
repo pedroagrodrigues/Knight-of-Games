@@ -17,7 +17,7 @@ class CreateUserHasSocialTable extends Migration
             $table->integer('id_user')->unsigned()->index();
             $table->integer('id_social')->unsigned()->index();
             $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('id_social')->references('id')->on('socials')->onDelete('cascade');
+            $table->foreign('id_social')->references('id')->on('social')->onDelete('cascade');
             $table->timestamps();
         });
     }

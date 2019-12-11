@@ -16,7 +16,7 @@ class CreateProductsTable extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->increments('id');
             $table->string('product');
-            $table->enum('rating', ['avaible','pre order','soon']);
+            $table->enum('rating', ['available','pre order','soon']);
             $table->double('price');
             $table->timestamps();
         });
