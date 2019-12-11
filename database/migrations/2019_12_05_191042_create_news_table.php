@@ -20,7 +20,7 @@ class CreateNewsTable extends Migration
             $table->longText('body');
             $table->string('category');
             $table->string('hashtag');
-            $table->timestamps('added on');
+            $table->timestamps();
         });
     }
 
