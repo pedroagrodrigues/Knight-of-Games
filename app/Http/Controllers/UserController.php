@@ -14,6 +14,19 @@ class UserController extends Controller
      */
     public function __invoke(Request $request)
     {
-        //
+        function index()
+        {
+            return view('login');
+        }
+
+        function checkLogin(Request $request)
+        {
+            $this->validate(
+                $request, [
+                    'email' => 'required|email'
+                    
+                ]
+            );
+        }
     }
 }
