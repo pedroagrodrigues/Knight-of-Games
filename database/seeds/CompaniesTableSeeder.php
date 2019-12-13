@@ -373,30 +373,30 @@ class UsersTableSeeder extends Seeder
                     ],      
 
                     [
-                        'id' => 49, 
+                        'id' => 50, 
                         'company' => 'Kalypso Media',
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],      
 
                     [
-                        'id' => 49, 
-                        'company' => 'Limbic Entertainment',
+                        'id' => 51, 
+                        'company' => 'THQ',
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],      
 
                     [
-                        'id' => 49, 
-                        'company' => 'Limbic Entertainment',
+                        'id' => 52, 
+                        'company' => 'THQ Nordic',
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],      
 
                     [
-                        'id' => 49, 
-                        'company' => 'Limbic Entertainment',
-                        'created_at' => $date, //indicate the company's start time
+                        'id' => 53, 
+                        'company' => 'Yager Development',
+                        'created_at' => 1999, //indicate the company's start time
                         'updated_at' => $date 
                     ],      
 
