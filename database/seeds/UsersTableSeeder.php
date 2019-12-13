@@ -11,21 +11,27 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-
+        $date = date('Y-m-d H:i:s');
         $roles = [
                     [
                         'id' => 1, 
-                        'role' => 'common', 
+                        'role' => 'common',
+                        'created_at' => $date,
+                        'updated_at' => $date 
                     ],
 
                     [
                         'id' => 2, 
-                        'role' => 'moderator', 
+                        'role' => 'moderator',
+                        'created_at' => $date,
+                        'updated_at' => $date 
                     ],
 
                     [
                         'id' => 3, 
-                        'role' => 'administrator', 
+                        'role' => 'administrator',
+                        'created_at' => $date,
+                        'updated_at' => $date 
                     ],
         ];
 
@@ -33,36 +39,41 @@ class UsersTableSeeder extends Seeder
                     [   'id' => 1, 
                         'role_id' => 3,
                         'name' => 'Josué Ferreira', 
-                        'username' => 'patriotHunter', 
                         'email' => 'joshuaferreira@gmail.com', 
-                        'password' => '12345678'
+                        'password' => '12345678',
+                        'created_at' => $date,
+                        'updated_at' => $date
                     ],
                     
                     [   'id' => 2, 
                         'role_id' => 3,
-                        'name' => 'Pedro Rodrigues',
-                        'username' => 'Trovao', 
+                        'name' => 'Pedro "Trovao" Rodrigues',
                         'email' => 'pedrorodriguez@gmail.com', 
-                        'password' => '12345678'
+                        'password' => '12345678',
+                        'created_at' => $date,
+                        'updated_at' => $date 
                     ],
 
                     [   'id' => 3, 
                         'role_id' => 2,
-                        'name' => 'John Smith', 
-                        'username' => 'WhoIsJohnSmith', 
+                        'name' => 'John Smith',  
                         'email' => 'whoisjohnsmith@gmail.com', 
-                        'password' => '12345678'
+                        'password' => '12345678',
+                        'created_at' => $date,
+                        'updated_at' => $date
                     ],
                     
                     [   'id' => 4, 
                         'role_id' => 3,
                         'name' => 'Enola Gay',
-                        'username' => 'LittleBoy', 
                         'email' => 'riphiroshima@gmail.com', 
-                        'password' => '12345678'
+                        'password' => '12345678',
+                        'created_at' => $date,
+                        'updated_at' => $date
                     ],
         ];
 
-        DB::table('users');
+        DB::table('roles')->insert($roles);
+        DB::table('users')->insert($users);
     }
 }
