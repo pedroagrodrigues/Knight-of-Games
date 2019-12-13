@@ -202,6 +202,20 @@ class UsersTableSeeder extends Seeder
                         'created_at' => $date,
                         'updated_at' => $date 
                     ],
+
+                    [
+                        'id' => 27,
+                        'genre' => 'Third Person Shooter',
+                        'created_at' => $date,
+                        'updated_at' => $date
+                    ],
+
+                    [
+                        'id' => 28,
+                        'genre' => 'First Person Shooter',
+                        'created_at' => $date,
+                        'updated_at' => $date
+                    ]
         ];
 
         

@@ -401,7 +401,41 @@ class UsersTableSeeder extends Seeder
                     ],      
 
 
+                    [
+                        'id' => 54, 
+                        'company' => 'SIE Santa Monica Studio',
+                        'created_at' => 1999, //indicate the company's start time
+                        'updated_at' => $date 
+                    ],    
 
+                    [
+                        'id' => 55, 
+                        'company' => 'Sony Interactive Entertainment',
+                        'created_at' => 1999, //indicate the company's start time
+                        'updated_at' => $date 
+                    ],
+
+                    [
+                        'id' => 56, 
+                        'company' => 'Campo Santo',
+                        'created_at' => 1999, //indicate the company's start time
+                        'updated_at' => $date 
+                    ],
+
+                    [
+                        'id' => 58, 
+                        'company' => 'Tripwire Interactive',
+                        'created_at' => 1999, //indicate the company's start time
+                        'updated_at' => $date 
+                    ],
+
+                    [
+                        'id' => 59, 
+                        'company' => 'Antimatter Games',
+                        'created_at' => 1999, //indicate the company's start time
+                        'updated_at' => $date 
+                    ],
+                   
 
                     
 
