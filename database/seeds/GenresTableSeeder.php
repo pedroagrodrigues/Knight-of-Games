@@ -29,14 +29,186 @@ class UsersTableSeeder extends Seeder
 
                     [
                         'id' => 3, 
-                        'genre' => 'Platform',
+                        'genre' => 'Fighting',
+                        'created_at' => $date,
+                        'updated_at' => $date 
+                    ],
+
+                    [
+                        'id' => 4, 
+                        'genre' => 'Stealth',
+                        'created_at' => $date,
+                        'updated_at' => $date 
+                    ],
+
+                    [
+                        'id' => 5, 
+                        'genre' => 'Survival',
+                        'created_at' => $date,
+                        'updated_at' => $date 
+                    ],
+
+
+                    [
+                        'id' => 6, 
+                        'genre' => 'Battle Royale',
+                        'created_at' => $date,
+                        'updated_at' => $date 
+                    ],
+
+                    [
+                        'id' => 7, 
+                        'genre' => 'Rhythm',
+                        'created_at' => $date,
+                        'updated_at' => $date 
+                    ],
+
+
+                    [
+                        'id' => 8, 
+                        'genre' => 'Survival horror',
+                        'created_at' => $date,
+                        'updated_at' => $date 
+                    ],
+
+
+                    [
+                        'id' => 9, 
+                        'genre' => 'Visual novel',
+                        'created_at' => $date,
+                        'updated_at' => $date 
+                    ],
+
+
+                    [
+                        'id' => 10, 
+                        'genre' => 'Action RPG',
+                        'created_at' => $date,
+                        'updated_at' => $date 
+                    ],
+
+
+                    [
+                        'id' => 11, 
+                        'genre' => 'MMORPG',
+                        'created_at' => $date,
+                        'updated_at' => $date 
+                    ],
+
+
+                    [
+                        'id' => 12, 
+                        'genre' => 'Tactical RPG',
+                        'created_at' => $date,
+                        'updated_at' => $date 
+                    ],
+
+
+                    [
+                        'id' => 13, 
+                        'genre' => 'Simulation',
+                        'created_at' => $date,
+                        'updated_at' => $date 
+                    ],
+
+                    [
+                        'id' => 14, 
+                        'genre' => 'Strategy',
+                        'created_at' => $date,
+                        'updated_at' => $date 
+                    ],
+
+
+                    [
+                        'id' => 15, 
+                        'genre' => 'Racing',
+                        'created_at' => $date,
+                        'updated_at' => $date 
+                    ],
+
+                    [
+                        'id' => 16, 
+                        'genre' => 'Sports',
+                        'created_at' => $date,
+                        'updated_at' => $date 
+                    ],
+
+                    [
+                        'id' => 17, 
+                        'genre' => 'Indie',
+                        'created_at' => $date,
+                        'updated_at' => $date 
+                    ],
+
+                    [
+                        'id' => 18, 
+                        'genre' => 'Casual',
+                        'created_at' => $date,
+                        'updated_at' => $date 
+                    ],
+
+                    [
+                        'id' => 19, 
+                        'genre' => 'Adventure',
+                        'created_at' => $date,
+                        'updated_at' => $date 
+                    ],
+
+                    [
+                        'id' => 20, 
+                        'genre' => 'Realistic',
+                        'created_at' => $date,
+                        'updated_at' => $date 
+                    ],
+
+                    [
+                        'id' => 21, 
+                        'genre' => 'Violence',
+                        'created_at' => $date,
+                        'updated_at' => $date 
+                    ],
+
+                    [
+                        'id' => 22, 
+                        'genre' => 'Retro',
+                        'created_at' => $date,
+                        'updated_at' => $date 
+                    ],
+
+                    [
+                        'id' => 23, 
+                        'genre' => 'Arcade',
+                        'created_at' => $date,
+                        'updated_at' => $date 
+                    ],
+
+                    [
+                        'id' => 24, 
+                        'genre' => 'Classic',
+                        'created_at' => $date,
+                        'updated_at' => $date 
+                    ],
+
+                    [
+                        'id' => 25, 
+                        'genre' => 'Space',
+                        'created_at' => $date,
+                        'updated_at' => $date 
+                    ],
+
+                    [
+                        'id' => 26, 
+                        'genre' => 'Hack & Slash',
                         'created_at' => $date,
                         'updated_at' => $date 
                     ],
         ];
 
         
-
-        DB::table('genres')->insert($genres);
+        foreach ($genres as $genre)
+        {
+            DB::table('genres')->insert($genre);
+        }
+        
     }
 }
