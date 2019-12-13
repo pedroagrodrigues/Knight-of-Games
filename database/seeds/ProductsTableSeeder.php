@@ -271,7 +271,7 @@ class ProductsTableSeeder extends Seeder
                         ],
 
                         [
-                            'id' => 1,
+                            'id' => 33,
                             'product' => 'Call of Duty Black Ops 4',
                             'status' => 'avaible',
                             'created_at' => '03-08-2018',
@@ -279,7 +279,7 @@ class ProductsTableSeeder extends Seeder
                         ],
 
                         [
-                            'id' => 1,
+                            'id' => 34,
                             'product' => 'Killing Floor 2',
                             'status' => 'avaible',
                             'created_at' => '18-11-2016',
@@ -287,7 +287,7 @@ class ProductsTableSeeder extends Seeder
                         ],
 
                         [
-                            'id' => 1,
+                            'id' => 35,
                             'product' => 'Rocket League',
                             'status' => 'avaible',
                             'created_at' => '07-06-2015',
@@ -295,7 +295,7 @@ class ProductsTableSeeder extends Seeder
                         ],
 
                         [
-                            'id' => 1,
+                            'id' => 36,
                             'product' => 'Counter Strike: Global Offensive',
                             'status' => 'avaible',
                             'created_at' => '21-08-2012',
@@ -303,7 +303,7 @@ class ProductsTableSeeder extends Seeder
                         ],
 
                         [
-                            'id' => 1,
+                            'id' => 37,
                             'product' => 'PES 2020',
                             'status' => 'avaible',
                             'created_at' => '30-06-2019',
@@ -311,58 +311,58 @@ class ProductsTableSeeder extends Seeder
                         ],
 
                         [
-                            'id' => 1,
+                            'id' => 38,
                             'product' => 'Battlefield 5',
                             'status' => 'avaible',
-                            'created_at' => 1,
+                            'created_at' => '09-11-2019',
                             'updated_at' => $date
                         ],
 
                         [
-                            'id' => 1,
+                            'id' => 39,
                             'product' => 'Battlefield 1',
                             'status' => 'avaible',
-                            'created_at' => 1,
+                            'created_at' => '21-10-2016',
                             'updated_at' => $date
                         ],
 
                         [
-                            'id' => 1,
+                            'id' => 40,
                             'product' => 'Minecraft',
                             'status' => 'avaible',
-                            'created_at' => 1,
+                            'created_at' => '17-05-2009',
                             'updated_at' => $date
                         ],
 
                         [
-                            'id' => 1,
+                            'id' => 41,
                             'product' => 'F1 2019',
                             'status' => 'avaible',
-                            'created_at' => 1,
+                            'created_at' => '25-06-2019',
                             'updated_at' => $date
                         ],
 
                         [
-                            'id' => 1,
+                            'id' => 42,
                             'product' => 'Burnout Paradise',
                             'status' => 'avaible',
-                            'created_at' => 1,
+                            'created_at' => '22-05-2008',
                             'updated_at' => $date
                         ],
 
                         [
-                            'id' => 1,
+                            'id' => 43,
                             'product' => 'Project CARS 2',
                             'status' => 'avaible',
-                            'created_at' => 1,
+                            'created_at' => '21-09-2019',
                             'updated_at' => $date
                         ],
 
                         [
-                            'id' => 1,
+                            'id' => 44,
                             'product' => 'Asseto Corsa Competizione',
                             'status' => 'avaible',
-                            'created_at' => 1,
+                            'created_at' => '12-09-2018',
                             'updated_at' => $date
                         ],
 
