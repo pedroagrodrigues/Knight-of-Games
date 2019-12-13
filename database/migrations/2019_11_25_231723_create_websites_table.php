@@ -18,8 +18,6 @@ class CreateWebsitesTable extends Migration
             $table->string('website');
             $table->enum('rating', ['1','2','3','4','5']);
             $table->boolean('blacklist');
-            $table->integer('product_id')->unsigned()->index();
-            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
             $table->timestamps();
         });
     }
