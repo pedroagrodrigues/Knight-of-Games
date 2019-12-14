@@ -12,7 +12,7 @@ class ProductsTableSeeder extends Seeder
     public function run()
     {
         $date = date('Y-m-d H:i:s');
-        $predefined =kmcso;
+        
         $products = [
                         [
                             'id' => 1,
@@ -370,7 +370,1148 @@ class ProductsTableSeeder extends Seeder
 
         $products_genres = [
 
+                    [
+                        'product_id' => 1,
+                        'genre_id' => 10,
+                        'created_at' => $date,
+                        'updated_at' => $date
 
+                    ],
+
+                    [
+                        'product_id' => 1,
+                        'genre_id' => 27,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+                    
+                    [
+                        'product_id' => 1,
+                        'genre_id' => 29,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 1,
+                        'genre_id' => 30,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 2,
+                        'genre_id' => 2,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+                    [
+                        'product_id' => 2,
+                        'genre_id' => 19,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 3,
+                        'genre_id' => 2,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 3,
+                        'genre_id' => 19,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 3,
+                        'genre_id' => 21,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 3,
+                        'genre_id' => 28,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 4,
+                        'genre_id' => 19,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 4,
+                        'genre_id' => 27,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 4,
+                        'genre_id' => 28,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 4,
+                        'genre_id' => 29,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 4,
+                        'genre_id' => 31,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 5,
+                        'genre_id' => 19,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 5,
+                        'genre_id' => 21,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 5,
+                        'genre_id' => 28,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 5,
+                        'genre_id' => 31,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 6,
+                        'genre_id' => 2,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 6,
+                        'genre_id' => 19,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 6,
+                        'genre_id' => 19,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 6,
+                        'genre_id' => 31,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 7,
+                        'genre_id' => 13,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 7,
+                        'genre_id' => 15,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 7,
+                        'genre_id' => 16,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 8,
+                        'genre_id' => 13,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 8,
+                        'genre_id' => 15,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 8,
+                        'genre_id' => 16,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 9,
+                        'genre_id' => 2,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 9,
+                        'genre_id' => 21,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 9,
+                        'genre_id' => 28,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 9,
+                        'genre_id' => 31,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 10,
+                        'genre_id' => 2,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 10,
+                        'genre_id' => 21,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 10,
+                        'genre_id' => 28,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 10,
+                        'genre_id' => 31,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 11,
+                        'genre_id' => 16,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 12,
+                        'genre_id' => 13,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 12,
+                        'genre_id' => 20,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 12,
+                        'genre_id' => 29,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 13,
+                        'genre_id' => 15,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 13,
+                        'genre_id' => 20,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 13,
+                        'genre_id' => 29,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 14,
+                        'genre_id' => 2,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 14,
+                        'genre_id' => 13,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 14,
+                        'genre_id' => 20,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 14,
+                        'genre_id' => 21,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 14,
+                        'genre_id' => 28,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+
+                    [
+                        'product_id' => 15,
+                        'genre_id' => 19,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 15,
+                        'genre_id' => 26,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 15,
+                        'genre_id' => 31,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 16,
+                        'genre_id' => 15,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 16,
+                        'genre_id' => 23,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 16,
+                        'genre_id' => 29,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 17,
+                        'genre_id' => 2,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 17,
+                        'genre_id' => 10,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 17,
+                        'genre_id' => 23,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 17,
+                        'genre_id' => 28,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 17,
+                        'genre_id' => 29,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 17,
+                        'genre_id' => 31,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 18,
+                        'genre_id' => 2,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 18,
+                        'genre_id' => 21,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 18,
+                        'genre_id' => 27,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 18,
+                        'genre_id' => 31,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 19,
+                        'genre_id' => 2,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 19,
+                        'genre_id' => 21,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 19,
+                        'genre_id' => 27,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 19,
+                        'genre_id' => 31,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 20,
+                        'genre_id' => 2,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 20,
+                        'genre_id' => 8,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 20,
+                        'genre_id' => 21,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 20,
+                        'genre_id' => 27,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 20,
+                        'genre_id' => 31,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 21,
+                        'genre_id' => 2,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 21,
+                        'genre_id' => 28,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 21,
+                        'genre_id' => 31,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 22,
+                        'genre_id' => 26,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 22,
+                        'genre_id' => 27,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 22,
+                        'genre_id' => 29,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 22,
+                        'genre_id' => 31,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 23,
+                        'genre_id' => 2,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 23,
+                        'genre_id' => 29,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 23,
+                        'genre_id' => 31,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 24,
+                        'genre_id' => 2,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 24,
+                        'genre_id' => 21,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 24,
+                        'genre_id' => 28,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 24,
+                        'genre_id' => 31,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 25,
+                        'genre_id' => 23,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 25,
+                        'genre_id' => 31,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 25,
+                        'genre_id' => 32,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 26,
+                        'genre_id' => 2,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 26,
+                        'genre_id' => 21,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 26,
+                        'genre_id' => 27,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 26,
+                        'genre_id' => 29,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 26,
+                        'genre_id' => 31,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 28,
+                        'genre_id' => 2,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 28,
+                        'genre_id' => 5,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 28,
+                        'genre_id' => 8,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 28,
+                        'genre_id' => 21,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 28,
+                        'genre_id' => 27,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 28,
+                        'genre_id' => 31,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 29,
+                        'genre_id' => 21,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 29,
+                        'genre_id' => 26,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 29,
+                        'genre_id' => 27,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 29,
+                        'genre_id' => 31,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 30,
+                        'genre_id' => 13,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 30,
+                        'genre_id' => 15,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 30,
+                        'genre_id' => 16,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 31,
+                        'genre_id' => 19,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 31,
+                        'genre_id' => 28,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 31,
+                        'genre_id' => 29,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 32,
+                        'genre_id' => 2,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 32,
+                        'genre_id' => 21,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 32,
+                        'genre_id' => 28,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 32,
+                        'genre_id' => 31,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 33,
+                        'genre_id' => 2,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 33,
+                        'genre_id' => 6,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 33,
+                        'genre_id' => 21,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 33,
+                        'genre_id' => 28,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 33,
+                        'genre_id' => 31,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 34,
+                        'genre_id' => 2,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 34,
+                        'genre_id' => 8,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 34,
+                        'genre_id' => 21,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 34,
+                        'genre_id' => 28,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 34,
+                        'genre_id' => 31,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 35,
+                        'genre_id' => 15,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 35,
+                        'genre_id' => 16,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 36,
+                        'genre_id' => 21,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 36,
+                        'genre_id' => 28,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 36,
+                        'genre_id' => 31,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 37,
+                        'genre_id' => 16,
+                        'created_at' => $date,
+                        'updated_at' => $date
+                    ],
+
+                    [
+                        'product_id' => 38,
+                        'genre_id' => 2,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 38,
+                        'genre_id' => 21,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 38,
+                        'genre_id' => 28,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 38,
+                        'genre_id' => 31,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 39,
+                        'genre_id' => 2,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 39,
+                        'genre_id' => 21,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 39,
+                        'genre_id' => 28,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 40,
+                        'genre_id' => 5,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 40,
+                        'genre_id' => 19,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 40,
+                        'genre_id' => 28,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 40,
+                        'genre_id' => 29,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
 
         ];
     }

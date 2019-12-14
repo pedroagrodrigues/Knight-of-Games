@@ -82,7 +82,7 @@ class UsersTableSeeder extends Seeder
 
                     [
                         'id' => 10, 
-                        'genre' => 'Action RPG',
+                        'genre' => 'RPG',
                         'created_at' => $date,
                         'updated_at' => $date 
                     ],
@@ -205,17 +205,46 @@ class UsersTableSeeder extends Seeder
 
                     [
                         'id' => 27,
-                        'genre' => 'Third Person Shooter',
+                        'genre' => 'Third Person',
                         'created_at' => $date,
                         'updated_at' => $date
                     ],
 
                     [
                         'id' => 28,
-                        'genre' => 'First Person Shooter',
+                        'genre' => 'First Person',
+                        'created_at' => $date,
+                        'updated_at' => $date
+                    ],
+
+                    [
+                        'id' => 29,
+                        'genre' => 'Open World',
+                        'created_at' => $date,
+                        'updated_at' => $date
+                    ],
+
+                    [
+                        'id' => 30,
+                        'genre' => 'Fantasy',
+                        'created_at' => $date,
+                        'updated_at' => $date
+                    ],
+
+                    [
+                        'id' => 31,
+                        'genre' => 'Action',
+                        'created_at' => $date,
+                        'updated_at' => $date
+                    ],
+
+                    [
+                        'id' => 32,
+                        'genre' => 'Aviation',
                         'created_at' => $date,
                         'updated_at' => $date
                     ]
+
         ];
 
         
