@@ -12,7 +12,7 @@ class Product extends Model
      */
     public function getCompaniesFromProduct()
     {
-        return $this->hasMany(Company::class);
+        return $this->belongToMany(Company::class);
     }
 
     /**

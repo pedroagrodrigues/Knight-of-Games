@@ -9,8 +9,8 @@ class Company extends Model
     /**
      * Get the websites that contains the products.
      */
-    public function getProductFromCompany()
+    public function getProductsFromCompany()
     {
-        return $this->belongsTo(Product::class);
+        return $this->belongsToMany(Product::class);
     }
 }

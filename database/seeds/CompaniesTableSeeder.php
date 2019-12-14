@@ -16,7 +16,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 1, 
                         'company' => 'Rockstar Games',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],
@@ -24,7 +24,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 2, 
                         'company' => '343 Industries',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],
@@ -32,7 +32,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 3, 
                         'company' => 'Splash Damage',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],
@@ -40,7 +40,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 4, 
                         'company' => 'Ruffian Games',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],
@@ -48,7 +48,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 5, 
                         'company' => 'Bungie',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],
@@ -56,7 +56,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 6, 
                         'company' => 'CAPCOM Co., Ltd.',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],
@@ -64,7 +64,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 7, 
                         'company' => 'SEGA',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],
@@ -72,7 +72,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 8, 
                         'company' => 'CREATIVE ASSEMBLY',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],
@@ -80,7 +80,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 9, 
                         'company' => 'PUBG Corporation',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],
@@ -88,7 +88,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 10, 
                         'company' => 'CD PROJEKT RED',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],
@@ -96,7 +96,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 11, 
                         'company' => 'Respawn Entertainment',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],
@@ -105,7 +105,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 12, 
                         'company' => 'Electronic Arts',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],
@@ -114,7 +114,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 13, 
                         'company' => 'Ubisoft',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],
@@ -122,7 +122,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 14, 
                         'company' => 'Xbox Game Studios',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],
@@ -130,7 +130,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 15, 
                         'company' => 'Moon Studios GmbH',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],
@@ -138,7 +138,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 16, 
                         'company' => 'Firaxis Games',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],
@@ -146,7 +146,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 17, 
                         'company' => '2K',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],
@@ -154,7 +154,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 18, 
                         'company' => 'Machine Games',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],
@@ -163,7 +163,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 19, 
                         'company' => 'Valve',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],
@@ -171,7 +171,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 20, 
                         'company' => 'Hidden Path Entertainment',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],
@@ -179,7 +179,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 21, 
                         'company' => 'id Software',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],
@@ -187,7 +187,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 22, 
                         'company' => 'Bethesda Softworks',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],
@@ -195,7 +195,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 23, 
                         'company' => 'Activision',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],
@@ -203,7 +203,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 24, 
                         'company' => 'Sledgehammer Games',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],
@@ -211,7 +211,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 25, 
                         'company' => 'Raven Software',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],
@@ -220,7 +220,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 26, 
                         'company' => 'Treyarch',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],
@@ -228,7 +228,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 27, 
                         'company' => 'Infinity Ward',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],
@@ -236,7 +236,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 28, 
                         'company' => 'Bethesda Game Studios',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],
@@ -244,7 +244,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 29, 
                         'company' => 'Obsidian Entertainment',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],
@@ -252,7 +252,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 30, 
                         'company' => 'Codemasters',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],
@@ -260,7 +260,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 31, 
                         'company' => 'Triumph Studios',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],
@@ -268,7 +268,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 31, 
                         'company' => 'Virtual Programming',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],
@@ -277,7 +277,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 32, 
                         'company' => 'FromSoftware',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],
@@ -286,7 +286,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 33, 
                         'company' => 'Warner Bros Interactive Entertainment',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],
@@ -295,7 +295,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 34, 
                         'company' => 'NetherRealm Studios',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],
@@ -304,7 +304,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 35, 
                         'company' => 'QLOC',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],
@@ -313,7 +313,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 36, 
                         'company' => 'Shiver',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],
@@ -321,7 +321,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 37, 
                         'company' => '4A Games',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],
@@ -329,7 +329,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 38, 
                         'company' => 'Deep Silver',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],
@@ -337,7 +337,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 39, 
                         'company' => 'GSC Game World',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],
@@ -345,7 +345,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 40, 
                         'company' => 'Square Enix',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],
@@ -353,7 +353,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 41, 
                         'company' => 'Ubisoft Montreal',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],
@@ -361,7 +361,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 42, 
                         'company' => 'Nintendo Entertainment Analysis & Development',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],
@@ -369,7 +369,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 43, 
                         'company' => 'Nintendo',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ], 
@@ -377,7 +377,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 44, 
                         'company' => 'Spike Chunsoft Co., Ltd.',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],      
@@ -385,7 +385,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 45, 
                         'company' => 'BANDAI NAMCO Entertainment',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],      
@@ -393,7 +393,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 46, 
                         'company' => 'BANDAI NAMCO Studios',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],      
@@ -401,7 +401,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 47, 
                         'company' => 'KOEI TECMO GAMES CO., LTD.',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],      
@@ -409,7 +409,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 48, 
                         'company' => 'Microsoft Studios',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],      
@@ -417,7 +417,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 49, 
                         'company' => 'Limbic Entertainment',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],      
@@ -425,7 +425,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 50, 
                         'company' => 'Kalypso Media',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],      
@@ -433,7 +433,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 51, 
                         'company' => 'THQ',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],      
@@ -441,7 +441,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 52, 
                         'company' => 'THQ Nordic',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],      
@@ -449,7 +449,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 53, 
                         'company' => 'Yager Development',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],      
@@ -458,7 +458,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 54, 
                         'company' => 'SIE Santa Monica Studio',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],    
@@ -466,7 +466,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 55, 
                         'company' => 'Sony Interactive Entertainment',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],
@@ -474,7 +474,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 56, 
                         'company' => 'Campo Santo',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],
@@ -482,7 +482,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 58, 
                         'company' => 'Tripwire Interactive',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],
@@ -490,7 +490,7 @@ class CompaniesTableSeeder extends Seeder
                     [
                         'id' => 59, 
                         'company' => 'Antimatter Games',
-                        'description' => NULL,
+                        'description' => "Something",
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],               
