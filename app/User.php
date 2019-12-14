@@ -34,4 +34,20 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * Get the role that belongs to the users.
+     */
+    public function getRoleFromUser()
+    {
+        return $this->belongsTo(Role::class);
+    }
+
+    /**
+     * Get the social media that belongs to the users.
+     */
+    public function getSocialsFromUser()
+    {
+        return $this->belongToMany(Social::class);
+    }
 }
