@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateProductHasWebsitesTable extends Migration
+class CreateProductHasCompaniesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ class CreateProductHasWebsitesTable extends Migration
      */
     public function up()
     {
-        Schema::create('product_has_website', function (Blueprint $table) {
+        Schema::create('product_has_companies', function (Blueprint $table) {
             $table->integer('product_id')->unsigned()->index();
             $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
-            $table->integer('website_id')->unsigned()->index();
-            $table->foreign('website_id')->references('id')->on('websites')->onDelete('cascade');
-            $table->double('price');
+            $table->integer('company_id')->unsigned()->index();
+            $table->foreign('company_id')->references('id')->on('companies')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ class CreateProductHasWebsitesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('product_has_website');
+        Schema::dropIfExists('product_has_companies');
     }
 }

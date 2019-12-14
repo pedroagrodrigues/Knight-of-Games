@@ -12,7 +12,6 @@ class ProductsTableSeeder extends Seeder
     public function run()
     {
         $date = date('Y-m-d H:i:s');
-        
         $products = [
                         [
                             'id' => 1,
@@ -1609,7 +1608,7 @@ class ProductsTableSeeder extends Seeder
 
                     ],
         ];
-        
+
         DB::table('products')->insert($product);
         DB::table('product_has_genres')->insert($product_has_genre);
     }
