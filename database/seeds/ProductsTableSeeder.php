@@ -1513,6 +1513,102 @@ class ProductsTableSeeder extends Seeder
 
                     ],
 
+                    [
+                        'product_id' => 41,
+                        'genre_id' => 13,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 41,
+                        'genre_id' => 15,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 41,
+                        'genre_id' => 16,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 42,
+                        'genre_id' => 13,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 42,
+                        'genre_id' => 15,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 42,
+                        'genre_id' => 16,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 43,
+                        'genre_id' => 13,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 43,
+                        'genre_id' => 15,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 43,
+                        'genre_id' => 16,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 44,
+                        'genre_id' => 13,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 44,
+                        'genre_id' => 15,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
+                    [
+                        'product_id' => 44,
+                        'genre_id' => 16,
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
         ];
     }
 }
