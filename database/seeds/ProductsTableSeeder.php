@@ -1609,15 +1609,8 @@ class ProductsTableSeeder extends Seeder
 
                     ],
         ];
-
-        foreach ($products as $product)
-        {
-            DB::table('products')->insert($product);
-        }
-
-        foreach ($product_has_genres as $product_has_genre)
-        {
-            DB::table('product_has_genres')->insert($product_has_genre);
-        }
+        
+        DB::table('products')->insert($product);
+        DB::table('product_has_genres')->insert($product_has_genre);
     }
 }

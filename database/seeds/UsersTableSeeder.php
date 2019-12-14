@@ -16,6 +16,7 @@ class UsersTableSeeder extends Seeder
                     [
                         'id' => 1, 
                         'role' => 'common',
+                        'description' => "Just a common user",
                         'created_at' => $date,
                         'updated_at' => $date 
                     ],
@@ -23,6 +24,7 @@ class UsersTableSeeder extends Seeder
                     [
                         'id' => 2, 
                         'role' => 'moderator',
+                        'description' => "You can restrict the comments and notify abusive users",
                         'created_at' => $date,
                         'updated_at' => $date 
                     ],
@@ -30,6 +32,7 @@ class UsersTableSeeder extends Seeder
                     [
                         'id' => 3, 
                         'role' => 'administrator',
+                        'description' => "You were the Chose One!",
                         'created_at' => $date,
                         'updated_at' => $date 
                     ],

@@ -11,20 +11,27 @@ class SocialsTableSeeder extends Seeder
      */
     public function run()
     {
+        $date = date('Y-m-d H:i:s');
         $socials = [
             [
                 'id' => 1, 
                 'company' => 'Google', 
+                'created_at' => $date,
+                'updated_at' => $date
             ],
 
             [
                 'id' => 2, 
                 'company' => 'Facebook', 
+                'created_at' => $date,
+                'updated_at' => $date
             ],
 
             [
                 'id' => 3, 
-                'company' => 'Twitter', 
+                'company' => 'Twitter',
+                'created_at' => $date,
+                'updated_at' => $date 
             ],
         ];
 

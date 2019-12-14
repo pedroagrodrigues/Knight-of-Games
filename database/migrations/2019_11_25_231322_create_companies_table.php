@@ -18,6 +18,7 @@ class CreateCompaniesTable extends Migration
             $table->string('company');
             $table->integer('product_id')->unsigned()->index();
             $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
+            $table->string('description'); //describing if its a developer or a publisher
             $table->timestamps();
         });
     }

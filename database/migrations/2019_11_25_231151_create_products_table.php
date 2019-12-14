@@ -17,6 +17,7 @@ class CreateProductsTable extends Migration
             $table->increments('id');
             $table->string('product');
             $table->enum('status', ['available','pre order','soon']);
+            $table->string('description'); //short description about the game
             $table->timestamps();
         });
     }
