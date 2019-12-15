@@ -16,7 +16,7 @@ class ProductsTableSeeder extends Seeder
                         [
                             'id' => 1,
                             'product' => 'Witcher 3 - Wild Hunt',
-                            'status' => 'avaible',
+                            'status' => 'available',
                             'description' => "Something", // NULL,
                             'created_at' => $date, //'19-05-2015',
                             'updated_at' => $date
@@ -25,7 +25,7 @@ class ProductsTableSeeder extends Seeder
                         [
                             'id' => 2,
                             'product' => 'Red Dead Redemption II',
-                            'status' => 'avaible',
+                            'status' => 'available',
                             'description' => "Something", // NULL,
                             'created_at' => $date, //'26-10-2019',
                             'updated_at' => $date
@@ -34,7 +34,7 @@ class ProductsTableSeeder extends Seeder
                         [
                             'id' => 3,
                             'product' => 'Halo: The Master Chief Collection',
-                            'status' => 'avaible',
+                            'status' => 'available',
                             'description' => "Something", // NULL,
                             'created_at' => $date, //'03-12-2019',
                             'updated_at' => $date
@@ -43,7 +43,7 @@ class ProductsTableSeeder extends Seeder
                         [
                             'id' => 4,
                             'product' => 'Grand Theft Auto V',
-                            'status' => 'avaible',
+                            'status' => 'available',
                             'description' => "Something", // NULL,
                             'created_at' => $date, //'17-09-2013',
                             'updated_at' => $date
@@ -52,7 +52,7 @@ class ProductsTableSeeder extends Seeder
                         [
                             'id' => 5,
                             'product' => 'Bioshock Infinite',
-                            'status' => 'avaible',
+                            'status' => 'available',
                             'description' => "Something", // NULL,
                             'created_at' => $date, //'26-03-2013',
                             'updated_at' => $date
@@ -70,7 +70,7 @@ class ProductsTableSeeder extends Seeder
                         [
                             'id' => 7,
                             'product' => 'Dirt 3',
-                            'status' => 'avaible',
+                            'status' => 'available',
                             'description' => "Something", // NULL,
                             'created_at' => $date, //'24-05-2011',
                             'updated_at' => $date
@@ -79,7 +79,7 @@ class ProductsTableSeeder extends Seeder
                         [
                             'id' => 8,
                             'product' => 'Dirt 4',
-                            'status' => 'avaible',
+                            'status' => 'available',
                             'description' => "Something", // NULL,
                             'created_at' => $date, //'06-06-2017',
                             'updated_at' => $date
@@ -88,7 +88,7 @@ class ProductsTableSeeder extends Seeder
                         [
                             'id' => 9,
                             'product' => 'DOOM',
-                            'status' => 'avaible',
+                            'status' => 'available',
                             'description' => "Something", // NULL,
                             'created_at' => $date, //'13-05-2016',
                             'updated_at' => $date
@@ -97,7 +97,7 @@ class ProductsTableSeeder extends Seeder
                         [
                             'id' => 10,
                             'product' => 'Call of Duty Modern Warfare',
-                            'status' => 'avaible',
+                            'status' => 'available',
                             'description' => "Something", // NULL,
                             'created_at' => $date, //'25-10-2019',
                             'updated_at' => $date
@@ -106,7 +106,7 @@ class ProductsTableSeeder extends Seeder
                         [
                             'id' => 11,
                             'product' => 'FIFA 20',
-                            'status' => 'avaible',
+                            'status' => 'available',
                             'description' => "Something", // NULL,
                             'created_at' => $date, //'24-09-2019',
                             'updated_at' => $date
@@ -124,7 +124,7 @@ class ProductsTableSeeder extends Seeder
                         [
                             'id' => 13,
                             'product' => 'Forza 4 Horizon',
-                            'status' => 'avaible',
+                            'status' => 'available',
                             'description' => "Something", // NULL,
                             'created_at' => $date, //'28-09-2019',
                             'updated_at' => $date
@@ -133,7 +133,7 @@ class ProductsTableSeeder extends Seeder
                         [
                             'id' => 14,
                             'product' => 'Rising Storm 2: Vietnam',
-                            'status' => 'avaible',
+                            'status' => 'available',
                             'description' => "Something", // NULL,
                             'created_at' => $date, //'30-05-2017',
                             'updated_at' => $date
@@ -142,7 +142,7 @@ class ProductsTableSeeder extends Seeder
                         [
                             'id' => 15,
                             'product' => 'Star Wars: Jedi Fallen Order',
-                            'status' => 'avaible',
+                            'status' => 'available',
                             'description' => "Something", // NULL,
                             'created_at' => $date, //'15-11-2019',
                             'updated_at' => $date
@@ -151,7 +151,7 @@ class ProductsTableSeeder extends Seeder
                         [
                             'id' => 16,
                             'product' => 'Need for Speed Heat',
-                            'status' => 'avaible',
+                            'status' => 'available',
                             'description' => "Something", // NULL,
                             'created_at' => $date, //'08-11-2019',
                             'updated_at' => $date
@@ -160,7 +160,7 @@ class ProductsTableSeeder extends Seeder
                         [
                             'id' => 17,
                             'product' => 'Boorderlands 3',
-                            'status' => 'avaible',
+                            'status' => 'available',
                             'description' => "Something", // NULL,
                             'created_at' => $date, //'13-09-2019',
                             'updated_at' => $date
@@ -169,7 +169,7 @@ class ProductsTableSeeder extends Seeder
                         [
                             'id' => 18,
                             'product' => 'Spec Ops: The Line',
-                            'status' => 'avaible',
+                            'status' => 'available',
                             'description' => "Something", // NULL,
                             'created_at' => $date, //'26-06-2012',
                             'updated_at' => $date
@@ -178,7 +178,7 @@ class ProductsTableSeeder extends Seeder
                         [
                             'id' => 19,
                             'product' => 'Max Payne 3',
-                            'status' => 'avaible',
+                            'status' => 'available',
                             'description' => "Something", // NULL,
                             'created_at' => $date, //'15-05-2012',
                             'updated_at' => $date
@@ -187,7 +187,7 @@ class ProductsTableSeeder extends Seeder
                         [
                             'id' => 20,
                             'product' => 'Resident Evil 2',
-                            'status' => 'avaible',
+                            'status' => 'available',
                             'description' => "Something", // NULL,
                             'created_at' => $date, //'11-01-2019',
                             'updated_at' => $date
@@ -196,7 +196,7 @@ class ProductsTableSeeder extends Seeder
                         [
                             'id' => 21,
                             'product' => 'Overwatch',
-                            'status' => 'avaible',
+                            'status' => 'available',
                             'description' => "Something", // NULL,
                             'created_at' => $date, //'24-05-2016',
                             'updated_at' => $date
@@ -205,7 +205,7 @@ class ProductsTableSeeder extends Seeder
                         [
                             'id' => 22,
                             'product' => 'Assassins Creed Odyssey',
-                            'status' => 'avaible',
+                            'status' => 'available',
                             'description' => "Something", // NULL,
                             'created_at' => $date, //'02-10-2018',
                             'updated_at' => $date
@@ -232,7 +232,7 @@ class ProductsTableSeeder extends Seeder
                         [
                             'id' => 25,
                             'product' => 'Ace Combat 7: Skies Unknown',
-                            'status' => 'avaible',
+                            'status' => 'available',
                             'description' => "Something", // NULL,
                             'created_at' => $date, //'18-01-2019',
                             'updated_at' => $date
@@ -259,7 +259,7 @@ class ProductsTableSeeder extends Seeder
                         [
                             'id' => 28,
                             'product' => 'Alien Isolation',
-                            'status' => 'avaible',
+                            'status' => 'available',
                             'description' => "Something", // NULL,
                             'created_at' => $date, //'07-10-2014',
                             'updated_at' => $date
@@ -268,7 +268,7 @@ class ProductsTableSeeder extends Seeder
                         [
                             'id' => 29,
                             'product' => 'God of War',
-                            'status' => 'avaible',
+                            'status' => 'available',
                             'description' => "Something", // NULL,
                             'created_at' => $date, //'20-04-2018',
                             'updated_at' => $date
@@ -277,7 +277,7 @@ class ProductsTableSeeder extends Seeder
                         [
                             'id' => 30,
                             'product' => 'Gran Turismo Sport',
-                            'status' => 'avaible',
+                            'status' => 'available',
                             'description' => "Something", // NULL,
                             'created_at' => $date, //'17-10-2017',
                             'updated_at' => $date
@@ -286,7 +286,7 @@ class ProductsTableSeeder extends Seeder
                         [
                             'id' => 31,
                             'product' => 'Firewatch',
-                            'status' => 'avaible',
+                            'status' => 'available',
                             'description' => "Something", // NULL,
                             'created_at' => $date, //'09-02-2016',
                             'updated_at' => $date
@@ -295,7 +295,7 @@ class ProductsTableSeeder extends Seeder
                         [
                             'id' => 32,
                             'product' => 'Call of Duty Black Ops III',
-                            'status' => 'avaible',
+                            'status' => 'available',
                             'description' => "Something", // NULL,
                             'created_at' => $date, //'06-11-2015',
                             'updated_at' => $date
@@ -304,7 +304,7 @@ class ProductsTableSeeder extends Seeder
                         [
                             'id' => 33,
                             'product' => 'Call of Duty Black Ops 4',
-                            'status' => 'avaible',
+                            'status' => 'available',
                             'description' => "Something", // NULL,
                             'created_at' => $date, //'03-08-2018',
                             'updated_at' => $date
@@ -313,7 +313,7 @@ class ProductsTableSeeder extends Seeder
                         [
                             'id' => 34,
                             'product' => 'Killing Floor 2',
-                            'status' => 'avaible',
+                            'status' => 'available',
                             'description' => "Something", // NULL,
                             'created_at' => $date, //'18-11-2016',
                             'updated_at' => $date
@@ -322,7 +322,7 @@ class ProductsTableSeeder extends Seeder
                         [
                             'id' => 35,
                             'product' => 'Rocket League',
-                            'status' => 'avaible',
+                            'status' => 'available',
                             'description' => "Something", // NULL,
                             'created_at' => $date, //'07-06-2015',
                             'updated_at' => $date
@@ -331,7 +331,7 @@ class ProductsTableSeeder extends Seeder
                         [
                             'id' => 36,
                             'product' => 'Counter Strike: Global Offensive',
-                            'status' => 'avaible',
+                            'status' => 'available',
                             'description' => "Something", // NULL,
                             'created_at' => $date, //'21-08-2012',
                             'updated_at' => $date
@@ -340,7 +340,7 @@ class ProductsTableSeeder extends Seeder
                         [
                             'id' => 37,
                             'product' => 'PES 2020',
-                            'status' => 'avaible',
+                            'status' => 'available',
                             'description' => "Something", // NULL,
                             'created_at' => $date, //'30-06-2019',
                             'updated_at' => $date
@@ -349,7 +349,7 @@ class ProductsTableSeeder extends Seeder
                         [
                             'id' => 38,
                             'product' => 'Battlefield 5',
-                            'status' => 'avaible',
+                            'status' => 'available',
                             'description' => "Something", // NULL,
                             'created_at' => $date, //'09-11-2019',
                             'updated_at' => $date
@@ -358,7 +358,7 @@ class ProductsTableSeeder extends Seeder
                         [
                             'id' => 39,
                             'product' => 'Battlefield 1',
-                            'status' => 'avaible',
+                            'status' => 'available',
                             'description' => "Something", // NULL,
                             'created_at' => $date, //'21-10-2016',
                             'updated_at' => $date
@@ -367,7 +367,7 @@ class ProductsTableSeeder extends Seeder
                         [
                             'id' => 40,
                             'product' => 'Minecraft',
-                            'status' => 'avaible',
+                            'status' => 'available',
                             'description' => "Something", // NULL,
                             'created_at' => $date, //'17-05-2009',
                             'updated_at' => $date
@@ -376,7 +376,7 @@ class ProductsTableSeeder extends Seeder
                         [
                             'id' => 41,
                             'product' => 'F1 2019',
-                            'status' => 'avaible',
+                            'status' => 'available',
                             'description' => "Something", // NULL,
                             'created_at' => $date, //'25-06-2019',
                             'updated_at' => $date
@@ -385,7 +385,7 @@ class ProductsTableSeeder extends Seeder
                         [
                             'id' => 42,
                             'product' => 'Burnout Paradise',
-                            'status' => 'avaible',
+                            'status' => 'available',
                             'description' => "Something", // NULL,
                             'created_at' => $date, //'22-05-2008',
                             'updated_at' => $date
@@ -394,7 +394,7 @@ class ProductsTableSeeder extends Seeder
                         [
                             'id' => 43,
                             'product' => 'Project CARS 2',
-                            'status' => 'avaible',
+                            'status' => 'available',
                             'description' => "Something", // NULL,
                             'created_at' => $date, //'21-09-2019',
                             'updated_at' => $date
@@ -403,7 +403,7 @@ class ProductsTableSeeder extends Seeder
                         [
                             'id' => 44,
                             'product' => 'Asseto Corsa Competizione',
-                            'status' => 'avaible',
+                            'status' => 'available',
                             'description' => "Something", // NULL,
                             'created_at' => $date, //$date,
                             'updated_at' => $date
@@ -411,7 +411,7 @@ class ProductsTableSeeder extends Seeder
 
                     ];
 
-        $products_genres = [
+        $product_has_genres = [
 
                     [
                         'product_id' => 1,
@@ -1654,6 +1654,6 @@ class ProductsTableSeeder extends Seeder
         ];
 
         DB::table('products')->insert($products);
-        DB::table('product_has_genres')->insert($product_has_genre);
+        DB::table('product_has_genres')->insert($product_has_genres);
     }
 }
