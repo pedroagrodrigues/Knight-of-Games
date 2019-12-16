@@ -36,11 +36,27 @@ class User extends Authenticatable
     ];
 
     /**
+     * Add a mutator to ensure hashed passwords
+     */
+    public function setPasswordAttribute($password)
+    {
+        $this->attributes['password'] = bcrypt($password);
+    }
+
+    /**
      * Get the role that belongs to the users.
      */
     public function getRoleFromUser()
     {
         return $this->belongsTo(Role::class);
+    }
+
+    /**
+     * Get the comments that belongs to the user.
+     */
+    public function getCommentsFromUser()
+    {
+        return $this->hasMany(Comment::class);
     }
 
     /**
@@ -50,4 +66,6 @@ class User extends Authenticatable
     {
         return $this->belongToMany(Social::class);
     }
+
+
 }

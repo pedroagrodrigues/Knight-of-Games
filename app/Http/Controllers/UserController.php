@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
+use App\Social;
 
 class UserController extends Controller
 {
@@ -19,14 +21,20 @@ class UserController extends Controller
             return view('login');
         }
 
-        function checkLogin(Request $request)
-        {
-            $this->validate(
-                $request, [
-                    'email' => 'required|email'
+        // function checkLogin(Request $request)
+        // {
+        //     $this->validate(
+        //         $request, [
+        //             'email' => 'required|email'
                     
-                ]
-            );
-        }
+        //         ]
+        //     );
+        // }
+
+    }
+
+    public function store()
+    {
+
     }
 }
