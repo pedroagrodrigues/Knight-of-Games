@@ -39,44 +39,44 @@ class UsersTableSeeder extends Seeder
         ];
 
         $users = [
-                    [   'id' => 1, 
+                    [   'id' => 2, 
                         'role_id' => 3,
                         'name' => 'Josué Ferreira', 
                         'email' => 'joshuaferreira@gmail.com', 
-                        'password' => '12345678',
+                        'password' => Hash::make('12345678'),
                         'created_at' => $date,
                         'updated_at' => $date
                     ],
                     
-                    [   'id' => 2, 
+                    [   'id' => 3, 
                         'role_id' => 3,
                         'name' => 'Pedro "Trovao" Rodrigues',
                         'email' => 'pedrorodriguez@gmail.com', 
-                        'password' => '12345678',
+                        'password' => Hash::make('12345678'),
                         'created_at' => $date,
                         'updated_at' => $date 
                     ],
 
-                    [   'id' => 3, 
+                    [   'id' => 4, 
                         'role_id' => 2,
                         'name' => 'John Smith',  
                         'email' => 'whoisjohnsmith@gmail.com', 
-                        'password' => '12345678',
+                        'password' => Hash::make('12345678'),
                         'created_at' => $date,
                         'updated_at' => $date
                     ],
                     
-                    [   'id' => 4, 
-                        'role_id' => 3,
+                    [   'id' => 5, 
+                        'role_id' => 2,
                         'name' => 'Enola Gay',
                         'email' => 'riphiroshima@gmail.com', 
-                        'password' => '12345678',
+                        'password' => Hash::make('12345678'),
                         'created_at' => $date,
                         'updated_at' => $date
                     ],
         ];
 
-        DB::table('roles')->insert($roles);
+        //DB::table('roles')->insert($roles);
         DB::table('users')->insert($users);
     }
 }
