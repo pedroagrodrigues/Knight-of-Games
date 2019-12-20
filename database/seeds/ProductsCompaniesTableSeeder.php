@@ -370,7 +370,7 @@ class ProductsCompaniesTableSeeder extends Seeder
 
             [
                 'product_id' => 37,
-                'company_id' => 62,	// Kpnami
+                'company_id' => 62,	// Konami
                 'created_at' => $date,
                 'updated_at' => $date,
             ],
@@ -419,14 +419,14 @@ class ProductsCompaniesTableSeeder extends Seeder
 
             [
                 'product_id' => 44,
-                'company_id' => 63,	
+                'company_id' => 63,	// alguma coisa
                 'created_at' => $date,
                 'updated_at' => $date,
             ],
 
             [
                 'product_id' => 44,
-                'company_id' => 64,	
+                'company_id' => 64,	// alguma coisa
                 'created_at' => $date,
                 'updated_at' => $date,
             ],

@@ -20,21 +20,16 @@ class UserController extends Controller
         {
             return view('login');
         }
+    }
 
-        // function checkLogin(Request $request)
-        // {
-        //     $this->validate(
-        //         $request, [
-        //             'email' => 'required|email'
-                    
-        //         ]
-        //     );
-        // }
+
+    public function doLogin(Request $request)
+    {
 
     }
 
-    public function store()
+    public function doStore(Request $request)
     {
-
+        
     }
 }

@@ -494,6 +494,48 @@ class CompaniesTableSeeder extends Seeder
                         'created_at' => $date, //indicate the company's start time
                         'updated_at' => $date 
                     ],               
+
+                    [
+                        'id' => 60,
+                        'company_id' => 'Blizzard Entertainment',
+                        'description' => "Something",
+                        'created_at' => $date, //indicate the company's start time
+                        'updated_at' => $date 
+                    ],
+
+                    [
+                        'id' => 61,
+                        'company' => 'Psyonix',
+                        'description' => "Something",
+                        'created_at' => $date, //indicate the company's start time
+                        'updated_at' => $date 
+                    ],
+
+                    [
+                        'id' => 62,
+                        'company' => 'Konami',
+                        'description' => "Something",
+                        'created_at' => $date, //indicate the company's start time
+                        'updated_at' => $date 
+                    ],
+
+                    [
+                        'id' => 63,
+                        'company' => 'Kunos Simulazioni',
+                        'description' => "Something",
+                        'created_at' => $date, //indicate the company's start time
+                        'updated_at' => $date 
+                    ],
+
+                    [
+                        'id' => 64,
+                        'company' => '505 Games',
+                        'description' => "Something",
+                        'created_at' => $date, //indicate the company's start time
+                        'updated_at' => $date
+                    ]
+
+
         ];
 
         DB::table('companies')->insert($companies);

@@ -69,7 +69,13 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-            'role_id' => 1,                                 //new implementation to give a role automatically
+            'role_id' => $data['role_id'],                                 //new implementation to give a role automatically
         ]);
     }
+
+    // public function register(Request $request)
+    // {
+    //     $this->validator($request->all())->validate();
+    //     event(new Registered($user = $this->create($request->all())));
+    // }
 }
