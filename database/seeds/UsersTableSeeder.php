@@ -39,6 +39,17 @@ class UsersTableSeeder extends Seeder
         ];
 
         $users = [
+
+                    [   'id' => 1,
+                        'role_id' => 1,
+                        'name' => 'potas', 
+                        'email' => 'potas@gmail',
+                        'password' => Hash::make('12345678'),
+                        'created_at' => $date,
+                        'updated_at' => $date
+
+                    ],
+
                     [   'id' => 2, 
                         'role_id' => 3,
                         'name' => 'Josué Ferreira', 
