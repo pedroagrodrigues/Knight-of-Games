@@ -15,7 +15,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//IT'S IMPORTANT TO RUN: npm install && npm run dev
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 
