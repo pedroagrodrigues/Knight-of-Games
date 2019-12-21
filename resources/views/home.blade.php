@@ -14,17 +14,17 @@
                         </div>
                     @endif
 
-                    @php
-                        <div>
+                    <div>
+                    <?php
                         if(Auth::user()->role_id === 1) {
-                            You are just a common user <br>
+                            echo "You are just a common user";
                         } elseif (Auth::user()->role_id === 2) {
-                            You are a moderator user <br>
+                            echo "You are a moderator user";
                         } elseif (Auth::user()->role_id === 3) {
-                            You are the administrator user <br>
+                            echo "You are the administrator user";
                         }
-                        </div>
-                    @endphp
+                    ?>
+                    </div>
 
                     You are logged in!
                 </div>
