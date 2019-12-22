@@ -50,7 +50,7 @@ class SocialController extends Controller
         $TWITTER_ID = 3;
 
         $date = date('Y-m-d H:i:s');
-    
+        
         $findUser = User::where('email', $user->email)->first();
 
         /**
@@ -59,13 +59,13 @@ class SocialController extends Controller
          * */ 
         if (!$findUser) 
         {
-            $user = User::create([
-                'name' => $userSocial->name,
-                'email' => $userSocial->email,
-                'password' => Hash::make(12345678),
-                'created_at' => $date,
-                'updated_at' => $date
-            ]);
+             $user = User::create([
+                 'name' => $user->name,
+                 'email' => $user->email,
+                 'password' => Hash::make(12345678),
+                 'created_at' => $date,
+                 'updated_at' => $date
+             ]);
 
             /**
              *  Calling the table social_user
@@ -74,17 +74,19 @@ class SocialController extends Controller
             {
                 $google_provider = Social::find($GOOGLE_ID);
                 $user->getSocialsFromUser()->attach($google_provider);
-
+                return $user;
             }
             else if ($provider == 'facebook')
             {
                 $facebook_provider = Social::find($FACEBOOK_ID);
                 $user->getSocialsFromUser()->attach($facebook_provider);
+                return $user;
             }
             else if ($provider == 'twitter')
             {
                 $twitter_provider = Social::find($TWITTER_ID);
                 $user->getSocialsFromUser()->attach($twitter_provider);
+                return $user;
             }
         }
         return $findUser;
