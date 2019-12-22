@@ -20,6 +20,11 @@ class CompanyController extends Controller
 
     public function viewCompany()
     {
+
+    }
+
+    public function createNewCompany()
+    {
         
     }
 }

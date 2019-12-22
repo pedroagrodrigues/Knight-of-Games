@@ -11,7 +11,12 @@ class ProductController extends Controller
         return view('products');
     }
 
-    public function viewCompany()
+    public function viewProduct()
+    {
+        
+    }
+
+    public function createNewProduct()
     {
         
     }

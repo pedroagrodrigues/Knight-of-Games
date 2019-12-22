@@ -24,6 +24,11 @@ class UserController extends Controller
         
     }
 
+    public function updateUser()
+    {
+        
+    }
+
     public function doLogin(Request $request)
     {
 
