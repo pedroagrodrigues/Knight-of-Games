@@ -15,6 +15,16 @@
                     @endif
 
                     <div>
+                        <table class="table table-bordered table-striped">
+                            <tr>
+                                <th>Company</th>
+                            </tr>
+                            @foreach($companies as $company)
+                            <tr>
+                                <td>{{$company['company']}}</td>
+                            </tr>
+                            @endforeach
+                        </table>
                     <?php
                     ?>
                     </div>

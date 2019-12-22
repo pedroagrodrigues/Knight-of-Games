@@ -15,13 +15,13 @@ class CompanyController extends Controller
      */
     public function index()
     {
-        return view('companies');
+        $companies = Company::all();
+        return view('companies', ['companies' => $companies]);
     }
 
     public function viewCompany()
     {
-        $companies = \App\Company::all();
-        return view('companies', ['companies' => $companies]);
+        
     }
 
     public function createNewCompany()

@@ -44,3 +44,7 @@ Route::post('/products/create', 'ProductController@createNewProduct'); //create 
 Route::get('/users', 'UserController@index');
 Route::get('/users/{id}', 'UserController@viewUser'); //showing a specific user
 Route::post('/users/{id}/update', 'UserController@updateUser'); //updates the user - contains admin restrictions
+
+Route::get('/genres', 'GenreController@index');
+Route::get('/genres/{id}', 'GenreController@viewGenre'); //showing a specific company, indicating the games
+Route::post('/genres/create', 'GenreController@createNewGenre'); //create a new company - contains admin restrictions

@@ -2,18 +2,24 @@
 
 namespace App\Http\Controllers;
 
+use App\Genre;
 use Illuminate\Http\Request;
 
 class GenreController extends Controller
 {
-    /**
-     * Handle the incoming request.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function __invoke(Request $request)
+    public function index()
     {
-        //
+        $genres = Genre::all();
+        return view('products', ['products' => $products]);
+    }
+
+    public function viewGenre()
+    {
+        
+    }
+
+    public function createNewGenre()
+    {
+        
     }
 }

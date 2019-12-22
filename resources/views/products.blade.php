@@ -15,8 +15,17 @@
                     @endif
 
                     <div>
+                        <table class="table table-bordered table-striped">
+                            <tr>
+                                <th>Product</th>
+                            </tr>
+                            @foreach($products as $product)
+                            <tr>
+                                <td>{{$product['product']}}</td>
+                            </tr>
+                            @endforeach
+                        </table>
                     <?php
-                    
                     ?>
                     </div>
                     You are logged in!
