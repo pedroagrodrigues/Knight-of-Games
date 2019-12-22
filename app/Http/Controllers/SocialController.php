@@ -27,8 +27,11 @@ class SocialController extends Controller
     public function handleProviderCallback($provider)
     {
         try{
-            //The stateless disables the session state verification
-            $user = Socialite::driver($provider)->stateless()->user(); 
+            if ($provider != 'twitter') //stateless doesn't exist in the twitter
+            {
+                $user = Socialite::driver($provider)->stateless()->user(); 
+            }
+            else $user = Socialite::driver($provider)->user();
             //return $user->token;
         }
         catch(\Exception $e){
@@ -65,7 +68,7 @@ class SocialController extends Controller
             ]);
 
             /**
-             *  Calling the table users_has_social
+             *  Calling the table social_user
              * */ 
             if ($provider == 'google')
             {
