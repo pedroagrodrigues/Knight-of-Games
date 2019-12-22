@@ -7,14 +7,12 @@ use App\Social;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use Laravel\Socialite\Facades\Socialite;
 
 class SocialController extends Controller
 {
-    private $GOOGLE_ID = 1;
-    private $FACEBOOK_ID = 2;
-    private $TWITTER_ID = 3;
     /**
      * Handle the incoming request.
      *
@@ -23,14 +21,11 @@ class SocialController extends Controller
      */
     public function redirectToProvider($provider)
     {
-        //dd("FUNCIONA AQUI");
         return Socialite::driver($provider)->redirect();
     }
 
     public function handleProviderCallback($provider)
     {
-        $date = date('Y-m-d H:i:s');
-        //dd("FUNCIONA AQUI FILHO DA PUTA!");
         try{
             //The stateless disables the session state verification
             $user = Socialite::driver($provider)->stateless()->user(); 
@@ -40,13 +35,19 @@ class SocialController extends Controller
             return redirect('/login');
         }
 
-        // $authUser = findOrCreateUser($user, $provider);
-        // Auth::login($authUser, true);
-        // return redirect('/home');
+        $authUser = $this->findOrCreateUser($user, $provider);
+        Auth::login($authUser, true);
+        return redirect('/home');
     }
 
     public function findOrCreateUser($user, $provider)
     {
+        $GOOGLE_ID = 1;
+        $FACEBOOK_ID = 2;
+        $TWITTER_ID = 3;
+
+        $date = date('Y-m-d H:i:s');
+    
         $findUser = User::where('email', $user->email)->first();
 
         /**
@@ -59,8 +60,9 @@ class SocialController extends Controller
                 'name' => $userSocial->name,
                 'email' => $userSocial->email,
                 'password' => Hash::make(12345678),
+                'created_at' => $date,
+                'updated_at' => $date
             ]);
-            //echo "Will create a user<br>";
 
             /**
              *  Calling the table users_has_social
@@ -69,20 +71,17 @@ class SocialController extends Controller
             {
                 $google_provider = Social::find($GOOGLE_ID);
                 $user->getSocialsFromUser()->attach($google_provider);
-                //echo "With the google provider<br>";
 
             }
             else if ($provider == 'facebook')
             {
                 $facebook_provider = Social::find($FACEBOOK_ID);
                 $user->getSocialsFromUser()->attach($facebook_provider);
-                //echo "With the facebook provider<br>";
             }
             else if ($provider == 'twitter')
             {
                 $twitter_provider = Social::find($TWITTER_ID);
                 $user->getSocialsFromUser()->attach($twitter_provider);
-                //echo "With the twitter provider<br>";
             }
         }
         return $findUser;

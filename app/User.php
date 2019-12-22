@@ -58,6 +58,6 @@ class User extends Authenticatable
      */
     public function getSocialsFromUser()
     {
-        return $this->belongToMany(Social::class);
+        return $this->belongsToMany(Social::class);
     }
 }
