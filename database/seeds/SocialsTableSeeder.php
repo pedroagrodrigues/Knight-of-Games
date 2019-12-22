@@ -35,6 +35,6 @@ class SocialsTableSeeder extends Seeder
             ],
         ];
 
-        DB::table('social')->insert($socials);
+        DB::table('socials')->insert($socials);
     }
 }
