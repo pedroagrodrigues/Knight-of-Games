@@ -28,5 +28,8 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 //Socialite Provider
-Route::get('login/{provider}', 'SocialController@redirectToProvider');
-Route::get('login/{provider}/callback', 'SocialController@handleProviderCallback');
+Route::get('/login/{provider}', 'SocialController@redirectToProvider')
+        ->where('provider','google|facebook|twitter');
+Route::get('/login/callback/{provider}', 'SocialController@handleProviderCallback')
+        ->where('provider','google|facebook|twitter');
+
