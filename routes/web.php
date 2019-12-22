@@ -33,3 +33,11 @@ Route::get('/login/{provider}', 'SocialController@redirectToProvider')
 Route::get('/login/callback/{provider}', 'SocialController@handleProviderCallback')
         ->where('provider','google|facebook|twitter');
 
+Route::get('/companies', 'CompanyController@index');
+Route::get('/companies/{id}', 'CompanyController@viewCompany'); //showing a specific company
+
+Route::get('/products', 'ProductController@index');
+Route::get('/products/{id}', 'ProductController@viewProduct'); //showing a specific product
+
+Route::get('/users', 'UserController@index');
+Route::get('/users/{id}', 'UserController@viewUser'); //showing a specific user

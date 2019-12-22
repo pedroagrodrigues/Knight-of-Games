@@ -14,14 +14,15 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function __invoke(Request $request)
+    public function index()
     {
-        function index()
-        {
-            return view('login');
-        }
+        return view('users');
     }
 
+    public function viewUser()
+    {
+        
+    }
 
     public function doLogin(Request $request)
     {
