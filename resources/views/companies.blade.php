@@ -21,7 +21,7 @@
                             </tr>
                             @foreach($companies as $company)
                             <tr>
-                                <td>{{$company['company']}}</td>
+                                <td><a href="{{ url('companies/'.$company['id'])}}">{{$company['company']}}</a></td>
                             </tr>
                             @endforeach
                         </table>

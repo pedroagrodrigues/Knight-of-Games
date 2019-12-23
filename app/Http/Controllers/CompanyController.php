@@ -21,7 +21,9 @@ class CompanyController extends Controller
 
     public function viewCompany()
     {
-        
+        $companyID = Company::where('id', $id)->get();
+        //$companyID = DB::table('companies')->where('companies.id', $id)->first();
+        return view('companies/{id}', ['companies' => $companyID]);
     }
 
     public function createNewCompany()
