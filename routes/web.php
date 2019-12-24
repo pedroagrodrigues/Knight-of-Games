@@ -42,8 +42,8 @@ Route::get('/login/callback/{provider}', 'SocialController@handleProviderCallbac
         Route::post('/product_create', 'ProductController@createNewProduct'); //create a new product - contains admin restrictions
         
         Route::get('/users', 'UserController@index');
-        Route::get('/user/{id}', 'UserController@viewUser'); //showing a specific user
-        Route::post('/user_update', 'UserController@updateUser'); //updates the user - contains admin restrictions
+        Route::get('/user_update/{id}', 'UserController@viewUser'); //showing a specific user
+        Route::post('/user_update/{id}', 'UserController@updateUser'); //updates the user - contains admin restrictions
         
         Route::get('/genres', 'GenreController@index');
         Route::get('/genre/{id}', 'GenreController@viewGenre'); //showing a specific company, indicating the games
