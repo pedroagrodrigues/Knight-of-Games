@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use DB;
+use Auth;
 use App\User;
 use App\Social;
+use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
@@ -23,11 +24,13 @@ class UserController extends Controller
 
     public function viewUser($id) // retrieve the user information
     {
-        $genres = DB::table('genres')->where('id', $id)->get();
-        return view('genre', ['genres' => $genres]);
+        //if (Auth::check())
+        $users = DB::table('users')->where('id', $id)->get();
+        return view('user', ['users' => $users]);
+        //else 
     }
 
-    public function updateUser(Request $request,$id) {
+    public function updateUser(Request $request, $id) {
         $role = $request->input('role_id'); //create a method to call the method input from a radio later
         $users = User::where('id', $id)
                         ->update(['role_id' => $request]);

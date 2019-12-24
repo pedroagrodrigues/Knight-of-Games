@@ -19,7 +19,7 @@ class GenreController extends Controller
         return view('genre', ['genres' => $genres]);
     }
 
-    public function createNewGenre(Request $request, $id)
+    public function createNewGenre(Request $request_name)
     {
         
     }
