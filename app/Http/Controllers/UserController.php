@@ -25,10 +25,14 @@ class UserController extends Controller
         
     }
 
-    public function updateUser()
-    {
-        
-    }
+    
+    public function updateUser(Request $request,$id) {
+        $name = $request->input('stud_name');
+        DB::update('update student set name = ? where id = ?',[$name,$id]);
+        //echo "Record updated successfully.<br/>";
+        //echo '<a href = "/edit-records">Click Here</a> to go back.';
+        return view('updated_user', ['users' => $users]);
+     }
 
     public function doLogin(Request $request)
     {

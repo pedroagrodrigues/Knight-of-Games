@@ -33,18 +33,18 @@ Route::get('/login/{provider}', 'SocialController@redirectToProvider')
 Route::get('/login/callback/{provider}', 'SocialController@handleProviderCallback')
         ->where('provider','google|facebook|twitter');
 
-Route::get('/companies', 'CompanyController@index');
-Route::get('/companies/{id}', 'CompanyController@viewCompany'); //showing a specific company
-Route::post('/companies/create', 'CompanyController@createNewCompany'); //create a new company - contains admin restrictions
-
-Route::get('/products', 'ProductController@index');
-Route::get('/products/{id}', 'ProductController@viewProduct'); //showing a specific product
-Route::post('/products/create', 'ProductController@createNewProduct'); //create a new product - contains admin restrictions
-
-Route::get('/users', 'UserController@index');
-Route::get('/users/{id}', 'UserController@viewUser'); //showing a specific user
-Route::post('/users/{id}/update', 'UserController@updateUser'); //updates the user - contains admin restrictions
-
-Route::get('/genres', 'GenreController@index');
-Route::get('/genres/{id}', 'GenreController@viewGenre'); //showing a specific company, indicating the games
-Route::post('/genres/create', 'GenreController@createNewGenre'); //create a new company - contains admin restrictions
+        Route::get('/companies', 'CompanyController@index');
+        Route::get('/company/{id}', 'CompanyController@viewCompany'); //showing a specific company
+        Route::post('/company_create', 'CompanyController@createNewCompany'); //create a new company - contains admin restrictions
+        
+        Route::get('/products', 'ProductController@index');
+        Route::get('/products/{id}', 'ProductController@viewProduct'); //showing a specific product with description and the genres tags
+        Route::post('/product_create', 'ProductController@createNewProduct'); //create a new product - contains admin restrictions
+        
+        Route::get('/users', 'UserController@index');
+        Route::get('/user/{id}', 'UserController@viewUser'); //showing a specific user
+        Route::post('/user_update', 'UserController@updateUser'); //updates the user - contains admin restrictions
+        
+        Route::get('/genres', 'GenreController@index');
+        Route::get('/genre/{id}', 'GenreController@viewGenre'); //showing a specific company, indicating the games
+        Route::post('/genre_create', 'GenreController@createNewGenre'); //create a new company - contains admin restrictions
