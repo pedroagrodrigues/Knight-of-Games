@@ -15,16 +15,16 @@
                     @endif
 
                     <div>
-                        <table class="table table-bordered table-striped">
-                            <tr>
-                                <th>Product</th>
-                            </tr>
-                            @foreach($products as $product)
-                            <tr>
-                                <td><a href="{{ url('product/'.$product['id'])}}"> {{$product['product']}}</a></td>
-                            </tr>
-                            @endforeach
-                        </table>
+                    <table class="table table-bordered table-striped">
+                        <tr>
+                            <th>Product</th>
+                        </tr>
+                        @foreach($products as $product)
+                        <tr>
+                            <td><a href="{{ url('product/'.$product['id'])}}"> {{$product['product']}}</a></td>
+                        </tr>
+                        @endforeach
+                    </table>
                     <?php
                     ?>
                     </div>

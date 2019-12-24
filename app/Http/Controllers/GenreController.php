@@ -13,12 +13,14 @@ class GenreController extends Controller
         return view('products', ['products' => $products]);
     }
 
-    public function viewGenre()
+    public function viewGenre($id)
     {
-        
+        $genreID = Company::where('id', $id)->get();
+        //$companyID = DB::table('companies')->where('companies.id', $id)->first();
+        return view('genre/{id}', ['companies' => $companyID]);
     }
 
-    public function createNewGenre()
+    public function createNewGenre(Request $request, $id)
     {
         
     }

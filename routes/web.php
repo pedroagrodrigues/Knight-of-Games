@@ -38,7 +38,7 @@ Route::get('/login/callback/{provider}', 'SocialController@handleProviderCallbac
         Route::post('/company_create', 'CompanyController@createNewCompany'); //create a new company - contains admin restrictions
         
         Route::get('/products', 'ProductController@index');
-        Route::get('/products/{id}', 'ProductController@viewProduct'); //showing a specific product with description and the genres tags
+        Route::get('/product/{id}', 'ProductController@viewProduct'); //showing a specific product with description and the genres tags
         Route::post('/product_create', 'ProductController@createNewProduct'); //create a new product - contains admin restrictions
         
         Route::get('/users', 'UserController@index');

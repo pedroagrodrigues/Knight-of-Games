@@ -17,7 +17,7 @@ class ProductController extends Controller
     {
         $productID = Product::where('id', $id)->get();
         //$companyID = DB::table('companies')->where('companies.id', $id)->first();
-        return view('products/{id}', ['products' => $productID]);
+        return view('product/{id}', ['products' => $products]);
     }
 
     public function createNewProduct()
