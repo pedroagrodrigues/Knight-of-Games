@@ -23,7 +23,8 @@
                             </tr>
                             @foreach($companies as $company)
                             <tr>
-                                <td><a href="{{ url('companies/'.$company['id'])}}">{{$company['company']}}</a></td>
+                                <td>{{$company['company']}}</a></td>
+                                <td>{{$company['description']}}</td>
                             </tr>
                             @endforeach
                         </table>
