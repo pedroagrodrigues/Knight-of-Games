@@ -15,9 +15,8 @@ class GenreController extends Controller
 
     public function viewGenre($id)
     {
-        $genreID = Company::where('id', $id)->get();
-        //$companyID = DB::table('companies')->where('companies.id', $id)->first();
-        return view('genre/{id}', ['companies' => $companyID]);
+        $genres = DB::table('genres')->where('id', $id)->get();
+        return view('genre', ['genres' => $genres]);
     }
 
     public function createNewGenre(Request $request, $id)
