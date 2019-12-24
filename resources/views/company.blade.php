@@ -25,6 +25,7 @@
                             <tr>
                                 <td>{{$company['company']}}</a></td>
                                 <td>{{$company['description']}}</td>
+                                <td>{{$company['created_at']}</td> 
                             </tr>
                             @endforeach
                         </table>
