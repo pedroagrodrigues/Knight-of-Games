@@ -37,8 +37,7 @@
                     else 
                     {
                     ?>
-                    <p>You don't have permission to access this!<br>
-                    You need to be admin!</p>     
+                    You don't have permission to access this! You need to be admin!    
                     <?php    
                     }
                     ?>

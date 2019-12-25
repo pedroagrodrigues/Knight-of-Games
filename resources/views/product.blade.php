@@ -18,10 +18,16 @@
                     <table class="table table-bordered table-striped">
                         <tr>
                             <th>Product</th>
+                            <td>Status</td>
+                            <td>Descritpion</td>
+                            <td>Created at</td>
                         </tr>
                         @foreach($products as $product)
                         <tr>
-                            <td><a href="{{ url('product/'.$product['id'])}}"> {{$product['product']}}</a></td>
+                            <td>{{$product['product']}}</td>
+                            <td>{{$product['status']}}</td>
+                            <td>{{$product['description']}}</td>
+                            <td>{{$product['created_at']}}</td>
                         </tr>
                         @endforeach
                     </table>
