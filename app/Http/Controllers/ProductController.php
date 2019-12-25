@@ -15,9 +15,10 @@ class ProductController extends Controller
 
     public function viewProduct()
     {
-        $productID = Product::where('id', $id)->get();
-        //$companyID = DB::table('companies')->where('companies.id', $id)->first();
-        return view('product/{id}', ['products' => $products]);
+        $products = Product::where('id', $id)->get(); //finding the specific game
+        //$product_companies = 
+
+        return view('product', ['products' => $products]);
     }
 
     public function createNewProduct()
