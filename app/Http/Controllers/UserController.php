@@ -30,12 +30,12 @@ class UserController extends Controller
         //else 
     }
 
-    public function updateUser(Request $request, $id) {
-        $role = $request->input('role_id'); //create a method to call the method input from a radio later
-        $users = User::where('id', $id)
-                        ->update(['role_id' => $request]);
-        //DB::update('update student set name = ? where id = ?',[$name,$id]);
-        return view('updated_user/{id}', ['users' => $users]);
-     }
+    public function updateUser(Request $request,$id) {
+        $role_id = $request->input('role_id');
+        DB::update('update student set name = ? where id = ?',[$name,$id]);
+        $users = User::where('id', $id)->get();
+        //echo "Record updated successfully.<br/>";
+        //echo '<a href = "/edit-records">Click Here</a> to go back.';
+    }
 
 }
