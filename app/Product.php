@@ -2,6 +2,10 @@
 
 namespace App;
 
+use App\Company;
+use App\Comment;
+use App\Website;
+use App\Genre;
 use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
@@ -12,7 +16,7 @@ class Product extends Model
      */
     public function getCompaniesFromProduct()
     {
-        return $this->belongToMany(Company::class);
+        return $this->belongsToMany(Company::class);
     }
 
     /**

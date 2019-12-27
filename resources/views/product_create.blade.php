@@ -19,7 +19,7 @@
                     <div class="form-group">
                         Title: <input type="text" name="product_name"><br>
                         Description: <textarea rows="4" cols="50" name='product_description'><br>
-                        Status: 
+                        Status: <>
                     </div>
                     You are logged in!
                 </div>

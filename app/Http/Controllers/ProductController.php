@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Product;
+use App\Company;
+use App\Genre;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -18,8 +20,11 @@ class ProductController extends Controller
         $products = Product::where('id', $id)->get(); //finding the specific game
         // SELECT companies.company FROM products, product_has_companies, companies 
         //     where products.id = 1 AND products.id = product_has_companies.product_id and companies.id = product_has_companies.company_id
-        $companies = Product::with('companies')->where('id', $id)->get();
-        //->with('companies')->get();
+        $companies = Product::with(['companies'])->get();
+        //$genres = Product::with('genres')->where('id', $id)->get();
+        //$websites = Product::with('websites')->where('id', $id)->get();
+
+        //$companies = $products->getCompaniesFromProduct()->get();
 
         return view('product', ['products' => $products, 'companies' => $companies]);
     }

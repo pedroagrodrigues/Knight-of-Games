@@ -2,17 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use DB;
 use App\Company;
+use App\Product;
 use Illuminate\Http\Request;
 
 class CompanyController extends Controller
 {
-    /**
-     * Handle the incoming request.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         $companies = Company::all();
@@ -23,6 +19,7 @@ class CompanyController extends Controller
     {
         //$companies = DB::table('companies')->where('id', $id)->get();
         $companies = Company::where('id', $id)->get();
+        //$products = $companies->getProductsFromCompany()->get();
         return view('company', ['companies' => $companies]);
     }
 
