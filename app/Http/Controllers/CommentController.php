@@ -12,7 +12,17 @@ class CommentController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function __invoke(Request $request)
+    public function createCommentProduct()
+    {
+        //
+    }
+
+    public function createCommentWebsite()
+    {
+        //
+    }
+
+    public function createCommentNews()
     {
         //
     }

@@ -26,8 +26,8 @@
                     <form action="/product_create" method="post">
                     <fieldset>
                     <div class="form-group">
-                    Title:<input type="text" name="product_name"><br>
-                    Description: <input type="text" name="product_description"><br>
+                    <h3>Title:</h3><input type="text" name="product_name"><br>
+                    <h3>Description:</h3><input type="text" name="product_description"><br>
                     <legend>Status:</legend>
                     <?php
                             foreach($enum as $status)
@@ -51,7 +51,7 @@
                             }
                     ?>
                     
-                    Created at: <input type="date" name="product_created"><br>
+                    <h3>Created at:</h3><input type="date" name="product_created"><br>
                     <legend>Company/Companies:</legend>
                     <?php
                             foreach($companies as $company)

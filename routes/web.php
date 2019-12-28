@@ -27,24 +27,34 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-//Socialite Provider
 Route::get('/login/{provider}', 'SocialController@redirectToProvider')
         ->where('provider','google|facebook|twitter');
 Route::get('/login/callback/{provider}', 'SocialController@handleProviderCallback')
         ->where('provider','google|facebook|twitter');
 
-        Route::get('/companies', 'CompanyController@index');
-        Route::get('/company/{id}', 'CompanyController@viewCompany'); //showing a specific company
-        Route::post('/company_create', 'CompanyController@createNewCompany'); //create a new company - contains admin restrictions
-        
-        Route::get('/products', 'ProductController@index');
-        Route::get('/product/{id}', 'ProductController@viewProduct'); //showing a specific product with description and the genres tags
-        Route::post('/product_create', 'ProductController@createNewProduct'); //create a new product - contains admin restrictions
-        
-        Route::get('/users', 'UserController@index');
-        Route::get('/user_update/{id}', 'UserController@viewUser'); //showing a specific user
-        Route::post('/user_update/{id}', 'UserController@updateUser'); //updates the user - contains admin restrictions
-        
-        Route::get('/genres', 'GenreController@index');
-        Route::get('/genre/{id}', 'GenreController@viewGenre'); //showing a specific company, indicating the games
-        Route::post('/genre_create', 'GenreController@createNewGenre'); //create a new company - contains admin restrictions
+Route::get('/companies', 'CompanyController@index');
+Route::get('/company/{id}', 'CompanyController@viewCompany');
+Route::get('/company_create', 'CompanyController@beforeCreateNewCompany');
+Route::post('/company_create', 'CompanyController@createNewCompany'); 
+
+Route::get('/products', 'ProductController@index');
+Route::get('/product/{id}', 'ProductController@viewProduct');
+Route::get('/product_create', 'ProductController@beforeCreateNewProduct');
+Route::post('/product_create', 'ProductController@createNewProduct');
+Route::get('/product_edit/{id}', 'ProductController@viewProduct');
+Route::post('/product_edit/{id}', 'ProductController@editProduct');
+
+Route::get('/users', 'UserController@index');
+Route::get('/user_update/{id}', 'UserController@viewUser');
+Route::post('/user_update/{id}', 'UserController@updateUser');
+
+Route::get('/genres', 'GenreController@index');
+Route::get('/genre/{id}', 'GenreController@viewGenre');
+Route::post('/genre_create', 'GenreController@createNewGenre');
+
+Route::get('/websites', 'WebsiteController@index');
+Route::get('/website/{id}', 'WebsiteController@viewWebsite');
+Route::get('/website_create', 'WebsiteController@beforeCreateNewWebsite');
+Route::post('/website_create', 'WebsiteController@createNewWebsite');
+Route::get('/website_edit/{id}', 'WebsiteController@beforeEditWebsite');
+Route::post('/website_edit/{id}', 'WebsiteController@editWebsite');
