@@ -16,10 +16,14 @@ class CompanyController extends Controller
 
     public function viewCompany($id)
     {
-        // $companies = DB::table('companies')->where('id', $id)->get();
         $companies = Company::where('id', $id)->get();
         //$products = Company::with('getProductsFromCompany')->where('id', $id)->get();
         return view('company', ['companies' => $companies]);
+    }
+
+    public function beforeCreateNewCompany()
+    {
+        return view('company_create'); 
     }
 
     public function createCompany(Request $request_name, Request $request_description, Request $request_created)

@@ -25,6 +25,14 @@ class ProductController extends Controller
         return view('product', ['products' => $products]);
     }
 
+    public function beforeCreateNewProduct()
+    {
+        $companies = Company::all();
+        $genres = Genre::all();
+        return view('product_create', ['companies' => $companies, 'genres' => $genres]);
+    }
+
+
     public function createProduct(  Request $request_name,   Request $request_description,
                                     Request $request_status, Request $request_companies, 
                                     Request $request_genres, Request $request_release    )

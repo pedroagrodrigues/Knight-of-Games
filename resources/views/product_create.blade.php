@@ -23,24 +23,57 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    <div>
-                    <form='/product_create' method='post'>
+                    <form action="/product_create" method="post">
+                    <fieldset>
                     <div class="form-group">
-                        Title: <input type="text" name="product_name"><br>
-                        Description: <textarea rows="4" cols="50" name='product_description'><br>
-                        Status: 
-                        <?php
+                    Title:<input type="text" name="product_name"><br>
+                    Description: <input type="text" name="product_description"><br>
+                    <legend>Status:</legend>
+                    <?php
                             foreach($enum as $status)
                             {
-                        ?>
-                        <input type="radio" name="product_status"><?php echo $status; ?><br>
-                        <?php
+                    ?>
+                                <input type="radio" name="product_status">
+                                <?php 
+                                    if ($status == "available")
+                                    {
+                                        echo "Available";
+                                    } else if ($status == "pre order")
+                                    {
+                                        echo "Pre-Order";
+                                    }
+                                    else if ($status == "soon")
+                                    {
+                                        echo "Soon";
+                                    }
+                                    ?><br>
+                    <?php
                             }
-                        ?>
-                        <input type="submit">
+                    ?>
+                    
+                    Created at: <input type="date" name="product_created"><br>
+                    <legend>Company/Companies:</legend>
+                    <?php
+                            foreach($companies as $company)
+                            {
+                    ?>
+                                <input type="checkbox" name="product_companies[]"><?php echo $company['company']; ?><br>
+                    <?php
+                            }
+                    ?>
+                    <legend>Genres:</legend>
+                    <?php
+                            foreach($genres as $genre)
+                            {
+                    ?>
+                                <input type="checkbox" name="product_genres[]"><?php echo $genre['genre'];?><br>
+                    <?php
+                            }
+                    ?>
+                    <input type="submit" value="Submit">
                     </div>
-                    You are logged in!
+                    </fieldset>
+                    </form>
                 </div>
             </div>
         </div>

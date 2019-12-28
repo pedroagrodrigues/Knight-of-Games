@@ -13,14 +13,14 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    <div>
-                    <form='/company_create' method='post'>
+                    <form action="/company_create" method="post">
                     <div class="form-group">
-                        Title: <input type="text" name="company_name"><br>
-                        Description: <textarea rows="4" cols="50" name='company_description'><br>
-                        <input type="submit">
+                    Company: <input type="text" name="company_name"><br>
+                    Description: <input type="text" name="company_description"><br>
+                    Created at: <input type="date" name="company_created"><br>
+                    <input type="submit" value="Submit">
                     </div>
+                    </form>
                 </div>
             </div>
         </div>
