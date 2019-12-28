@@ -26,7 +26,7 @@
                             </tr>
                             @foreach($users as $user)
                             <tr>
-                                <td>{{$user['name']}}</td>
+                                <td><a href="{{ url('users/'.$user['id'])}}">{{$user['name']}}</a></td>
                                 <td>{{$user['email']}}</td>
                             </tr>
                             @endforeach
@@ -37,11 +37,11 @@
                     else 
                     {
                     ?>
-                    <p>You don't have permission to access this!<br>
-                    You need to be admin!</p>     
+                    You don't have permission to acess this! You need to be admin!    
                     <?php    
                     }
                     ?>
+                    
                     You are logged in!
                 </div>
             </div>

@@ -31,8 +31,39 @@
                         </tr>
                         @endforeach
                     </table>
-                    <?php
-                    ?>
+                    </div>
+                    <div>
+                        <table class="table table-bordered table-striped">
+                            <tr>
+                                <th>Company</th>
+                            </tr>
+                            @foreach($product->getCompaniesFromProduct as $company)
+                            <tr>
+                                <td><?php //var_dump($company) ?>
+                                {{$company['company']}}
+                                </td>
+                            </tr>
+                            @endforeach
+                        </table>
+                    </div>
+                    <div>
+                        <table class="table table-bordered table-striped">
+                            <tr>
+                                <th>Genres</th>
+                            </tr>
+                            @foreach($product->getGenresFromProduct as $genre)
+                            <tr>
+                                <td><?php //var_dump($company) ?>
+                                {{$genre['genre']}}
+                                </td>
+                            </tr>
+                            @endforeach
+                        </table>
+                    </div>
+                    <div>
+                        <table class="table table-bordered table-striped">
+                        
+                        </table>
                     </div>
                     You are logged in!
                 </div>

@@ -15,7 +15,7 @@
                     @endif
 
                     <div>
-                        <table class="table table-bordered table-striped">
+                    <table class="table table-bordered table-striped">
                             <tr>
                                 <th>Company</th>
                                 <th>Description</th>
@@ -23,9 +23,9 @@
                             </tr>
                             @foreach($companies as $company)
                             <tr>
-                                <td>{{$company['company']}}</a></td>
-                                <td>{{$company['description']}}</td>
-                                <td>{{$company['created_at']}</td> 
+                                <td>{{$company->company}}</a></td>
+                                <td>{{$company->description}}</td>
+                                <td>{{$company->created_at}}</td> 
                             </tr>
                             @endforeach
                         </table>

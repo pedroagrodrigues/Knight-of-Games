@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use DB;
 use App\Company;
-use App\Product;
 use Illuminate\Http\Request;
 
 class CompanyController extends Controller
@@ -17,9 +16,9 @@ class CompanyController extends Controller
 
     public function viewCompany($id)
     {
-        //$companies = DB::table('companies')->where('id', $id)->get();
+        // $companies = DB::table('companies')->where('id', $id)->get();
         $companies = Company::where('id', $id)->get();
-        //$products = $companies->getProductsFromCompany()->get();
+        //$products = Company::with('getProductsFromCompany')->where('id', $id)->get();
         return view('company', ['companies' => $companies]);
     }
 

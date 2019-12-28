@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use DB;
 use App\Product;
 use App\Company;
 use App\Genre;
@@ -17,16 +18,11 @@ class ProductController extends Controller
 
     public function viewProduct($id)
     {
-        $products = Product::where('id', $id)->get(); //finding the specific game
-        // SELECT companies.company FROM products, product_has_companies, companies 
-        //     where products.id = 1 AND products.id = product_has_companies.product_id and companies.id = product_has_companies.company_id
-        $companies = Product::with(['companies'])->get();
-        //$genres = Product::with('genres')->where('id', $id)->get();
-        //$websites = Product::with('websites')->where('id', $id)->get();
-
-        //$companies = $products->getCompaniesFromProduct()->get();
-
-        return view('product', ['products' => $products, 'companies' => $companies]);
+        $products = Product::where('id', $id)->get();
+        //$companies = Product::with('getCompaniesFromProduct')->where('id', $id)->get();
+        //$genres = Product::with('getGenresFromProduct')->where('id', $id)->get();
+        //$websites = Product::with('getWebsitesFromProduct')->where('id', $id)->get();
+        return view('product', ['products' => $products]);
     }
 
     public function createProduct(  Request $request_name,   Request $request_description,
@@ -39,7 +35,7 @@ class ProductController extends Controller
         $product_status         = $request_status->input('product_status');
         $product_companies      = $request_companies->input('product_companies'); //must be a array in html format
         $product_genres         = $request_genres->input('product_genres'); //must be a array in html format
-        $product_release_date   = $request_release_date->input('product_release_date'); //what if there is no release date 
+        $product_release_date   = $request_release_date->input('product_release_date'); //what if there is no release date  
 
         //Creating the new product
         if ($product_release_date != NULL )

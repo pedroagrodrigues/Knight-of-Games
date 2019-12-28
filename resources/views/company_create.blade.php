@@ -19,8 +19,8 @@
                     <div class="form-group">
                         Title: <input type="text" name="company_name"><br>
                         Description: <textarea rows="4" cols="50" name='company_description'><br>
+                        <input type="submit">
                     </div>
-                    You are logged in!
                 </div>
             </div>
         </div>

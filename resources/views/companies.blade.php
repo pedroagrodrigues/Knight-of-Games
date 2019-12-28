@@ -14,19 +14,22 @@
                         </div>
                     @endif
 
-                    <div>
+                    <div>                
                         <table class="table table-bordered table-striped">
-                            <tr>
-                                <th>Company</th>
-                            </tr>
-                            @foreach($companies as $company)
-                            <tr>
-                                <td><a href="{{ url('company/'.$company['id'])}}">{{$company['company']}}</a></td>
-                            </tr>
-                            @endforeach
+                        <tr>
+                            <th>Company</th>
+                        </tr>
+                        @foreach($companies as $company)
+                        <?php
+                        $id = $company['id'];
+                        ?>
+                        <tr>
+                            <td><a href="{{ url('company/'.$company['id'])}}"> {{$company->company}}</a></td>
+                        </tr>
+                        @endforeach
                         </table>
-                    <?php
-                    ?>
+                        
+                    
                     </div>
                     You are logged in!
                 </div>

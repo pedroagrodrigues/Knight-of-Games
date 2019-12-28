@@ -2,7 +2,6 @@
 
 namespace App;
 
-use App\Product;
 use Illuminate\Database\Eloquent\Model;
 
 class Genre extends Model
@@ -12,6 +11,6 @@ class Genre extends Model
      */
     public function getProductsFromGenre()
     {
-        return $this->belongsToMany(Product::class);
+        return $this->belongsToMany(Product::class, 'product_has_genres', 'product_id', 'genre_id');
     }
 }

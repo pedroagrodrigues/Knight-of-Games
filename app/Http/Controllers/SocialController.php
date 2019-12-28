@@ -6,6 +6,7 @@ use App\User;
 use App\Social;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
@@ -49,7 +50,7 @@ class SocialController extends Controller
         $FACEBOOK_ID = 2;
         $TWITTER_ID = 3;
 
-        $date = date('Y-m-d H:i:s');
+        //$date = date('Y-m-d H:i:s');
         
         $findUser = User::where('email', $user->email)->first();
 
@@ -63,8 +64,6 @@ class SocialController extends Controller
                  'name' => $user->name,
                  'email' => $user->email,
                  'password' => Hash::make(12345678),
-                 'created_at' => $date,
-                 'updated_at' => $date
              ]);
 
             /**

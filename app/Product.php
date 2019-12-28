@@ -10,13 +10,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
-
+    protected $fillable = ['product','status', 'description'];
     /**
      * Get the companies that developed and published the products.
      */
     public function getCompaniesFromProduct()
     {
-        return $this->belongsToMany(Company::class);
+        return $this->belongsToMany(Company::class, 'product_has_companies', 'product_id', 'company_id');
     }
 
     /**
@@ -32,7 +32,7 @@ class Product extends Model
      */
     public function getWebsitesFromProduct()
     {
-        return $this->belongsToMany(Website::class);
+        return $this->belongsToMany(Website::class, 'product_has_websites');
     }
 
     /**
@@ -40,6 +40,6 @@ class Product extends Model
      */
     public function getGenresFromProduct()
     {
-        return $this->belongsToMany(Genre::class);
+        return $this->belongsToMany(Genre::class, 'product_has_genres', 'product_id', 'genre_id');
     }
 }
