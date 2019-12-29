@@ -2,7 +2,7 @@
 
 @section('content')
 <?php
-$games = DB::select(DB::raw( "SELECT products.product, product_has_website.price
+$games = DB::select(DB::raw( "SELECT products.id, products.product, product_has_website.price
                               FROM product_has_website, websites, products 
                               WHERE websites.id = product_has_website.website_id 
                                 AND products.id = product_has_website.product_id 
@@ -45,7 +45,7 @@ $games = DB::select(DB::raw( "SELECT products.product, product_has_website.price
                             </tr>
                             @foreach($games as $game)
                             <tr>
-                                <td><?php echo $game->product; ?></td> 
+                                <td><a href="{{ url('product/'.$game->id)}}"><?php echo $game->product; ?></a></td> 
                                 <td><?php echo $game->price; ?>€</td> 
                             </tr>
                             @endforeach

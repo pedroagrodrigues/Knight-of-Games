@@ -31,7 +31,7 @@
                         </tr>
                         @foreach($genre->getProductsFromGenre as $product)
                         <tr>
-                            <td><a href="{{ url('genres/'.$genre['id'])}}">{{$product['product']}}</a></td>
+                            <td><a href="{{ url('product/'.$product['id'])}}">{{$product['product']}}</a></td>
                         </tr>
                         @endforeach
                         </table>

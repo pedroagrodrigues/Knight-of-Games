@@ -40,7 +40,7 @@
                             @foreach($product->getCompaniesFromProduct as $company)
                             <tr>
                                 <td><?php //var_dump($company) ?>
-                                {{$company['company']}}
+                                <a href="{{ url('company/'.$company['id'])}}">{{$company['company']}}</a>
                                 </td>
                             </tr>
                             @endforeach
@@ -53,25 +53,11 @@
                             </tr>
                             @foreach($product->getGenresFromProduct as $genre)
                             <tr>
-                                <td>{{$genre['genre']}}</td>
+                                <td><a href="{{ url('genre/'.$genre['id'])}}">{{$genre['genre']}}</a></td>
                             </tr>
                             @endforeach
                         </table>
                     </div>
-                    <!-- <div>
-                        <table class="table table-bordered table-striped">
-                            <tr>
-                                <th>Websites</th>
-                            </tr>
-                            @foreach($product->getWebsitesFromProduct as $websites)
-                            <tr>
-                            <td>
-                                <?php //echo $websites['website'];?>
-                            </td>
-                            </tr>
-                            @endforeach
-                        </table>
-                    </div> -->
                 </div>
             </div>
         </div>

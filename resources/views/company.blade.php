@@ -35,7 +35,7 @@
                             </tr>
                             @foreach($company->getProductsFromCompany as $product)
                             <tr>
-                                <td>{{$product->product}}</td>
+                                <td><a href="{{ url('product/'.$product['id'])}}">{{$product->product}}</a></td>
                             </tr>
                             @endforeach
                     </table>
