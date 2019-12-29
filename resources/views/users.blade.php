@@ -26,8 +26,8 @@
                             </tr>
                             @foreach($users as $user)
                             <tr>
-                                <td><a href="{{ url('users/'.$user['id'])}}">{{$user['name']}}</a></td>
-                                <td>{{$user['email']}}</td>
+                                <td><a href="{{ url('user/'.$user->id)}}">{{$user->name}}</a></td>
+                                <td>{{$user->email}}</td>
                             </tr>
                             @endforeach
                         </table>

@@ -3,21 +3,25 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 use App\User;
 use App\Social;
+use App\Role;
 
 class UserController extends Controller
 {
     public function index()
     {
-        $users = User::all();
+        //$users = User::all();
+        $users = DB::select(DB::raw("SELECT * FROM `users` where not role_id = 3"));
         return view('users', ['users' => $users]);
     }
 
     public function viewUser($id)
     {
         $users = User::where('id', $id)->get();
-        return view('users', ['users' => $users]);
+        $roles = Role::all();
+        return view('user_update', ['users' => $users, 'roles' => $roles]);
     }
 
     public function updateUser(Request $request, $id) {

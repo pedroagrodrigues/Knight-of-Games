@@ -6,7 +6,7 @@ $games = DB::select(DB::raw( "SELECT products.id, products.product, product_has_
                               FROM product_has_website, websites, products 
                               WHERE websites.id = product_has_website.website_id 
                                 AND products.id = product_has_website.product_id 
-                                AND product_has_website.website_id = $id"))
+                                AND product_has_website.website_id = $id"));
 ?>
 <div class="container">
     <div class="row justify-content-center">
