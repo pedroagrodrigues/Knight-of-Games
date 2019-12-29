@@ -17,11 +17,11 @@
                     <div>                
                         <table class="table table-bordered table-striped">
                         <tr>
-                            <th>Company</th>
+                            <th>Genres</th>
                         </tr>
                         @foreach($genres as $genre)
                         <tr>
-                            <td><a href="{{ url('genres/'.$genre['id'])}}">{{$genre['genre']}}</a></td>
+                            <td><a href="{{ url('genre/'.$genre['id'])}}">{{$genre['genre']}}</a></td>
                         </tr>
                         @endforeach
                         </table>

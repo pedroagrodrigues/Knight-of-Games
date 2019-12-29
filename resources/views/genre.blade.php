@@ -17,7 +17,7 @@
                     <div>                
                         <table class="table table-bordered table-striped">
                         <tr>
-                            <th>Company</th>
+                            <th>Genre</th>
                         </tr>
                         @foreach($genres as $genre)
                         <tr>
@@ -25,8 +25,16 @@
                         </tr>
                         @endforeach
                         </table>
-                    <?php
-                    ?>
+                        <table class="table table-bordered table-striped">
+                        <tr>
+                            <th>Games</th>
+                        </tr>
+                        @foreach($genre->getProductsFromGenre as $product)
+                        <tr>
+                            <td><a href="{{ url('genres/'.$genre['id'])}}">{{$product['product']}}</a></td>
+                        </tr>
+                        @endforeach
+                        </table>
                     </div>
                     You are logged in!
                 </div>
