@@ -28,9 +28,17 @@
                                 <td>{{$company->created_at}}</td> 
                             </tr>
                             @endforeach
-                        </table>
-                    <?php
-                    ?>
+                    </table>
+                    <table class="table table-bordered table-striped">
+                            <tr>
+                                <th>Products</th>
+                            </tr>
+                            @foreach($company->getProductsFromCompany as $product)
+                            <tr>
+                                <td>{{$product->product}}</td>
+                            </tr>
+                            @endforeach
+                    </table>
                     </div>
                     You are logged in!
                 </div>

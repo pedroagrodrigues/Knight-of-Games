@@ -24,6 +24,7 @@
                         </div>
                     @endif
                     <form action="/company_create" method="post">
+                    @csrf
                     <div class="form-group">
                     Website: <input type="text" name="website_name"><br>
                     <legend>Rating:</legend>

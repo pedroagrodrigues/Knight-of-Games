@@ -21,7 +21,6 @@ class ProductController extends Controller
         $products = Product::where('id', $id)->get();
         //$companies = Product::with('getCompaniesFromProduct')->where('id', $id)->get();
         //$genres = Product::with('getGenresFromProduct')->where('id', $id)->get();
-        //$websites = Product::with('getWebsitesFromProduct')->where('id', $id)->get();
         return view('product', ['products' => $products]);
     }
 
@@ -35,7 +34,7 @@ class ProductController extends Controller
 
     public function createProduct(  Request $request_name,   Request $request_description,
                                     Request $request_status, Request $request_companies, 
-                                    Request $request_genres, Request $request_release    )
+                                    Request $request_genres, Request $request_release_date    )
     {
         $date = date('Y-m-d H:i:s');
         $product_name           = $request_name->input('product_name');
@@ -76,10 +75,16 @@ class ProductController extends Controller
         $product->getGenresFromProduct()->attach($genres);
     }
 
-    public function editProduct(Request $request_companies, Request $request_genres, $id)
+    public function editProduct($id)
     {
-        //Just updates de product
-        $product_companies     = $request_companies->input('product_companies'); 
-        $product_genres  = $request_genres->input('product_genres');  
+
+        return view('product_edit');    
+    }
+
+    public function beforeEditProduct(Request $request_companies, Request $request_genres, $id)
+    {
+        //Just updates the product
+        $product_companies  = $request_companies->input('product_companies'); 
+        $product_genres     = $request_genres->input('product_genres');  
     }
 }

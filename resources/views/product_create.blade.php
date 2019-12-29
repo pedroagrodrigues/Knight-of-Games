@@ -24,6 +24,7 @@
                         </div>
                     @endif
                     <form action="/product_create" method="post">
+                    @csrf
                     <fieldset>
                     <div class="form-group">
                     <h3>Title:</h3><input type="text" name="product_name"><br>

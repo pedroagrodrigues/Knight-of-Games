@@ -13,6 +13,6 @@ class Company extends Model
      */
     public function getProductsFromCompany()
     {
-        return $this->belongsToMany(Product::class, 'product_has_companies', 'product_id', 'company_id');
+        return $this->belongsToMany(Product::class, 'product_has_companies', 'company_id', 'product_id');
     }
 }

@@ -41,7 +41,7 @@ Route::get('/products', 'ProductController@index');
 Route::get('/product/{id}', 'ProductController@viewProduct');
 Route::get('/product_create', 'ProductController@beforeCreateNewProduct');
 Route::post('/product_create', 'ProductController@createNewProduct');
-Route::get('/product_edit/{id}', 'ProductController@viewProduct');
+Route::get('/product_edit/{id}', 'ProductController@beforeEditProduct');
 Route::post('/product_edit/{id}', 'ProductController@editProduct');
 
 Route::get('/users', 'UserController@index');

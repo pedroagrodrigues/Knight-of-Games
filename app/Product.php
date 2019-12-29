@@ -2,10 +2,8 @@
 
 namespace App;
 
-use App\Company;
 use App\Comment;
-use App\Website;
-use App\Genre;
+
 use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
@@ -32,7 +30,7 @@ class Product extends Model
      */
     public function getWebsitesFromProduct()
     {
-        return $this->belongsToMany(Website::class, 'product_has_website', 'product_id', 'website_id');
+        return $this->belongsToMany(Website::class, 'product_has_website', 'website_id', 'product_id');
     }
 
     /**

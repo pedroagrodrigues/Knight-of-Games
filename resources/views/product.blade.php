@@ -53,19 +53,25 @@
                             </tr>
                             @foreach($product->getGenresFromProduct as $genre)
                             <tr>
-                                <td><?php //var_dump($company) ?>
-                                {{$genre['genre']}}
-                                </td>
+                                <td>{{$genre['genre']}}</td>
                             </tr>
                             @endforeach
                         </table>
                     </div>
-                    <div>
+                    <!-- <div>
                         <table class="table table-bordered table-striped">
-                        
+                            <tr>
+                                <th>Websites</th>
+                            </tr>
+                            @foreach($product->getWebsitesFromProduct as $websites)
+                            <tr>
+                            <td>
+                                <?php //echo $websites['website'];?>
+                            </td>
+                            </tr>
+                            @endforeach
                         </table>
-                    </div>
-                    You are logged in!
+                    </div> -->
                 </div>
             </div>
         </div>

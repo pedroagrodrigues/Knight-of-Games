@@ -14,6 +14,7 @@
                         </div>
                     @endif
                     <form action="/company_create" method="post">
+                    @csrf
                     <div class="form-group">
                     Company: <input type="text" name="company_name"><br>
                     Description: <input type="text" name="company_description"><br>

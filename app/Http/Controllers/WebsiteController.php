@@ -21,7 +21,7 @@ class WebsiteController extends Controller
      */
     public function index()
     {
-        $websites = Webiste::all();
+        $websites = Website::all();
         return view('websites', ['websites' => $websites]);
     }
 
@@ -30,8 +30,10 @@ class WebsiteController extends Controller
      */
     public function viewWebsite($id)
     {
-        $websites = Webiste::where($id)->get();
-        return view('websites', ['websites' => $websites]);
+        $websites = Website::where('id',$id)->get();
+        // SELECT product_has_website.product_id, products.product, product_has_website.price, websites.website FROM product_has_website, websites, products 
+        // where websites.id = product_has_website.website_id and products.id = product_has_website.product_id
+        return view('website', ['id' => $id, 'websites' => $websites]);
     }
 
     public function beforeCreateNewWebsite()
@@ -65,14 +67,25 @@ class WebsiteController extends Controller
         }
     }
 
-    public function beforeEditWebsite()
+    public function beforeEditWebsite($id)
     {
-        return view('edit_website');
+        $products = Product::all();
+        $websites = Website::where('id', $id)->get();
+        return view('edit_website', ['websites' => $websites, 'products' => $products]);
     }
 
     public function editWebsite(Request $request_games, Request $request_prices, $id)
     {
+        $website_rating = $request_rating->input('website_rating');
         $website_games = $request_games->input('website_games');
-        $website_games = $request_games->input('website_games');
+        $website_prices = $request_games->input('website_prices');
+
+        if ($website_games != NULL) //if does contain the games will try to find and attach to the database
+        {
+            $games = Product::find($website_games);
+            $website->getProductsFromWebsite()->attach($games);
+        }
+
+        
     }
 }
