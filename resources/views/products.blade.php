@@ -15,14 +15,17 @@
                     @endif
 
                     <div>
+                    <table class="table table-bordered table-striped">
+                        <tr>
+                            <th>Product</th>
+                        </tr>
+                        @foreach($products as $product)
+                        <tr>
+                            <td><a href="{{ url('product/'.$product['id'])}}"> {{$product['product']}}</a></td>
+                        </tr>
+                        @endforeach
+                    </table>
                     <?php
-                        if(Auth::user()->role_id === 1) {
-                            echo "You are just a common user";
-                        } elseif (Auth::user()->role_id === 2) {
-                            echo "You are a moderator user";
-                        } elseif (Auth::user()->role_id === 3) {
-                            echo "You are the administrator user";
-                        }
                     ?>
                     </div>
                     You are logged in!

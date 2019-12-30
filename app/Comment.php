@@ -2,10 +2,17 @@
 
 namespace App;
 
+use App\Website;
+use App\User;
+use App\Product;
+use App\News;
 use Illuminate\Database\Eloquent\Model;
 
 class Comment extends Model
 {
+
+    protected $fillable = ['comment'];
+
     /**
      * Get the website that have been comment or mentioned.
      */
@@ -35,6 +42,6 @@ class Comment extends Model
      */
     public function getNewsFromComment()
     {
-        return $this->belongsTo(Product::class);
+        return $this->belongsTo(News::class);
     }
 }

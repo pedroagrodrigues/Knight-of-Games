@@ -13,19 +13,13 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    <div>
-                    <?php
-                        if(Auth::user()->role_id === 1) {
-                            echo "You are just a common user";
-                        } elseif (Auth::user()->role_id === 2) {
-                            echo "You are a moderator user";
-                        } elseif (Auth::user()->role_id === 3) {
-                            echo "You are the administrator user";
-                        }
-                    ?>
+                    <form action="/company_create" method="post">
+                    <div class="form-group">
+                    Website: <input type="text" name="company_name"><br>
+                    Rating: <input type="text" name="company_description"><br>
+                    <input type="submit" value="Submit">
                     </div>
-                    You are logged in!
+                    </form>
                 </div>
             </div>
         </div>

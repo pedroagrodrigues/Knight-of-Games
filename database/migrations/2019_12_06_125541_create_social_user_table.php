@@ -13,7 +13,7 @@ class CreateUserHasSocialTable extends Migration
      */
     public function up()
     {
-        Schema::create('social_user', function (Blueprint $table) {
+        Schema::create('user_has_social', function (Blueprint $table) {
             $table->integer('user_id')->unsigned()->index();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->integer('social_id')->unsigned()->index();

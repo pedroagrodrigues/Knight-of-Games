@@ -14,15 +14,18 @@
                         </div>
                     @endif
 
-                    <div>
+                    <div>                
+                        <table class="table table-bordered table-striped">
+                        <tr>
+                            <th>Genres</th>
+                        </tr>
+                        @foreach($genres as $genre)
+                        <tr>
+                            <td><a href="{{ url('genre/'.$genre['id'])}}">{{$genre['genre']}}</a></td>
+                        </tr>
+                        @endforeach
+                        </table>
                     <?php
-                        if(Auth::user()->role_id === 1) {
-                            echo "You are just a common user";
-                        } elseif (Auth::user()->role_id === 2) {
-                            echo "You are a moderator user";
-                        } elseif (Auth::user()->role_id === 3) {
-                            echo "You are the administrator user";
-                        }
                     ?>
                     </div>
                     You are logged in!

@@ -3,33 +3,33 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 use App\User;
 use App\Social;
+use App\Role;
 
 class UserController extends Controller
 {
-    /**
-     * Handle the incoming request.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function __invoke(Request $request)
+    public function index()
     {
-        function index()
-        {
-            return view('login');
-        }
+        //$users = User::all();
+        $users = DB::select(DB::raw("SELECT * FROM `users` where not role_id = 3"));
+        return view('users', ['users' => $users]);
     }
 
-
-    public function doLogin(Request $request)
+    public function viewUser($id)
     {
-
+        $users = User::where('id', $id)->get();
+        $roles = Role::all();
+        return view('user_update', ['users' => $users, 'roles' => $roles]);
     }
 
-    public function doStore(Request $request)
-    {
-        
-    }
+    public function updateUser(Request $request, $id) {
+        $role_id = $request->input('role_id');
+        //DB::update('update student set name = ? where id = ?',[$name,$id]);
+        $user = User::where('id',$id)->update('role_id', $role_id);
+        //echo "Record updated successfully.<br/>";
+        //echo '<a href = "/users">Click Here</a> to go back.';
+     }
+
 }
