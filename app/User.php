@@ -2,9 +2,9 @@
 
 namespace App;
 
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
@@ -36,4 +36,28 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+        /**
+     * Get the role that belongs to the users.
+     */
+    public function getRoleFromUser()
+    {
+        return $this->belongsTo(Role::class);
+    }
+
+    /**
+     * Get the comments that belongs to the user.
+     */
+    public function getCommentsFromUser()
+    {
+        return $this->hasMany(Comment::class);
+    }
+
+    /**
+     * Get the social media that belongs to the users.
+     */
+    public function getSocialsFromUser()
+    {
+        return $this->belongsToMany(Social::class);
+    }
 }
