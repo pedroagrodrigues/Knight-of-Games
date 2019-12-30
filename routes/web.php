@@ -53,6 +53,7 @@ Route::get('/genre/{id}', 'GenreController@viewGenre');
 Route::post('/genre_create', 'GenreController@createNewGenre');
 
 Route::get('/websites', 'WebsiteController@index');
+Route::get('/websites/teste', 'WebsiteController@teste');
 Route::get('/website/{id}', 'WebsiteController@viewWebsite');
 Route::get('/website_create', 'WebsiteController@beforeCreateNewWebsite');
 Route::post('/website_create', 'WebsiteController@createNewWebsite');

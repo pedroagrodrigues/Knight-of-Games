@@ -58,6 +58,21 @@
                             @endforeach
                         </table>
                     </div>
+                    <div>
+                        <table class="table table-bordered table-striped">
+                            <tr>
+                                <th>Websites</th>
+                            </tr>
+                            @foreach($websites as $website)
+                            <?php $callWebsite = DB::select(DB::raw("SELECT * FROM websites WHERE websites.id = $website->website_id"));
+                                  $website_name = $callWebsite[0]->website;
+                            ?>
+                            <tr>
+                                <td><a href="{{ url('website/'.$website->website_id)}}">{{$website_name}}</a></td>
+                            </tr>
+                            @endforeach
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>

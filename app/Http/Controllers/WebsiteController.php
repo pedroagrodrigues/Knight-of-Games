@@ -88,4 +88,12 @@ class WebsiteController extends Controller
 
         
     }
+
+    public function teste(){
+        $test = Website::find(1);
+        $game = Product::find(2);
+       // dd($test);
+        dd($test->getProductsFromWebsite());
+        //dd($game->getWebsitesFromProduct());
+    }
 }

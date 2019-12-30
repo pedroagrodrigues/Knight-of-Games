@@ -29,7 +29,7 @@ class UserController extends Controller
         //DB::update('update student set name = ? where id = ?',[$name,$id]);
         $user = User::where('id',$id)->update('role_id', $role_id);
         //echo "Record updated successfully.<br/>";
-        //echo '<a href = "/edit-records">Click Here</a> to go back.';
+        //echo '<a href = "/users">Click Here</a> to go back.';
      }
 
 }
