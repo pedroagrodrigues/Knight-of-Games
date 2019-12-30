@@ -6,6 +6,7 @@
         <div class="logo"></div>
     </a> -->
     <form action="{{ route('login') }}" class="form-authentication" method="POST">
+        @csrf
         <div class="form-inputs">
             <h1>UChoose</h1>
             <h2 class="quote">The price finder</h2>
@@ -14,7 +15,12 @@
                     <div class="icon">&#xf2c0</div>
                     <div class="input-field-controler">
                         <div class="input-field-div">
-                            <input class="input-field" type="text" name="email" placeholder="Email" required>
+                            <input class="input-field form-control @error('email') is-invalid @enderror" type="email" name="email" placeholder="Email" required autocomplete="email" autofocus>
+                            @error('email')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                         </div>
                     </div>
                 </div>
@@ -22,9 +28,22 @@
                     <div class="icon">&#xf023</div>
                     <div class="input-field-controler">
                         <div class="input-field-div">
-                            <input class="input-field" type="password" name="password" placeholder="Password" required>
+                            <input id="password" type="password" class="input-field form-control @error('password') is-invalid @enderror" name="password" placeholder="Password" required autocomplete="current-password">
+
+                            @error('password')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                         </div>
                     </div>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+
+                    <label class="form-check-label" for="remember">
+                        {{ __('Remember Me') }}
+                    </label>
                 </div>
             </div>
         </div>
@@ -46,6 +65,11 @@
     </div>
     <div class="bottom-wrapper">
         <p>Don't have an account? <a href="{{ route('register') }}">Create one!</a></p>
+        @if (Route::has('password.request'))
+            <a href="{{ route('password.request') }}">
+                {{ __('Forgot Your Password?') }}
+            </a>
+        @endif
     </div>
     
 </div>
