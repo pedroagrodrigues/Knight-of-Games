@@ -44,18 +44,18 @@ Route::post('/product_create', 'ProductController@createNewProduct');
 Route::get('/product_edit/{id}', 'ProductController@beforeEditProduct');
 Route::post('/product_edit/{id}', 'ProductController@editProduct');
 
-Route::get('/users', 'UserController@index');
-Route::get('/user_update/{id}', 'UserController@viewUser');
-Route::post('/user_update/{id}', 'UserController@updateUser');
+Route::get('/users', 'UserController@index')->middleware('auth');;
+Route::get('/user_update/{id}', 'UserController@viewUser')->middleware('auth');
+Route::post('/user_update/{id}', 'UserController@updateUser')->middleware('auth');
 
 Route::get('/genres', 'GenreController@index');
 Route::get('/genre/{id}', 'GenreController@viewGenre');
-Route::post('/genre_create', 'GenreController@createNewGenre');
+Route::post('/genre_create', 'GenreController@createNewGenre')->middleware('auth');
 
 Route::get('/websites', 'WebsiteController@index');
 Route::get('/websites/teste', 'WebsiteController@teste');
 Route::get('/website/{id}', 'WebsiteController@viewWebsite');
-Route::get('/website_create', 'WebsiteController@beforeCreateNewWebsite');
-Route::post('/website_create', 'WebsiteController@createNewWebsite');
-Route::get('/website_edit/{id}', 'WebsiteController@beforeEditWebsite');
-Route::post('/website_edit/{id}', 'WebsiteController@editWebsite');
+Route::get('/website_create', 'WebsiteController@beforeCreateNewWebsite')->middleware('auth');
+Route::post('/website_create', 'WebsiteController@createNewWebsite')->middleware('auth');
+Route::get('/website_edit/{id}', 'WebsiteController@beforeEditWebsite')->middleware('auth');
+Route::post('/website_edit/{id}', 'WebsiteController@editWebsite')->middleware('auth');

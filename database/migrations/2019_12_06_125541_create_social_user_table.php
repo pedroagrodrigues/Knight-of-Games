@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUserHasSocialTable extends Migration
+class CreateSocialUserTable extends Migration
 {
     /**
      * Run the migrations.
@@ -17,7 +17,7 @@ class CreateUserHasSocialTable extends Migration
             $table->integer('user_id')->unsigned()->index();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->integer('social_id')->unsigned()->index();
-            $table->foreign('social_id')->references('id')->on('social')->onDelete('cascade');
+            $table->foreign('social_id')->references('id')->on('socials')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreateUserHasSocialTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_has_social');
+        Schema::dropIfExists('social_user');
     }
 }

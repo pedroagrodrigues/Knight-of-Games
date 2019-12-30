@@ -19,8 +19,6 @@ class ProductController extends Controller
     public function viewProduct($id)
     {
         $products = Product::where('id', $id)->get();
-        //$companies = Product::with('getCompaniesFromProduct')->where('id', $id)->get();
-        //$genres = Product::with('getGenresFromProduct')->where('id', $id)->get();
         $websites = DB::select(DB::raw("SELECT DISTINCT website_id 
                                         FROM product_has_website, websites, products 
                                         WHERE products.id = $id AND product_has_website.product_id = products.id"));
