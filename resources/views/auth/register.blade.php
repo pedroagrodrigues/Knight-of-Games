@@ -6,6 +6,7 @@
         <div class="logo"></div>
     </a> -->
     <form action="{{ route('register') }}" class="form-authentication" method="POST">
+        @csrf
         <div class="form-inputs">
             <h1>UChoose</h1>
             <h2 class="quote">The price finder</h2>
@@ -14,7 +15,12 @@
                     <div class="icon">&#xf003;</div>
                     <div class="input-field-controler">
                         <div class="input-field-div">
-                            <input class="input-field" type="text" name="email" placeholder="Email" required>
+                            <input id="name" class="input-field form-control @error('name') is-invalid @enderror" type="text" name="name" value="{{ old('name') }}" placeholder="Username" required autocomplete="username" autofocus>
+                            @error('name')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                         </div>
                     </div>
                 </div>
@@ -22,7 +28,13 @@
                     <div class="icon">&#xf2c0</div>
                     <div class="input-field-controler">
                         <div class="input-field-div">
-                            <input class="input-field" type="text" name="username" placeholder="Username" required>
+                            <input id="email" type="email" class="input-field form-control @error('email') is-invalid @enderror" name="email" placeholder="Email" value="{{ old('email') }}" required autocomplete="email">
+
+                            @error('email')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                         </div>
                     </div>
                 </div>
@@ -30,7 +42,12 @@
                     <div class="icon">&#xf023</div>
                     <div class="input-field-controler">
                         <div class="input-field-div">
-                            <input class="input-field" type="password" name="password" placeholder="Password" required>
+                            <input id="password" type="password" name="password" class="input-field form-control @error('password') is-invalid @enderror" placeholder="Password" required autocomplete="new-password">
+                            @error('password')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                         </div>
                     </div>
                 </div>
@@ -38,13 +55,13 @@
                     <div class="icon">&#xf023</div>
                     <div class="input-field-controler">
                         <div class="input-field-div">
-                            <input class="input-field" type="password" name="confirmPassword" placeholder="Confirm Password" required>
+                            <input id="password-confirm" type="password" class="input-field form-control" name="password_confirmation" placeholder="Confirm Password" required autocomplete="new-password"> 
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <button class="form-submit" value="Submit">Join UChoose</button>
+        <button type="submit" class="form-submit" value="{{ __('Register') }}">Join UChoose</button>
     </form>
     <div class="social-networks-wrapper">
         <div class="social-networks-services">
