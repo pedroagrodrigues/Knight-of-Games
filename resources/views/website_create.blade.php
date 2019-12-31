@@ -10,6 +10,8 @@
         $v = trim($value, "'");
         $enum = array_add($enum, $v, $v);
     }
+    
+    $actualUser = Auth::user();
 ?>
 <div class="container">
     <div class="row justify-content-center">
@@ -23,7 +25,10 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <form action="/company_create" method="post">
+                    <?php 
+                    if($actualUser->role_id === 3)
+                    { ?> 
+                    <form action="/website_create" method="post">
                     @csrf
                     <div class="form-group">
                     Website: <input type="text" name="website_name"><br>
@@ -70,6 +75,10 @@
                     <input type="submit" value="Submit">
                     </div>
                     </form>
+                <?php   
+                    }
+                    else echo "Permission denied: You need to be administrator<br>";
+                ?>
                 </div>
             </div>
         </div>

@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<?php $actualUser = Auth::user();?>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -15,50 +16,57 @@
                     @endif
                     <div>
                         <?php 
-                        if ($users[0]->role_id != 3)
+                        if ($actualUser->role_id === 3)//if the actual user is admin
                         {
+                            if ($users[0]->role_id != 3)//if the chosen user does not contain admin role 
+                            {
                         ?>
-                        User Information:<br>
-                        Username: {{$users[0]->name}}<br>
-                        Contact: {{$users[0]->email}}<br>
-                        Role:
+                                User Information:<br>
+                                Username: {{$users[0]->name}}<br>
+                                Contact: {{$users[0]->email}}<br>
+                                Role:
                         <?php  
-                        if ($users[0]->role_id == 1)
-                        {
-                            echo "Common User<br>";
-                        }
-                        else if ($users[0]->role_id == 2) 
-                        {
-                            echo "Moderator<br>";
-                        }
+                                if ($users[0]->role_id == 1)
+                                {
+                                    echo "Common User<br>";
+                                }
+                                else if ($users[0]->role_id == 2) 
+                                {
+                                    echo "Moderator<br>";
+                                }
                         ?>
-                        <form action="/user_update" method="post">
-                        @csrf
-                        <h4>Wanna update the user?</h4>
-                        @foreach($roles as $role)
-                            <input type="radio" name="role_id" value=<?php echo $role->id; ?>>
-                            <?php 
-                            if ($role->role == "common")
-                            {
-                                echo "Common<br>";
-                            }
-                            else if ($role->role == "moderator")
-                            {
-                                echo "Moderator<br>";
-                            }
-                            else if ($role->role == "admin")
-                            {
-                                echo "Administrator<br>";
-                            }
-                            ?>
-                        @endforeach
-                        <input type="submit" value="Update User">
-                        </form>
+                                <form action="/user_update/$id" method="post">
+                                @csrf
+                                    <h4>Wanna update the user?</h4>
+                                    @foreach($roles as $role)
+                                    <input type="radio" name="role_id" value=<?php echo $role->id; ?>>
+                                    <?php 
+                                    if ($role->role == "common")
+                                    {
+                                        echo "Common<br>";
+                                    }
+                                    else if ($role->role == "moderator")
+                                    {
+                                        echo "Moderator<br>";
+                                    }
+                                    else if ($role->role == "admin")
+                                    {
+                                        echo "Administrator<br>";
+                                    }
+                                    ?>
+                                    @endforeach
+                                    <input type="submit" value="Update User">
+                                </form>
                         <?php
-                        } 
+                            } 
+                            else 
+                            {
+                                echo "He is the chosen One!<br>";
+                            }
+                        }
                         else 
                         {
-                            echo "He is the chosen One!<br>";
+                            echo "Permission denied: You need to be administrator<br>";
                         }?>
                     </div>
                 </div>

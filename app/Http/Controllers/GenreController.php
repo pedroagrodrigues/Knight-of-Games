@@ -20,10 +20,10 @@ class GenreController extends Controller
         return view('genre', ['genres' => $genres]);
     }
 
-    public function createNewGenre(Request $request_name)
+    public function createNewGenre(Request $request)
     {
 
-        $genre_name = $request_name->input('genre_name');
+        $genre_name = $request->input('genre_name');
 
         $date = date('Y-m-d H:i:s');
         $genres = Genres::create([

@@ -27,12 +27,28 @@ $games = DB::select(DB::raw( "SELECT products.id, products.product, product_has_
                                 <th>Website</th>
                                 <th>Rating</th>
                                 <th>Blacklist</th>
+                            <?php 
+                                if (Auth::user() && Auth::user()->role_id ==3) //check if is logged in and if its admin
+                                {
+                            ?>
+                                   <th>Edit</th>
+                            <?php
+                                }
+                            ?>
                             </tr>
                             @foreach($websites as $website)
                             <tr>
                                 <td>{{$website->website}}</a></td>
                                 <td>{{$website->rating}}</td>
                                 <td>{{$website->blacklist}}</td> 
+                            <?php 
+                                if (Auth::user() && Auth::user()->role_id ==3) //check if is logged in and if its admin
+                                {
+                           ?>
+                                    <td><a href="{{ url('website_edit/'.$id)}}">Edit Site</a></td>
+                            <?php
+                                }
+                            ?>    
                             </tr>
                             @endforeach
                     </table>

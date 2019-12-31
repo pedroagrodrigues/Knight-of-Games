@@ -45,12 +45,12 @@ class WebsiteController extends Controller
     /**
      * Method to create a new Website with/without games
      */
-    public function createNewWebsite(Request $request_website, Request $request_rating, Request $request_games)
+    public function createNewWebsite(Request $request)
     {
         $date = date('Y-m-d H:i:s');
-        $name = $request_website->input('website_name');
-        $rating = $request_rating->input('website_rating');
-        $website_games = $request_games->input('website_games');
+        $name           = $request->input('website_name');
+        $rating         = $request->input('website_rating');
+        $website_games  = $request->input('website_games');
 
         $website = Website::create([
             'website' => $name,
@@ -71,14 +71,15 @@ class WebsiteController extends Controller
     {
         $products = Product::all();
         $websites = Website::where('id', $id)->get();
-        return view('edit_website', ['websites' => $websites, 'products' => $products]);
+        return view('website_edit', ['websites' => $websites, 'products' => $products]);
     }
 
-    public function editWebsite(Request $request_games, Request $request_prices, $id)
+    public function editWebsite( Request $request, $id)
     {
-        $website_rating = $request_rating->input('website_rating');
-        $website_games = $request_games->input('website_games');
-        $website_prices = $request_games->input('website_prices');
+        $website_rating     = $request->input('website_rating');
+        $webiste_blacklist  = $request->input('website_blacklist');
+        $website_games      = $request->input('website_games');
+        $website_prices     = $request->input('website_prices');
 
         if ($website_games != NULL) //if does contain the games will try to find and attach to the database
         {
@@ -87,13 +88,5 @@ class WebsiteController extends Controller
         }
 
         
-    }
-
-    public function teste(){
-        $test = Website::find(1);
-        $game = Product::find(2);
-       // dd($test);
-        dd($test->getProductsFromWebsite());
-        //dd($game->getWebsitesFromProduct());
     }
 }

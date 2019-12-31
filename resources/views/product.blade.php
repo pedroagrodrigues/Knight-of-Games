@@ -39,7 +39,7 @@
                             </tr>
                             @foreach($product->getCompaniesFromProduct as $company)
                             <tr>
-                                <td><?php //var_dump($company) ?>
+                                <td>
                                 <a href="{{ url('company/'.$company['id'])}}">{{$company['company']}}</a>
                                 </td>
                             </tr>
@@ -61,7 +61,7 @@
                     <div>
                         <table class="table table-bordered table-striped">
                             <tr>
-                                <th>Websites</th>
+                                <th>Websites Available</th>
                             </tr>
                             @foreach($websites as $website)
                             <?php $callWebsite = DB::select(DB::raw("SELECT * FROM websites WHERE websites.id = $website->website_id"));

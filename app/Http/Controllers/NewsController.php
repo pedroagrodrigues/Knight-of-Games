@@ -30,14 +30,13 @@ class NewsController extends Controller
         return view('news_create');
     }
 
-    public function createNews( Request $request_title, Request $request_author, 
-                                Request $request_body, Request $request_tags    )
+    public function createNews(Request $request)
     {
         $date = date('Y-m-d H:i:s');
-        $title  = $request_title->input('news_title');
-        $author = $request_author->input('news_author');
-        $body   = $request_body->input('news_body');
-        $tags   = $request_tags->input('news_tags');
+        $title  = $request->input('news_title');
+        $author = $request->input('news_author');
+        $body   = $request->input('news_body');
+        $tags   = $request->input('news_tags');
 
         $news = News::create([
             'title'     => $title,

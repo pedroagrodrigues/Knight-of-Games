@@ -26,7 +26,7 @@
                             </tr>
                             @foreach($users as $user)
                             <tr>
-                                <td><a href="{{ url('user/'.$user->id)}}">{{$user->name}}</a></td>
+                                <td><a href="{{ url('user_update/'.$user->id)}}">{{$user->name}}</a></td>
                                 <td>{{$user->email}}</td>
                             </tr>
                             @endforeach
