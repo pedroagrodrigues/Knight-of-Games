@@ -43,35 +43,43 @@ class ProductController extends Controller
         $product_genres         = $request->input('product_genres'); //must be a array in html format
         $product_release_date   = $request->input('product_release_date'); //what if there is no release date  
 
-        //Creating the new product
-        if ($product_release_date != NULL )
-        {
-            $product = Product::create([
-                'product'       => $product_name,
-                'status'        => $product_status,
-                'description'   => $product_description,
-                'created_at'    => $product_release_date,
-                'updated_at'    => $date
-            ]);
+        $find_product_name = Product::where('product', $product_name)->get(); 
+        if ($product_name == $find_product_name[0]->product){
+            echo "This product name exists in the database<br>";
         }
-        else 
+        else
         {
-            $product = Product::create([
-                'product'       => $product_name,
-                'status'        => $product_status,
-                'description'   => $product_description,
-                'created_at'    => NULL,
-                'updated_at'    => NULL
-            ]);   
-        }
+            //Creating the new product
+            if ($product_release_date != NULL )
+            {
+                $product = Product::create([
+                    'product'       => $product_name,
+                    'status'        => $product_status,
+                    'description'   => $product_description,
+                    'created_at'    => $product_release_date,
+                    'updated_at'    => $date
+                ]);
+            }
+            else 
+            {
+                $product = Product::create([
+                    'product'       => $product_name,
+                    'status'        => $product_status,
+                    'description'   => $product_description,
+                    'created_at'    => NULL,
+                    'updated_at'    => NULL
+                ]);   
+            }
 
-        //Finding the companies with their ids and attach to the database
-        $companies = Company::find($product_companies);
-        $product->getCompaniesFromProduct()->attach($companies);
+            //Finding the companies with their ids and attach to the database
+            $companies = Company::find($product_companies);
+            $product->getCompaniesFromProduct()->attach($companies);
+            
+            //Finding the genres with their ids and attach to the database
+            $genres = Genre::find($product_genres);
+            $product->getGenresFromProduct()->attach($genres);
+        }
         
-        //Finding the genres with their ids and attach to the database
-        $genres = Genre::find($product_genres);
-        $product->getGenresFromProduct()->attach($genres);
     }
 
     public function editProduct($id)
