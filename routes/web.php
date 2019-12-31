@@ -39,10 +39,10 @@ Route::post('/company_create', 'CompanyController@createNewCompany');
 
 Route::get('/products', 'ProductController@index');
 Route::get('/product/{id}', 'ProductController@viewProduct');
-Route::get('/product_create', 'ProductController@beforeCreateNewProduct');
-Route::post('/product_create', 'ProductController@createNewProduct');
-Route::get('/product_edit/{id}', 'ProductController@beforeEditProduct');
-Route::post('/product_edit/{id}', 'ProductController@editProduct');
+Route::get('/product_create', 'ProductController@beforeCreateNewProduct')->middleware('auth');
+Route::post('/product_create', 'ProductController@createNewProduct')->middleware('auth');
+Route::get('/product_edit/{id}', 'ProductController@beforeEditProduct')->middleware('auth');
+Route::post('/product_edit/{id}', 'ProductController@editProduct')->middleware('auth');
 
 Route::get('/users', 'UserController@index')->middleware('auth');;
 Route::get('/user_update/{id}', 'UserController@viewUser')->middleware('auth');
@@ -53,7 +53,6 @@ Route::get('/genre/{id}', 'GenreController@viewGenre');
 Route::post('/genre_create', 'GenreController@createNewGenre')->middleware('auth');
 
 Route::get('/websites', 'WebsiteController@index');
-Route::get('/websites/teste', 'WebsiteController@teste');
 Route::get('/website/{id}', 'WebsiteController@viewWebsite');
 Route::get('/website_create', 'WebsiteController@beforeCreateNewWebsite')->middleware('auth');
 Route::post('/website_create', 'WebsiteController@createNewWebsite')->middleware('auth');

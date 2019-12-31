@@ -33,17 +33,15 @@ class ProductController extends Controller
     }
 
 
-    public function createProduct(  Request $request_name,   Request $request_description,
-                                    Request $request_status, Request $request_companies, 
-                                    Request $request_genres, Request $request_release_date    )
+    public function createProduct(Request $request)
     {
         $date = date('Y-m-d H:i:s');
-        $product_name           = $request_name->input('product_name');
-        $product_description    = $request_description->input('product_description');
-        $product_status         = $request_status->input('product_status');
-        $product_companies      = $request_companies->input('product_companies'); //must be a array in html format
-        $product_genres         = $request_genres->input('product_genres'); //must be a array in html format
-        $product_release_date   = $request_release_date->input('product_release_date'); //what if there is no release date  
+        $product_name           = $request->input('product_name');
+        $product_description    = $request->input('product_description');
+        $product_status         = $request->input('product_status');
+        $product_companies      = $request->input('product_companies'); //must be a array in html format
+        $product_genres         = $request->input('product_genres'); //must be a array in html format
+        $product_release_date   = $request->input('product_release_date'); //what if there is no release date  
 
         //Creating the new product
         if ($product_release_date != NULL )
@@ -82,10 +80,10 @@ class ProductController extends Controller
         return view('product_edit');    
     }
 
-    public function beforeEditProduct(Request $request_companies, Request $request_genres, $id)
+    public function beforeEditProduct(Request $request, $id)
     {
         //Just updates the product
-        $product_companies  = $request_companies->input('product_companies'); 
-        $product_genres     = $request_genres->input('product_genres');  
+        $product_companies  = $request->input('product_companies'); 
+        $product_genres     = $request->input('product_genres');  
     }
 }

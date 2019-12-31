@@ -26,12 +26,12 @@ class CompanyController extends Controller
         return view('company_create'); 
     }
 
-    public function createCompany(Request $request_name, Request $request_description, Request $request_created)
+    public function createCompany(Request $request)
     {
         $date = date('Y-m-d H:i:s');
-        $company_name           = $request_name->input('company_name');
-        $company_description    = $request_description->input('company_description');
-        $company_created        = $request_created->input('company_created');
+        $company_name           = $request->input('company_name');
+        $company_description    = $request->input('company_description');
+        $company_created        = $request->input('company_created');
 
         if ($company_created == NULL)
         {

@@ -71,12 +71,14 @@ class WebsiteController extends Controller
     {
         $products = Product::all();
         $websites = Website::where('id', $id)->get();
-        return view('edit_website', ['websites' => $websites, 'products' => $products]);
+        return view('website_edit', ['websites' => $websites, 'products' => $products]);
     }
 
-    public function editWebsite(Request $request_games, Request $request_prices, $id)
+    public function editWebsite( Request $request_rating,   Request $request_blacklist,
+                                 Request $request_games,    Request $request_prices,    $id)
     {
         $website_rating = $request_rating->input('website_rating');
+        $webiste_blacklist = $request_blacklist->input('website_blacklist');
         $website_games = $request_games->input('website_games');
         $website_prices = $request_games->input('website_prices');
 
@@ -87,13 +89,5 @@ class WebsiteController extends Controller
         }
 
         
-    }
-
-    public function teste(){
-        $test = Website::find(1);
-        $game = Product::find(2);
-       // dd($test);
-        dd($test->getProductsFromWebsite());
-        //dd($game->getWebsitesFromProduct());
     }
 }
