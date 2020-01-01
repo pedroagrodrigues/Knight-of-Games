@@ -50,6 +50,7 @@ Route::post('/user_update/{id}', 'UserController@updateUser')->middleware('auth'
 
 Route::get('/genres', 'GenreController@index');
 Route::get('/genre/{id}', 'GenreController@viewGenre');
+Route::get('/genre_create', 'GenreController@beforeCreateNewGenre')->middleware('auth');
 Route::post('/genre_create', 'GenreController@createNewGenre')->middleware('auth');
 
 Route::get('/websites', 'WebsiteController@index');

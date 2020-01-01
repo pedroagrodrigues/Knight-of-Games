@@ -54,23 +54,43 @@ class WebsiteController extends Controller
 
         $find_website = Website::where('website', $name)->get();
 
-        if (!$find_website)
+        if ($name != NULL && $rating != NULL && $website_games != NULL )
         {
-            $website = Website::create([
-                'website' => $name,
-                'rating' => $rating,
-                'blacklist' => false,
-                'created_at' => $date,
-                'updated_at' => $date
-            ]);  		
-    
-            if ($website_games != NULL) //if does contain the games will try to find and attach to the database
+            if (!$find_website)
             {
-                $games = Product::find($website_games);
-                $website->getProductsFromWebsite()->attach($games);
+                $website = Website::create([
+                    'website' => $name,
+                    'rating' => $rating,
+                    'blacklist' => false,
+                    'created_at' => $date,
+                    'updated_at' => $date
+                ]);  		
+        
+                if ($website_games != NULL) //if does contain the games will try to find and attach to the database
+                {
+                    $games = Product::find($website_games);
+                    $website->getProductsFromWebsite()->attach($games);
+                }
             }
+            else echo "The website's name exists in the database<br>";
         }
-        else echo "The website's name exists in the database<br>";
+        else 
+        {
+            echo "There is missing fields: ";      
+            if ($name == NULL)
+            {
+                echo "Website Name ";
+            }
+            if ($product_status == NULL)
+            {
+                echo "Website Rating ";
+            }
+            if ($games == NULL)
+            {
+                echo "Games ";
+            }
+            echo "<br>";
+        }
         
     }
 
@@ -88,11 +108,20 @@ class WebsiteController extends Controller
         $website_games      = $request->input('website_games');
         $website_prices     = $request->input('website_prices');
 
-        if ($website_games != NULL) //if does contain the games will try to find and attach to the database
+        if ($website_rating == NULL && $webiste_blacklist == NULL && $website_games == NULL && $website_prices == NULL)
         {
-            $games = Product::find($website_games);
-            $website->getProductsFromWebsite()->attach($games);
+            echo "There is no update to the website";
         }
+        else 
+        {
+            if ($website_games != NULL) //if does contain the games will try to find and attach to the database
+            {
+                $games = Product::find($website_games);
+                $website->getProductsFromWebsite()->attach($games);
+            }
+        }
+        echo '<a href = "/websites">Click Here</a> to go back.';
+        
 
         
     }
