@@ -33,7 +33,7 @@ class ProductController extends Controller
     }
 
 
-    public function createProduct(Request $request)
+    public function createNewProduct(Request $request)
     {
         $date = date('Y-m-d H:i:s');
         $product_name           = $request->input('product_name');
@@ -42,10 +42,15 @@ class ProductController extends Controller
         $product_companies      = $request->input('product_companies'); //must be a array in html format
         $product_genres         = $request->input('product_genres'); //must be a array in html format
         $product_release_date   = $request->input('product_release_date'); //what if there is no release date  
+        $timestamp = strtotime($product_release_date);
+        dd($product_name, $product_description, $product_status, $product_companies, $product_genres, $product_release_date, $timestamp);
 
         $find_product_name = Product::where('product', $product_name)->get(); 
-        if ($product_name == $find_product_name[0]->product){
+        //If the does exists the product name or has the same characters in lower case
+        if ($find_product_name || strtolower($product_name) == strtolower($find_product_name[0]->product))
+        {
             echo "This product name exists in the database<br>";
+            echo 'Click <a href = "/products">here</a> to return to the products list<br>';
         }
         else
         {

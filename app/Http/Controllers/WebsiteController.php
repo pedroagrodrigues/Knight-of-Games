@@ -52,19 +52,26 @@ class WebsiteController extends Controller
         $rating         = $request->input('website_rating');
         $website_games  = $request->input('website_games');
 
-        $website = Website::create([
-            'website' => $name,
-            'rating' => $rating,
-            'blacklist' => false,
-            'created_at' => $date,
-            'updated_at' => $date
-        ]);  		
+        $find_website = Website::where('website', $name)->get();
 
-        if ($website_games != NULL) //if does contain the games will try to find and attach to the database
+        if (!$find_website)
         {
-            $games = Product::find($website_games);
-            $website->getProductsFromWebsite()->attach($games);
+            $website = Website::create([
+                'website' => $name,
+                'rating' => $rating,
+                'blacklist' => false,
+                'created_at' => $date,
+                'updated_at' => $date
+            ]);  		
+    
+            if ($website_games != NULL) //if does contain the games will try to find and attach to the database
+            {
+                $games = Product::find($website_games);
+                $website->getProductsFromWebsite()->attach($games);
+            }
         }
+        else echo "The website's name exists in the database<br>";
+        
     }
 
     public function beforeEditWebsite($id)
