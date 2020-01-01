@@ -40,6 +40,7 @@ class GenreController extends Controller
                     'created_at'    => $date,
                     'updated_at'    => $date
                 ]);
+                echo "The New Genre Type inserted<br>";
             }
             else echo "The Genre Type already contains in the database<br>";
         }
@@ -47,6 +48,6 @@ class GenreController extends Controller
         {
             echo "The is no Genre inserted<br>";
         }
-        echo 'Click <a href="/genres">here</a> to return to the products list<br>';
+        echo 'Click <a href="/genres">here</a> to return to the genres list<br>';
     }
 }

@@ -40,7 +40,7 @@
                                 @csrf
                                     <h4>Wanna update the user?</h4>
                                     @foreach($roles as $role)
-                                    <input type="radio" name="role_id" value=<?php echo $role->id; ?>>
+                                    <input type="radio" name="role_id" value="<?php echo $role->id; ?>">
                                     <?php 
                                     if ($role->role == "common")
                                     {
@@ -68,7 +68,8 @@
                         else 
                         {
                             echo "Permission denied: You need to be administrator<br>";
-                        }?>
+                        }
+                        ?>
                     </div>
                 </div>
             </div>

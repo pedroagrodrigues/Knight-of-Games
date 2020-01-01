@@ -14,13 +14,13 @@
                         </div>
                     @endif
                     <form action="/company_create" method="post">
-                    @csrf
-                    <div class="form-group">
-                    Company: <input type="text" name="company_name"><br>
-                    Description: <input type="text" name="company_description"><br>
-                    Created at: <input type="date" name="company_created"><br>
-                    <input type="submit" value="Submit">
-                    </div>
+                        @csrf
+                        <div class="form-group">
+                            Company: <input type="text" name="company_name"><br>
+                            Description: <input type="text" name="company_description"><br>
+                            Created at: <input type="date" name="company_created"><br>
+                            <input type="submit" value="Submit">
+                        </div>
                     </form>
                 </div>
             </div>

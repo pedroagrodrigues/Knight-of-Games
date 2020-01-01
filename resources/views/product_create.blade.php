@@ -35,7 +35,7 @@
                             foreach($enum as $status)
                             {
                     ?>
-                                <input type="radio" name="product_status" value=<?php echo $i;?>>
+                                <input type="radio" name="product_status" value="<?php echo $i;?>">
                                 <?php 
                                     if ($status == "available")
                                     {
@@ -60,7 +60,7 @@
                             foreach($companies as $company)
                             {
                     ?>
-                                <input type="checkbox" name="product_companies[]" value=<?php echo $company['id'] ?>><?php echo $company['company']; ?><br>
+                                <input type="checkbox" name="product_companies[]" value="<?php echo $company['id'] ?>"><?php echo $company['company']; ?><br>
                     <?php
                             }
                     ?>
@@ -69,7 +69,7 @@
                             foreach($genres as $genre)
                             {
                     ?>
-                                <input type="checkbox" name="product_genres[]" value=<?php echo $genre['id'] ?>><?php echo $genre['genre'];?><br>
+                                <input type="checkbox" name="product_genres[]" value="<?php echo $genre['id']; ?>"><?php echo $genre['genre'];?><br>
                     <?php
                             }
                     ?>

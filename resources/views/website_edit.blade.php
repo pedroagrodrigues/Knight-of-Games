@@ -37,7 +37,7 @@
                             foreach($enum as $rating)
                             {
                     ?>
-                                <input type="radio" name="website_rating">
+                                <input type="radio" name="website_rating" value="<?php echo $rating; ?>">
                                 <?php 
                                     if ($rating == "1")
                                     {
@@ -67,7 +67,7 @@
                     <input type="radio" name="website_blacklist" id="1">Yes<br>
                     <input type="radio" name="website_blacklist" id="0">No<br>
                     <h4>Games Edit</h4>
-                    <input type="checkbox" name="website_games[]"><br>
+                    <input type="checkbox" name="website_games[]" value=[]><br>
                     <input type="submit" value="Edit Site">
                     </div>
                     </form>

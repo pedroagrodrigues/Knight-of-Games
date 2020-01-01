@@ -15,10 +15,10 @@
                     @endif
                     <form action="/genre_create" method="post">
                     @csrf
-                    <div class="form-group">
-                    <h3>Genre:</h3><input type="text" name="genre_name"><br>
-                    <input type="submit" value="Submit">
-                    </div>
+                        <div class="form-group">
+                            <h3>Genre:</h3><input type="text" name="genre_name"><br>
+                            <input type="submit" value="Submit">
+                        </div>
                     </form>
                 </div>
             </div>
