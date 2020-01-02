@@ -12,7 +12,7 @@
     <form action="{{ route('login') }}" class="form-authentication" method="POST">
         @csrf
         <div class="form-inputs">
-            <h1>UChoose</h1>
+            <h1>{{ config('app.name') }}</h1>
             <h2 class="quote">The price finder</h2>
             <div class="form-inputs-with-icons">
                 <div class="input-with-icon">

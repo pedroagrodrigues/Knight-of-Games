@@ -50,3 +50,5 @@ Route::get('/website_create', 'WebsiteController@beforeCreateNewWebsite');
 Route::post('/website_create', 'WebsiteController@createNewWebsite');
 Route::get('/website_edit/{id}', 'WebsiteController@beforeEditWebsite');
 Route::post('/website_edit/{id}', 'WebsiteController@editWebsite');
+
+
