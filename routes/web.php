@@ -16,15 +16,6 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/login/{provider}', 'SocialController@redirectToProvider')
@@ -54,7 +45,9 @@ Route::post('/genre_create', 'GenreController@createNewGenre')->middleware('auth
 
 Route::get('/websites', 'WebsiteController@index');
 Route::get('/website/{id}', 'WebsiteController@viewWebsite');
-Route::get('/website_create', 'WebsiteController@beforeCreateNewWebsite')->middleware('auth');
-Route::post('/website_create', 'WebsiteController@createNewWebsite')->middleware('auth');
-Route::get('/website_edit/{id}', 'WebsiteController@beforeEditWebsite')->middleware('auth');
-Route::post('/website_edit/{id}', 'WebsiteController@editWebsite')->middleware('auth');
+Route::get('/website_create', 'WebsiteController@beforeCreateNewWebsite');
+Route::post('/website_create', 'WebsiteController@createNewWebsite');
+Route::get('/website_edit/{id}', 'WebsiteController@beforeEditWebsite');
+Route::post('/website_edit/{id}', 'WebsiteController@editWebsite');
+
+
