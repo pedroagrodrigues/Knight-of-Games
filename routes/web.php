@@ -51,3 +51,7 @@ Route::get('/website_edit/{id}', 'WebsiteController@beforeEditWebsite');
 Route::post('/website_edit/{id}', 'WebsiteController@editWebsite');
 
 
+//-------- General routes ---------
+Route::get('banner', function(){
+        return view('/layouts/banner');
+});
