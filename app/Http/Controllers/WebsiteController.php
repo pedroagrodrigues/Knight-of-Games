@@ -52,11 +52,11 @@ class WebsiteController extends Controller
         $rating         = $request->input('website_rating');
         $website_games  = $request->input('website_games');
 
-        $find_website = Website::where('website', $name)->get();
+        $find_website = Website::where('website', $name);
 
         if ($name != NULL && $rating != NULL && $website_games != NULL )
         {
-            if (!$find_website)
+            if (!$find_website && strtolower($name) != strtolower($find_website[0]->website))
             {
                 $website = Website::create([
                     'website' => $name,
@@ -98,7 +98,7 @@ class WebsiteController extends Controller
     {
         $products = Product::all();
         $websites = Website::where('id', $id)->get();
-        return view('website_edit', ['websites' => $websites, 'products' => $products]);
+        return view('website_edit', ['id' => $id, 'websites' => $websites, 'products' => $products]);
     }
 
     public function editWebsite( Request $request, $id)
@@ -121,8 +121,5 @@ class WebsiteController extends Controller
             }
         }
         echo '<a href = "/websites">Click Here</a> to go back.';
-        
-
-        
     }
 }

@@ -29,7 +29,7 @@
                     if ($actualUser->role_id === 3)
                     {
                     ?>
-                    <form action="/website_edit/$id" method="post">
+                    <form action="/website_edit/<?php echo $id; ?>" method="post">
                     <div class="form-group">
                     <b>Website:</b>  {{ $websites[0]->website }}<br>
                     <h4>Rating:</h4>

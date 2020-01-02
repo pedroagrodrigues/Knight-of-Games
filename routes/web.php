@@ -18,14 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/example','GeneralController@retrieveSteamSpyTop100InTwoWeeks');
 
 Route::get('/login/{provider}', 'SocialController@redirectToProvider')
         ->where('provider','google|facebook|twitter');
