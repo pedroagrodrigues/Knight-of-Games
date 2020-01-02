@@ -60,7 +60,7 @@ body{
 }
 .logo{
 	position: absolute;
-	background: url('/images/lights.jpg') no-repeat;
+	background: url('/images/logo.png') no-repeat;
 	background-size: 128px 128px;
 	width: auto;
 	height: auto;

@@ -6,7 +6,7 @@
     <a href="{{ url('/') }}">
         <div class='logo-wrapper'>
             <div class='logo-base'></div>
-            <div class="logo">teste</div>
+            <div class="logo"></div>
         </div>
     </a>
     <form action="{{ route('login') }}" class="form-authentication" method="POST">
