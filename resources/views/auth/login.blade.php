@@ -3,9 +3,12 @@
 @section('content')
 <link href="{{ asset('css/account.css') }}" rel="stylesheet">
 <div class='authentication-wrapper'>
-    <!-- <a href="{{ url('/') }}">
-        <div class="logo"></div>
-    </a> -->
+    <a href="{{ url('/') }}">
+        <div class='logo-wrapper'>
+            <div class='logo-base'></div>
+            <div class="logo">teste</div>
+        </div>
+    </a>
     <form action="{{ route('login') }}" class="form-authentication" method="POST">
         @csrf
         <div class="form-inputs">

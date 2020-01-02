@@ -41,7 +41,30 @@ body{
 	padding: 15px 15px 25px;
 	margin: 10px 0 20px;
 }
-
+.logo-wrapper{
+	width: 128px;
+    height: 128px;
+    position: absolute;
+    left: 50%;
+    top: -64px;
+    margin-left: -64px;
+}
+.logo-base{
+	position: absolute;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 118px;
+    height: 118px;
+    left: 5px;
+    top: 5px;
+}
+.logo{
+	position: absolute;
+	background: url('/images/lights.jpg') no-repeat;
+	background-size: 128px 128px;
+	width: auto;
+	height: auto;
+}
 .form-inputs{
 	width: 360;
 	padding: 10px;
