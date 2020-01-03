@@ -2,10 +2,10 @@
 
 <div class="banner-wrapper">
     
-    <div class="logo-wrapper">
+    <div class="page-logo-wrapper">
         <a href="/">
-            <div class="logo-base"></div>
-            <div class="logo"></div>
+            <div class="page-logo-base"></div>
+            <div class="page-logo"></div>
         </a>
     </div>
     <!-- <div class="social-wrapper"> -->
@@ -58,6 +58,5 @@
             </div>
     </div>
 </div>
-
 
 

@@ -1,8 +1,16 @@
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
-
-// Variables
 @import 'variables';
+body {
+	margin: 0;
+	background-color: $light-grey;
+}
 
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
+.main-content-wrapper {
+	height: 500px;
+	width: 85%;
+	background-color: $foreground;
+	position: absolute;
+	top: $banner-height;
+	margin-top: 12px;
+	left: 50%;
+	transform: translate(-50%, 0);
+}

@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @section('content')
 <link href="{{ asset('css/account.css') }}" rel="stylesheet">
 <div class='authentication-wrapper'>

@@ -1,12 +1,8 @@
-$background: #252525;
-$foreground: #353535;
-$white: #f5f5f7;
+@import 'variables';
 $banner-height: 150px;
 
 $logo-size: $banner-height;
-body {
-	margin: 0;
-}
+
 .banner-wrapper {
 	z-index: 15;
 	position: sticky;
@@ -15,7 +11,7 @@ body {
 	width: 100%;
 	float: left;
 }
-.logo-wrapper {
+.page-logo-wrapper {
 	z-index: 10;
 	position: relative;
 	height: $logo-size;
@@ -23,7 +19,7 @@ body {
 	float: inherit;
 }
 
-.logo-base {
+.page-logo-base {
 	position: absolute;
 	background-color: $white;
 	width: $logo-size;
@@ -32,7 +28,7 @@ body {
 	border-radius: 0px 0px 75px 0px;
 }
 
-.logo {
+.page-logo {
 	position: absolute;
 	background: url('/images/logo.png') no-repeat;
 	background-size: $logo-size $logo-size;
@@ -67,6 +63,7 @@ body {
 	transform: translate(-50%, 0%);
 	top: 60%;
 }
+
 .input-with-icon {
 	position: relative;
 	padding-top: 3px;
@@ -74,7 +71,7 @@ body {
 
 .icon {
 	position: absolute;
-	color: #ed1c24;
+	color: $red;
 	font-size: 20px;
 	left: 10px;
 	top: 30%;
@@ -93,7 +90,7 @@ body {
 	font-size: 16px;
 	height: auto;
 	line-height: 1.2;
-	background-color: #fff;
+	background-color: $white;
 	padding: 10px;
 	padding-left: 40px !important;
 }
@@ -109,7 +106,7 @@ body {
 .links-wrapper {
 	z-index: 9;
 	position: relative;
-	background-color: black;
+	background-color: $black;
 	width: $banner-height;
 	height: $banner-height;
 	float: right;
@@ -125,11 +122,11 @@ body {
 	font-weight: bold;
 	text-transform: uppercase;
 	text-align: center;
-	color: #fff;
+	color: $white;
 	text-decoration: none;
-	background-color: #ed1c24;
+	background-color: $red;
 	border-radius: 3px;
-	border: 2px solid #a50d13;
+	border: 2px solid $dark-red;
 	outline: 0;
 	padding: 10px 16px;
 	width: 75px;
@@ -138,11 +135,11 @@ body {
 }
 
 .bnt:hover {
-	background-color: #bc3315;
+	background-color: $orange;
 }
 .bnt:active {
 	background: linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
-	background-color: #a50d13;
+	background-color: $dark-red;
 	position: relative;
 	top: 1px;
 }
