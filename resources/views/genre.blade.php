@@ -15,16 +15,11 @@
                     @endif
 
                     <div>                
-                        <table class="table table-bordered table-striped">
-                        <tr>
-                            <th>Genre</th>
-                        </tr>
+                        <b>Genre</b>
                         @foreach($genres as $genre)
-                        <tr>
-                            <td><a href="{{ url('genres/'.$genre['id'])}}">{{$genre['genre']}}</a></td>
-                        </tr>
+                            {{$genre['genre']}}
                         @endforeach
-                        </table>
+                        <br>
                         <table class="table table-bordered table-striped">
                         <tr>
                             <th>Games</th>

@@ -16,10 +16,10 @@
 
                     <div>
                     @foreach($products as $product)
-                            <b>Product:</b>{{$product['product']}}<br>
-                            <b>Status:</b>{{$product['status']}}<br>
-                            <b>Descritpion:</b>{{$product['description']}}<br>
-                            <b>Created at:</b>{{$product['created_at']}}<br>
+                            <b>Product:</b> {{$product['product']}}<br>
+                            <b>Status:</b> {{$product['status']}}<br>
+                            <b>Descritpion:</b> {{$product['description']}}<br>
+                            <b>Created at:</b> {{$product['created_at']}}<br>
                     @endforeach
                         <!-- <table class="table table-bordered table-striped"> -->
                             

@@ -15,20 +15,11 @@
                     @endif
 
                     <div>
-                    <table class="table table-bordered table-striped">
-                            <tr>
-                                <th>Company</th>
-                                <th>Description</th>
-                                <th>Created at</th>
-                            </tr>
                             @foreach($companies as $company)
-                            <tr>
-                                <td>{{$company->company}}</a></td>
-                                <td>{{$company->description}}</td>
-                                <td>{{$company->created_at}}</td> 
-                            </tr>
+                                <b>Company:</b> {{$company->company}}<br>
+                                <b>Description:</b> {{$company->description}}<br>
+                                <b>Created at:</b> {{$company->created_at}}<br>
                             @endforeach
-                    </table>
                     <table class="table table-bordered table-striped">
                             <tr>
                                 <th>Products</th>
@@ -40,7 +31,6 @@
                             @endforeach
                     </table>
                     </div>
-                    You are logged in!
                 </div>
             </div>
         </div>

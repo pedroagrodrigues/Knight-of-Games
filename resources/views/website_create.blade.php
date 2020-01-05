@@ -37,7 +37,7 @@
                             foreach($enum as $rating)
                             {
                     ?>
-                                <input type="radio" name="website_rating">
+                                <input type="radio" name="website_rating" value="<?php echo $rating; ?>">
                                 <?php 
                                     if ($rating == "1")
                                     {
@@ -68,7 +68,7 @@
                             foreach($products as $product)
                             {
                     ?>
-                                <input type="checkbox" name="website_games[]"> <?php echo $product['product'];?><br>
+                                <input type="checkbox" name="website_games[]" value="<?php echo $product['id']; ?>"> <?php echo $product['product'];?><br>
                     <?php
                             }
                     ?>
