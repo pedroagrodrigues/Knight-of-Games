@@ -68,3 +68,6 @@ Route::post('/website_edit/{id}', 'WebsiteController@editWebsite')->middleware('
 Route::get('banner', function(){
         return view('/layouts/banner');
 });
+
+Route::get('/genre_create',
+ 'GenreController@beforeCreateNewGenre')->middleware('auth');
