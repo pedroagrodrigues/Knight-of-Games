@@ -31,7 +31,7 @@ A aplicação a ser desenvolvida deve:
 2. Conter pelo menos 6 views diferentes.
 3. A base de dados da aplicação deverá conter pelo menos 5 tabelas distintas.
 4. Implementar funcionalidades de _API_.
-5. Ser desenvolvida utilizado a framework Laravel.
+5. Ser desenvolvida utilizado a _framework_ [Laravel](https://www.laravel.com).
 
 ### 1.2.2 Requisitos Extra
 Para além dos requisitos base, também foram propostos alguns requisitos extra, nomeadamente: 
@@ -44,10 +44,10 @@ Para o desenvolvimento deste projeto realizou-se um _brainstorming_ sobre que ti
 Na sequência deste _brainstorming_, com inspiração no blog [_AllKeyShop_](https://allkeyshop.com), sugeriu-se ao docente a implementação de um _site_ de jogos. Este site teria o objetivo de procurar e comparar jogos vendidos online, disponibilizando assim hiperligações para redirecionar o utilizador para _websites_ onde tais jogos podem ser efetivamente adquiridos.
 
 # 3 Revisão da literatura e plano de ação
-Durante o desenvolvimento deste site foram realizadas várias pesquisas utilizando o motor de pesquisa [_Google_](https://www.google.com) que muitas vezes conduziu essa pesquisa até a página [_Stackoverflow_](https://stackoverflow.com/), durante o desenvolvimento de front end, procurou-se tutoriais, sobretudo de _CSS_, de entre as várias fontes, acabou por destacar-se a página [_w3schools.com_](https://www.w3schools.com/) a qual revelou-se deveras a mais importante na elaboração do _front-end_. O aspeto da aplicação desenvolvida teve como fontes de inspiração o blog acima referido, [_AllKeyShop_](https://allkeyshop.com), além disso alguns menus e cores foram inspirados na página [_Trakt_](https://trakt.tv) que teve um impacto positivo na elaboração do site.
+Durante o desenvolvimento deste site foram realizadas várias pesquisas utilizando o motor de pesquisa [_Google_](https://www.google.com) que muitas vezes conduziu essa pesquisa até a página [_Stackoverflow_](https://stackoverflow.com/), durante o desenvolvimento de _front-end_, procurou-se tutoriais, sobretudo de _CSS_, de entre as várias fontes, acabou por destacar-se a página [_w3schools.com_](https://www.w3schools.com/) a qual revelou-se deveras a mais importante na elaboração do _front-end_. O aspeto da aplicação desenvolvida teve como fontes de inspiração o blog acima referido, [_AllKeyShop_](https://allkeyshop.com), além disso alguns menus e cores foram inspirados na página [_Trakt_](https://trakt.tv) que teve um impacto positivo na elaboração do site.
 
 # 4 Solução proposta
-Seguindo os requisitos descritos anteriormente, deu-se início à implementação sob o padrão arquitetural ___MVC___ recorrendo à framework [_Laravel_](https://laravel.com/).
+Seguindo os requisitos descritos anteriormente, deu-se início à implementação sob o padrão arquitetural ___MVC___ recorrendo à _framework_ [_Laravel_](https://laravel.com/).
 
 ## 4.1 Descrição geral da solução
 Durante a elaboração desta aplicação foram utilizados vários controladores para desempenharem as várias funções necessárias para o bom funcionamento da aplicação.
@@ -65,4 +65,47 @@ Um controlador básico que indica os géneros (_Genres_) dos jogos, cada género
 - __UserController__:
 - __WebsiteController__:
  
+# 5 Utilização da aplicação
+Esta aplicação foi desenvolvida recorrendo à framework [Laravel](https://www.laravel.com). Por este motivo existem alguns pré-requisitos que devem ser tomados em conta antes de se proceder à instalação da mesma.
+
+## 5.1 Requisitos do sistema
+Préviamente à instalação o servidor onde esta aplicação deverá correr necessita dos seguintes softwares instalados:
+- [Bash](https://www.gnu.org/software/bash/)
+- [Node.js](https://nodejs.org/en/)
+- [npm](https://www.npmjs.com/)
+- [MySQL](https://www.mysql.com/)
+- PHP >= 7.2.0
+- BCMath PHP Extention
+- Ctype PHP Extension
+- JSON PHP Extension
+- Mbstring PHP Extension
+- OpenSSL PHP Extension
+- PDO PHP Extension
+- Tokenizer PHP Extension
+- XML PHP Extension
+- [Composer](https://getcomposer.org/)
+
+## 5.2 Instalação
+Uma vez tendo todos os pré-requisitos instalados na máquina servidor devem os seguintes comandos devem ser introduzidos no terminal _Bash_ desta máquina: 
+
+	git clone https://github.com/pedroagrodrigues/Knight-of-Games.git project
+    cd project
+    composer install
+    npm install
+	
+    
+
+### 5.2.1 Inicialização:
+Uma vez concluídos os passos acima descridos, procede-se então à configuração do ficheiro _.env_, para tal copiar o ficheiro _.env.example_ e renomear para _.env_. Posto isto devem ser configurados os acessos à base de dados. Para tal devem ser editados os parâmetros compreendidos entre a linha 9 e a linha 14 de forma a corresponderem às configurações do _MySQL_. De seguida executar os próximos passos.
+
+    php artisan key:generate
+    php artisan seed
+    php artisan serve
+
+Concluídas as indicações acima descritas deverá ser apresentada a seguinte mensagem no terminal:
+
+    Laravel development server started: http://127.0.0.1:8000
+
+Por outras palavras a instalação foi bem sucedida e o servidor está a correr em localhost na porta 8000.
+
 </div>
