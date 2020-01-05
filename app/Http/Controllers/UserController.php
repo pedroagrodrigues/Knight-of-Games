@@ -14,14 +14,14 @@ class UserController extends Controller
     {
         //$users = User::all();
         $users = DB::select(DB::raw("SELECT * FROM `users` where not role_id = 3"));
-        return view('users', ['users' => $users]);
+        return view('dashboard/users', ['users' => $users]);
     }
 
     public function viewUser($id)
     {
         $users = User::where('id', $id)->get();
         $roles = Role::all();
-        return view('user_update', ['users' => $users, 'roles' => $roles]);
+        return view('dashboard/user_update', ['users' => $users, 'roles' => $roles]);
     }
 
     public function updateUser(Request $request, $id) {

@@ -1,6 +1,6 @@
 @import 'variables';
 body {
-	background-image: url('/images/lights.jpg');
+	background-image: $logo;
 	background-repeat: no-repeat;
 }
 .authentication-wrapper {
@@ -61,7 +61,7 @@ body {
 }
 .logo {
 	position: absolute;
-	background: url('/images/logo.png') no-repeat;
+	background: $logo no-repeat;
 	background-size: 128px 128px;
 	width: 100%;
 	height: 100%;
