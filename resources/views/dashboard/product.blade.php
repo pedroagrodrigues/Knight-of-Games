@@ -15,18 +15,25 @@
                     <div>
                         <table class="table table-bordered table-striped">
                             <tr>
-                                <th>Product</th>
+                                <th>Nome</th>
+                                <th>Estado</th>
+                                <th>Descrição</th>
+                                <th>Sites</th>
+                                
                             </tr>
+                            
                             @foreach($products as $product)
                             <tr>
-                                <td><a href="{{ url('product/'.$product['id'])}}"> {{$product['product']}}</a></td>
+                                <td>{{$product['product']}}</td>
+                                <td>{{$product['status']}}</td>
+                                <td>{{$product['description']}}</td>
+                                <td>{{$product['description']}}</td>
                             </tr>
                             @endforeach
                         </table>
                         <?php
                     ?>
                     </div>
-                    You are logged in!
                 </div>
             </div>
         </div>

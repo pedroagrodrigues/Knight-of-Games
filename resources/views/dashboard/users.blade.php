@@ -8,14 +8,12 @@
             <div class="card">
                 <div class="card-body">
                     @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
+                    <div class="alert alert-success" role="alert">
+                        {{ session('status') }}
+                    </div>
                     @endif
 
-                    <?php if ($user->role_id === 3)
-                    {    
-                     ?>
+                    @if ($user->role_id === 3)
                     <div>
                         <table class="table table-bordered table-striped">
                             <tr>
@@ -30,17 +28,10 @@
                             @endforeach
                         </table>
                     </div>
-                    <?php 
-                    }
-                    else 
-                    {
-                    ?>
-                    You don't have permission to acess this! You need to be admin!    
-                    <?php    
-                    }
-                    ?>
-                    
-                    You are logged in!
+                    @else
+                    You don't have permission to acess this! You need to be admin!
+
+                    @endif
                 </div>
             </div>
         </div>
