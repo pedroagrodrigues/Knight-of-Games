@@ -33,7 +33,7 @@ class ProductController extends Controller
     }
 
 
-    public function createProduct(Request $request)
+    public function createNewProduct(Request $request)
     {
         $date = date('Y-m-d H:i:s');
         $product_name           = $request->input('product_name');
