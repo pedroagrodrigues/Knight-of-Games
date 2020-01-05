@@ -52,6 +52,7 @@ Seguindo os requisitos descritos anteriormente, deu-se início à implementaçã
 ## 4.1 Descrição geral da solução
 Durante a elaboração desta aplicação foram utilizados vários controladores para desempenharem as várias funções necessárias para o bom funcionamento da aplicação.
 - __CommentController__:
+Trata-se no ponto de vista geral, os comentários dos utilizadores. Um comentário do utilizador podia ser um produto, de um determinado site que distribui os jogos ou de uma notícia que aparecesse no site _Knight of Games_. Podia ser eliminado ou reportado por um moderador (_moderator_) ou de um administrador (_administrator_). No fim não foi desenvolvido a implementação para o produto final. No entanto, de futuro pode ser desenvolvido para por em prática juntamente com a framework [_Laravel_](https://laravel.com/).
 - __CompanyController__:
 - __GenreController__:
 - __HomeController__:
