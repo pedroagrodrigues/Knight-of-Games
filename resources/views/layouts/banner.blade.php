@@ -18,7 +18,9 @@
             <div class="icon">&#xf002;</div>
             <div class="input-field-controler">
                     <div class="input-field-div">
-                        <input class="input-field" type="search" name="search" placeholder="Search" autofocus>
+                        <form action="">
+                            <input class="input-field" type="search" name="search" placeholder="Search" autofocus>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -43,12 +45,16 @@
                         @endif
                     </div>
                 @else
+                    <div class="bnt-container">
                     
-                    <a class="dropdown-item" href="{{ route('logout') }}" 
-                    onclick="event.preventDefault(); 
-                    document.getElementById('logout-form').submit();">
-                        {{ __('Logout') }}
-                    </a>
+                        <a class="dropdown-item" href="{{ route('logout') }}" 
+                        onclick="event.preventDefault(); 
+                        document.getElementById('logout-form').submit();">
+                            <div class="bnt">
+                                {{ __('Logout') }}
+                            </div>
+                        </a>
+                    </div>
                     
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         @csrf

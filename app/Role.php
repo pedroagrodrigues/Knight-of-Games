@@ -14,23 +14,4 @@ class Role extends Model
         return $this->hasMany(User::class); //Eloquent will assume the foreign key of User is role_id
     }
 
-    public function findAllUsers()
-    {
-        $users = App\User::find(1)->users()->where('name', 'e-mail', 'password');
-    }
-
-    public function findAdmins()
-    {
-        // $admins =
-    }
-
-    public function findModerators()
-    {
-        // $moderators =
-    }
-
-    public function findCommons()
-    {
-        // $commons =
-    }
 }

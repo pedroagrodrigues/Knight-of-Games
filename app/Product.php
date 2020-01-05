@@ -30,7 +30,7 @@ class Product extends Model
      */
     public function getWebsitesFromProduct()
     {
-        return $this->belongsToMany(Website::class, 'product_has_website', 'website_id', 'product_id');
+        return $this->belongsToMany(Website::class, 'product_has_website', 'product_id', 'website_id');
     }
 
     /**

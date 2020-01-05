@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('dashboard.dashboard')
 
 @section('content')
 <?php $actualUser = Auth::user();?>
@@ -6,13 +6,12 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Dashboard</div>
 
                 <div class="card-body">
                     @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
+                    <div class="alert alert-success" role="alert">
+                        {{ session('status') }}
+                    </div>
                     @endif
                     <div>
                         <?php 
@@ -21,10 +20,10 @@
                             if ($users[0]->role_id != 3)//if the chosen user does not contain admin role 
                             {
                         ?>
-                                User Information:<br>
-                                Username: {{$users[0]->name}}<br>
-                                Contact: {{$users[0]->email}}<br>
-                                Role:
+                        User Information:<br>
+                        Username: {{$users[0]->name}}<br>
+                        Contact: {{$users[0]->email}}<br>
+                        Role:
                         <?php  
                                 if ($users[0]->role_id == 1)
                                 {
@@ -35,12 +34,12 @@
                                     echo "Moderator<br>";
                                 }
                         ?>
-                                <form action="/user_update/$id" method="post">
-                                @csrf
-                                    <h4>Wanna update the user?</h4>
-                                    @foreach($roles as $role)
-                                    <input type="radio" name="role_id" value=<?php echo $role->id; ?>>
-                                    <?php 
+                        <form action="/user_update/$id" method="post">
+                            @csrf
+                            <h4>Wanna update the user?</h4>
+                            @foreach($roles as $role)
+                            <input type="radio" name="role_id" value=<?php echo $role->id; ?>>
+                            <?php 
                                     if ($role->role == "common")
                                     {
                                         echo "Common<br>";
@@ -54,9 +53,9 @@
                                         echo "Administrator<br>";
                                     }
                                     ?>
-                                    @endforeach
-                                    <input type="submit" value="Update User">
-                                </form>
+                            @endforeach
+                            <input type="submit" value="Update User">
+                        </form>
                         <?php
                             } 
                             else 
