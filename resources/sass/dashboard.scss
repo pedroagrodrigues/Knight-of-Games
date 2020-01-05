@@ -27,7 +27,7 @@
 }
 .logo {
     background: $logo no-repeat;
-    background-size: auto;
+    background-size: contain;
     line-height: 1;
     position: absolute;
     left: 45px;
