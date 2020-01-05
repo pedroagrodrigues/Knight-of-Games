@@ -9,26 +9,18 @@
             <div class="aro-genre-list">
                 <ul id='link-table'>
                     <li>
-                        <a class="link" href="/">Home</a>
-                    </li>
-                    <li>
-                        <a class="link" href="">
-                            Cenas
+                        <a class="link" href="/products">
+                            Produtos
                         </a>
                     </li>
                     <li>
-                        <a class="link" href="">
-                            Coisas
+                        <a class="link" href="/companies">
+                            Sites
                         </a>
                     </li>
                     <li>
-                        <a class="link" href="">
-                            Mais Cenas
-                        </a>
-                    </li>
-                    <li>
-                        <a class="link" href="">
-                            Mais coisas
+                        <a class="link" href="/users">
+                            Utilizadores
                         </a>
                     </li>
                 </ul>
@@ -42,11 +34,7 @@
     </div>
 </div>
 
-
-<div class="responsive-account-container">
-    <div>
-        <h1 class="account-header">Account</h1>
-        <div class="account-messages-container"></div>
-    </div>
+<div class='content'>
+    @yield('content')
 </div>
 @endif
