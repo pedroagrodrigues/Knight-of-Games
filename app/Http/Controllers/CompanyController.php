@@ -11,13 +11,14 @@ class CompanyController extends Controller
     public function index()
     {
         $companies = Company::all();
-        return view('companies', ['companies' => $companies]);
+        return view('dashboard.companies', ['companies' => $companies]);
     }
 
     public function viewCompany($id)
     {
         $companies = Company::where('id', $id)->get();
-        return view('company', ['companies' => $companies]);
+        //$products = Company::with('getProductsFromCompany')->where('id', $id)->get();
+        return view('dashboard.company', ['companies' => $companies]);
     }
 
     public function beforeCreateNewCompany()

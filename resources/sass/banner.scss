@@ -30,7 +30,7 @@ $logo-size: $banner-height;
 
 .page-logo {
 	position: absolute;
-	background: url('/images/logo.png') no-repeat;
+	background: $logo no-repeat;
 	background-size: $logo-size $logo-size;
 	width: 100%;
 	height: 100%;
@@ -113,8 +113,10 @@ $logo-size: $banner-height;
 	border-radius: 25% 0 0 25%;
 }
 .bnt-container {
-	position: relative;
-	margin: 17% 13%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
 }
 .bnt {
 	font-family: sans-serif;

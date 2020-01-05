@@ -23,7 +23,7 @@ Route::get('/', function () {
          });
 
 Auth::routes();
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('dashboard');
 
 //-------- Socialite Routes ------------// 
 Route::get('/login/{provider}', 'SocialController@redirectToProvider')
