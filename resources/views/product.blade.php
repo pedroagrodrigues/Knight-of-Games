@@ -15,63 +15,108 @@
                     @endif
 
                     <div>
-                    <table class="table table-bordered table-striped">
-                        <tr>
-                            <th>Product</th>
-                            <td>Status</td>
-                            <td>Descritpion</td>
-                            <td>Created at</td>
-                        </tr>
-                        @foreach($products as $product)
-                        <tr>
-                            <td>{{$product['product']}}</td>
-                            <td>{{$product['status']}}</td>
-                            <td>{{$product['description']}}</td>
-                            <td>{{$product['created_at']}}</td>
-                        </tr>
-                        @endforeach
-                    </table>
-                    </div>
-                    <div>
-                        <table class="table table-bordered table-striped">
-                            <tr>
-                                <th>Company</th>
-                            </tr>
+                    @foreach($products as $product)
+                            <b>Product:</b>{{$product['product']}}<br>
+                            <b>Status:</b>{{$product['status']}}<br>
+                            <b>Descritpion:</b>{{$product['description']}}<br>
+                            <b>Created at:</b>{{$product['created_at']}}<br>
+                    @endforeach
+                        <!-- <table class="table table-bordered table-striped"> -->
+                            
+                            <b>Company</b>
                             @foreach($product->getCompaniesFromProduct as $company)
-                            <tr>
-                                <td>
-                                <a href="{{ url('company/'.$company['id'])}}">{{$company['company']}}</a>
-                                </td>
-                            </tr>
-                            @endforeach
-                        </table>
-                    </div>
-                    <div>
-                        <table class="table table-bordered table-striped">
-                            <tr>
-                                <th>Genres</th>
-                            </tr>
-                            @foreach($product->getGenresFromProduct as $genre)
-                            <tr>
-                                <td><a href="{{ url('genre/'.$genre['id'])}}">{{$genre['genre']}}</a></td>
-                            </tr>
-                            @endforeach
-                        </table>
-                    </div>
-                    <div>
-                        <table class="table table-bordered table-striped">
-                            <tr>
-                                <th>Websites Available</th>
-                            </tr>
-                            @foreach($websites as $website)
-                            <?php $callWebsite = DB::select(DB::raw("SELECT * FROM websites WHERE websites.id = $website->website_id"));
-                                  $website_name = $callWebsite[0]->website;
+                            <?php   
+                            $count = count($product->getCompaniesFromProduct);
+                            if ($count > 1)
+                            {
+                                $counting = 0;
+                                if ($counting == $count)
+                                {
                             ?>
-                            <tr>
-                                <td><a href="{{ url('website/'.$website->website_id)}}">{{$website_name}}</a></td>
-                            </tr>
+                                <a href="{{ url('company/'.$company['id'])}}">{{$company['company']}}</a>
+                            <?php
+                                }
+                                //if (array_key_last($company['id']) == $company['id'])
+                                else
+                                {
+                            ?>
+                                <a href="{{ url('company/'.$company['id'])}}">{{$company['company']}}</a>,
+                            <?php
+                                }
+                                $counting++;
+                            }
+                            else 
+                            {
+                            ?>
+                                <a href="{{ url('company/'.$company['id'])}}">{{$company['company']}}</a>
+                            <?php
+                            }
+                            ?>                                
                             @endforeach
-                        </table>
+                            <br>
+                        <!-- </table> -->
+                            <b>Genres</b>
+                            <?php
+                            $count = count($product->getGenresFromProduct);
+                            ?>
+                            @foreach($product->getGenresFromProduct as $genre)
+                            <?php 
+                            if ($count > 1)
+                            {
+                                $counting = 0;
+                                if ($counting == $count)
+                                {
+                            ?>
+                                <a href="{{ url('genre/'.$genre['id'])}}">{{$genre['genre']}}</a>
+                            <?php 
+                                }
+                                else 
+                                {
+                            ?> 
+                                <a href="{{ url('genre/'.$genre['id'])}}">{{$genre['genre']}}</a>,
+                            <?php
+                            
+                                }
+                            }
+                            else 
+                            {
+                            ?>
+                                <a href="{{ url('genre/'.$genre['id'])}}">{{$genre['genre']}}</a>
+                            <?php
+                            }
+                            ?>
+                            @endforeach
+                            <br>
+                            <b>Websites Available</b>
+                            <?php $count = count($websites); ?>
+                            @foreach($websites as $website)
+                            <?php 
+                                $callWebsite = DB::select(DB::raw("SELECT * FROM websites WHERE websites.id = $website->website_id"));
+                                $website_name = $callWebsite[0]->website;
+                                if ($count > 1)
+                                {
+                                    $counting = 0;
+                                    if ($counting == $count)
+                                    {
+                            ?>
+                                    <a href="{{ url('website/'.$website->website_id)}}">{{$website_name}}</a>
+                            <?php 
+                                    }
+                                    else
+                                    {
+                            ?>
+                                    <a href="{{ url('website/'.$website->website_id)}}">{{$website_name}}</a>,
+                            <?php
+                                    }
+                                }
+                                else 
+                                {
+                            ?>
+                                <a href="{{ url('website/'.$website->website_id)}}">{{$website_name}}</a>
+                            <?php       
+                                }
+                            ?>
+                            @endforeach
                     </div>
                 </div>
             </div>

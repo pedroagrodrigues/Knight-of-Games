@@ -38,13 +38,42 @@ class NewsController extends Controller
         $body   = $request->input('news_body');
         $tags   = $request->input('news_tags');
 
-        $news = News::create([
-            'title'     => $title,
-            'author'    => $author,
-            'body'      => $body,
-            'tags'      => $tags,
-            'created_at'=> $date,
-            'updated_at'=> $date 
-        ]);
+        $find_news = News::where('title', $title);
+        if ($title != NULL && $author != NULL && $body != NULL)
+        {
+            if(!$find_news && strtolower($title)!=strtolower($find_news[0]->title))
+            {
+                $news = News::create([
+                    'title'     => $title,
+                    'author'    => $author,
+                    'body'      => $body,
+                    'tags'      => $tags,
+                    'created_at'=> $date,
+                    'updated_at'=> $date 
+                ]);
+            }
+            else 
+            {
+                echo "The title exists in the database<br>";
+            }
+        }
+        else 
+        {
+            echo "There is missing field(s): ";      
+            if ($title == NULL)
+            {
+                echo "News Title ";
+            }
+            if ($author == NULL)
+            {
+                echo "News Author ";
+            }
+            if ($body == NULL)
+            {
+                echo "News Body ";
+            }
+            echo "<br>";
+        }
+        
     }
 }
