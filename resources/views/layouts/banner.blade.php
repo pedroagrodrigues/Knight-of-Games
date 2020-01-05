@@ -18,7 +18,9 @@
             <div class="icon">&#xf002;</div>
             <div class="input-field-controler">
                     <div class="input-field-div">
-                        <input class="input-field" type="search" name="search" placeholder="Search" autofocus>
+                        <form action="">
+                            <input class="input-field" type="search" name="search" placeholder="Search" autofocus>
+                        </form>
                     </div>
                 </div>
             </div>
