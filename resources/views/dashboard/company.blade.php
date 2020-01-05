@@ -8,13 +8,13 @@
 
                 <div class="card-body">
                     @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
+                    <div class="alert alert-success" role="alert">
+                        {{ session('status') }}
+                    </div>
                     @endif
 
                     <div>
-                    <table class="table table-bordered table-striped">
+                        <table class="table table-bordered table-striped">
                             <tr>
                                 <th>Company</th>
                                 <th>Description</th>
@@ -24,11 +24,11 @@
                             <tr>
                                 <td>{{$company->company}}</a></td>
                                 <td>{{$company->description}}</td>
-                                <td>{{$company->created_at}}</td> 
+                                <td>{{$company->created_at}}</td>
                             </tr>
                             @endforeach
-                    </table>
-                    <table class="table table-bordered table-striped">
+                        </table>
+                        <table class="table table-bordered table-striped">
                             <tr>
                                 <th>Products</th>
                             </tr>
@@ -37,9 +37,8 @@
                                 <td><a href="{{ url('product/'.$product['id'])}}">{{$product->product}}</a></td>
                             </tr>
                             @endforeach
-                    </table>
+                        </table>
                     </div>
-                    You are logged in!
                 </div>
             </div>
         </div>

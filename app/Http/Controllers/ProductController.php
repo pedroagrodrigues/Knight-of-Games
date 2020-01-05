@@ -21,8 +21,8 @@ class ProductController extends Controller
         $products = Product::where('id', $id)->get();
         $websites = DB::select(DB::raw("SELECT DISTINCT website_id 
                                         FROM product_has_website, websites, products 
-                                        WHERE products.id = $id AND product_has_website.product_id = products.id"));
-        return view('product', ['products' => $products, 'websites' => $websites]);
+                                        WHERE products.id = $id AND product_has_website.product_id = products.id"));                               
+        return view('dashboard/product', ['products' => $products, 'websites' => $websites]);
     }
 
     public function beforeCreateNewProduct()

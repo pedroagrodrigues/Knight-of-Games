@@ -7,27 +7,27 @@
             <div class="card">
                 <div class="card-body">
                     @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
+                    <div class="alert alert-success" role="alert">
+                        {{ session('status') }}
+                    </div>
                     @endif
 
-                    <div>                
+                    <div>
                         <table class="table table-bordered table-striped">
-                        <tr>
-                            <th>Company</th>
-                        </tr>
-                        @foreach($companies as $company)
-                        <?php
+                            <tr>
+                                <th>Company</th>
+                            </tr>
+                            @foreach($companies as $company)
+                            <?php
                         $id = $company['id'];
                         ?>
-                        <tr>
-                            <td><a href="{{ url('company/'.$company['id'])}}"> {{$company->company}}</a></td>
-                        </tr>
-                        @endforeach
+                            <tr>
+                                <td><a href="{{ url('company/'.$company['id'])}}"> {{$company->company}}</a></td>
+                            </tr>
+                            @endforeach
                         </table>
-                        
-                    
+
+
                     </div>
                     You are logged in!
                 </div>
