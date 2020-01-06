@@ -14,7 +14,7 @@ No âmbito da unidade curricular de Aplicações Centradas em Redes, foi propost
 ## 1.1 Visão geral
 Durante o desenvolvimento deste projeto era esperado que os alunos ganhassem competências nos seguintes campos:
  - Desenvolvimento com bibliotecas externas;
- - Desenvolvimento MVC com uma framework externa;
+ - Desenvolvimento MVC com uma _framework_ externa;
  - _Debugging_ do lado do servidor;
  - _Debugging_ do lado do cliente;
  - Comunicação com o cliente;
@@ -87,11 +87,17 @@ estas últimas duas não foram completamente testadas, no entanto podem servir o
 __RoleController__: Este controlador foi criado para poder modificar os utilizadores, podendo dar e remover privilégios dos mesmos. Por predefinição a criação de um novo utilizador está feita com o _role_ 1, ou seja, um utilizador comum. 
 
 __SocialController__: A função deste controlador implementar novos utilizadores utilizando as _APIs_ da _Google_, _Facebook_ e _Twitter_. Este controlador exige a instalação do [_Socialite_](https://laravel.com/docs/6.x/socialite#installation) através do _Composer_. 
-  
-- __WebsiteController__: Este controlador fornece todos os websites que existe na base de dados, cada website indica os produtos existentes. Tem 6 funções: _index_, _viewWebsite_, _beforeCreateNewWebsite_, _createNewWebsite_, _beforeEditWebsite_ e _editWebsite_. A função _index_ indica todos os websites existentes, a função _viewWebsite_ fornece informação especifica do website e os produtos que distribui. As funções _beforeCreateNewWebsite_, _createNewWebsite_, _beforeEditWebsite_ e _editWebsite_ são funções restritas apenas para os administradores, as duas primeiras servem para criar um novo website e as últimas duas índica faz o edit para o website e talvez inserir mais alguns jogos que o tal site distribuí. 
+
+__WebsiteController__: Este controlador fornece todos os websites que existem na base de dados, cada website indica os produtos existentes. Tem 5 funções:
+  - _index_: Indica todos os websites existentes.
+  - _viewWebsite_: Fornece informação especifica do website e os produtos que distribui.
+  - _createNewWebsite_, _beforeEditWebsite_ e _editWebsite_: são funções restritas apenas para os administradores, as duas primeiras servem para criar um novo website e as últimas duas índica faz o edição para o website e talvez inserir mais alguns jogos que o tal site distribuí. 
  
+## 4.1 Aspetos Relevantes
+Para a implementação deste projeto utilizou-se um [Raspberry Pi](https://www.raspberrypi.org/) a correr um servidor [NGINX](https://www.nginx.com/) e recorreu-se a um _DNS_ dinâmico utilizando a ferramenta [no-ip](https://www.noip.com/).
+
 # 5 Utilização da aplicação
-Esta aplicação foi desenvolvida recorrendo à framework [Laravel](https://www.laravel.com). Por este motivo existem alguns pré-requisitos que devem ser tomados em conta antes de se proceder à instalação da mesma.
+Esta aplicação foi desenvolvida recorrendo à _framework_ [Laravel](https://www.laravel.com). Por este motivo existem alguns pré-requisitos que devem ser tomados em conta antes de se proceder à instalação da mesma.
 
 ## 5.1 Requisitos do sistema
 Préviamente à instalação o servidor onde esta aplicação deverá correr necessita dos seguintes softwares instalados:
@@ -133,7 +139,31 @@ Concluídas as indicações acima descritas deverá ser apresentada a seguinte m
 
 Por outras palavras a instalação foi bem sucedida e o servidor está a correr em localhost na porta 8000.
 
+
 # 6 Conclusão
-Em conclusão, este framework fornece o conhecimento mais apropriado para Sistema de Gestão de Base Dados e o desenvolvimento Front-End, recorrendo SASS, JavaScript e entre outros. Uma vez estabelecido esses conhecimentos, os programadores poderão desenvolver futuros websites com este Framework ou com outros semelhantes. 
+Concluimos que esta _framework_ fornece todas as ferramentas necessárias para o desenvolvimento de uma aplicação _fullstack_. Facilitando o desenvolvimento da aplicação desde a conexão com a base de dados até à elaboração do _front-end_. Aprendemos ferramentas de desenvolvimento tais como SASS, JavaScript, Node entre outras. Uma vez adquiridos estes conhecimentos, acreditamos que qualquer desenvolvimento com esta _framework_, ou _framework_ semelhante, será mais fácil no futuro. 
+
+# 7 Referências
+Durante a elaboração deste trabalho, utilizou-se como referências:
+
+[Youtube](https://www.youtube.com/) - https://www.youtube.com/  
+
+[Bash](https://www.gnu.org/software/bash/) - https://www.gnu.org/software/bash/
+
+[Node.js](https://nodejs.org/en/) - https://nodejs.org/en/  
+
+[npm](https://www.npmjs.com/) - https://www.npmjs.com/  
+
+[MySQL](https://www.mysql.com/) - https://www.mysql.com/  
+
+[Composer](https://getcomposer.org/) - https://getcomposer.org/  
+
+[NGINX](https://www.nginx.com/) - https://www.nginx.com/  
+
+[no-ip](https://www.noip.com/) - https://www.noip.com/ 
+
+[Laracasts](https://laracasts.com/) - https://laracasts.com/  
+
+[Google](https://www.google.com/) - https://www.google.com/  
 
 </div>
