@@ -46,11 +46,13 @@
                     </div>
                 @else
                     <div class="bnt-container">
-                        <a href="{{ route('dashboard') }}">
-                                <div class="bnt">
-                                    dashboard
-                                </div>
-                            </a>
+                        @if (Auth::user()->role_id !==1)
+                        <a href='/products'>
+                            <div class="bnt">
+                                dashboard
+                            </div>
+                        </a>
+                        @endif
                         <a class="dropdown-item" href="{{ route('logout') }}" 
                         onclick="event.preventDefault(); 
                         document.getElementById('logout-form').submit();">
