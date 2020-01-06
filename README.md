@@ -122,7 +122,7 @@ Uma vez tendo todos os pré-requisitos instalados na máquina servidor devem os 
 Uma vez concluídos os passos acima descridos, procede-se então à configuração do ficheiro _.env_, para tal copiar o ficheiro _.env.example_ e renomear para _.env_. Posto isto devem ser configurados os acessos à base de dados. Para tal devem ser editados os parâmetros compreendidos entre a linha 9 e a linha 14 de forma a corresponderem às configurações do _MySQL_. De seguida executar os próximos passos.
 
     php artisan key:generate
-    php artisan seed
+    php artisan db:seed
     php artisan serve
 
 Concluídas as indicações acima descritas deverá ser apresentada a seguinte mensagem no terminal:
