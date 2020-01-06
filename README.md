@@ -139,11 +139,14 @@ Concluídas as indicações acima descritas deverá ser apresentada a seguinte m
 
 Por outras palavras a instalação foi bem sucedida e o servidor está a correr em localhost na porta 8000.
 
+# 6 Discussão
+A _framework_ utilizada para o desenvolvimento desta aplicação, revelou-se deveras útil. A forma como esta implementa o padrão arquitetural _MVC_ facilitou imenso a organização e estruturação do código possibilitando uma melhor aprendizagem deste padrão. Consideramos que o [Laravel](https://www.laravel.com) é uma ferramenta muito potente contudo exige algum tempo para compreender todas as suas funcionalidades e se famializar com esta _framework_.
+Apesar da sua utilidade, consideramos que o problema escolhido foi demasiado complicao. Pois devido à falta de tempo, e de mão de obra consideramos ter deixado a solução um pouco à quem das nossas expectativas iniciais. Consideramos que com mais tempo ou com mais membros no grupo, conseguia-mos entregar um produto bem melhor.
 
-# 6 Conclusão
+# 7 Conclusão
 Concluimos que esta _framework_ fornece todas as ferramentas necessárias para o desenvolvimento de uma aplicação _fullstack_. Facilitando o desenvolvimento da aplicação desde a conexão com a base de dados até à elaboração do _front-end_. Aprendemos ferramentas de desenvolvimento tais como SASS, JavaScript, Node entre outras. Uma vez adquiridos estes conhecimentos, acreditamos que qualquer desenvolvimento com esta _framework_, ou _framework_ semelhante, será mais fácil no futuro. 
 
-# 7 Referências
+# 8 Referências
 Durante a elaboração deste trabalho, utilizou-se como referências:
 
 [Youtube](https://www.youtube.com/) - https://www.youtube.com/  
@@ -166,4 +169,5 @@ Durante a elaboração deste trabalho, utilizou-se como referências:
 
 [Google](https://www.google.com/) - https://www.google.com/  
 
+[Laravel](https://www.laravel.com) - https://www.laravel.com
 </div>
