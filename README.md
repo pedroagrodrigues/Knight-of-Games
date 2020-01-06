@@ -85,6 +85,8 @@ estas últimas duas não foram completamente testadas, no entanto podem servir o
 __RoleController__: Este controlador foi criado para poder modificar os utilizadores, podendo dar e remover privilégios dos mesmos. Por predefinição a criação de um novo utilizador está feita com o _role_ 1, ou seja, um utilizador comum. 
 
 __SocialController__: A função deste controlador implementar novos utilizadores utilizando as _APIs_ da _Google_, _Facebook_ e _Twitter_. Este controlador exige a instalação do [_Socialite_](https://laravel.com/docs/6.x/socialite#installation) através do _Composer_. 
+  
+- __WebsiteController__: Este controlador fornece todos os websites que existe na base de dados, cada website indica os produtos existentes. Tem 6 funções: _index_, _viewWebsite_, _beforeCreateNewWebsite_, _createNewWebsite_, _beforeEditWebsite_ e _editWebsite_. A função _index_ indica todos os websites existentes, a função _viewWebsite_ fornece informação especifica do website e os produtos que distribui. As funções _beforeCreateNewWebsite_, _createNewWebsite_, _beforeEditWebsite_ e _editWebsite_ são funções restritas apenas para os administradores, as duas primeiras servem para criar um novo website e as últimas duas índica faz o edit para o website e talvez inserir mais alguns jogos que o tal site distribuí. 
  
 # 5 Utilização da aplicação
 Esta aplicação foi desenvolvida recorrendo à framework [Laravel](https://www.laravel.com). Por este motivo existem alguns pré-requisitos que devem ser tomados em conta antes de se proceder à instalação da mesma.
