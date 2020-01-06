@@ -13,7 +13,7 @@ No âmbito da unidade curricular de Aplicações Centradas em Redes, foi propost
 ## 1.1 Visão geral
 Durante o desenvolvimento deste projeto era esperado que os alunos ganhassem competências nos seguintes campos:
  - Desenvolvimento com bibliotecas externas;
- - Desenvolvimento MVC com uma framework externa;
+ - Desenvolvimento MVC com uma _framework_ externa;
  - _Debugging_ do lado do servidor;
  - _Debugging_ do lado do cliente;
  - Comunicação com o cliente;
@@ -87,7 +87,7 @@ __RoleController__: Este controlador foi criado para poder modificar os utilizad
 __SocialController__: A função deste controlador implementar novos utilizadores utilizando as _APIs_ da _Google_, _Facebook_ e _Twitter_. Este controlador exige a instalação do [_Socialite_](https://laravel.com/docs/6.x/socialite#installation) através do _Composer_. 
  
 # 5 Utilização da aplicação
-Esta aplicação foi desenvolvida recorrendo à framework [Laravel](https://www.laravel.com). Por este motivo existem alguns pré-requisitos que devem ser tomados em conta antes de se proceder à instalação da mesma.
+Esta aplicação foi desenvolvida recorrendo à _framework_ [Laravel](https://www.laravel.com). Por este motivo existem alguns pré-requisitos que devem ser tomados em conta antes de se proceder à instalação da mesma.
 
 ## 5.1 Requisitos do sistema
 Préviamente à instalação o servidor onde esta aplicação deverá correr necessita dos seguintes softwares instalados:
