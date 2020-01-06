@@ -85,7 +85,9 @@ estas últimas duas não foram completamente testadas, no entanto podem servir o
 __RoleController__: Este controlador foi criado para poder modificar os utilizadores, podendo dar e remover privilégios dos mesmos. Por predefinição a criação de um novo utilizador está feita com o _role_ 1, ou seja, um utilizador comum. 
 
 __SocialController__: A função deste controlador implementar novos utilizadores utilizando as _APIs_ da _Google_, _Facebook_ e _Twitter_. Este controlador exige a instalação do [_Socialite_](https://laravel.com/docs/6.x/socialite#installation) através do _Composer_. 
- 
+
+## 4.1 Aspetos Relevantes
+Para a implementação deste projeto utilizou-se um [Raspberry Pi](https://www.raspberrypi.org/) a correr um servidor [NGINX](https://www.nginx.com/) e recorreu-se a um _DNS_ dinâmico utilizando a ferramenta [no-ip](https://www.noip.com/).
 # 5 Utilização da aplicação
 Esta aplicação foi desenvolvida recorrendo à _framework_ [Laravel](https://www.laravel.com). Por este motivo existem alguns pré-requisitos que devem ser tomados em conta antes de se proceder à instalação da mesma.
 
@@ -128,5 +130,30 @@ Concluídas as indicações acima descritas deverá ser apresentada a seguinte m
     Laravel development server started: http://127.0.0.1:8000
 
 Por outras palavras a instalação foi bem sucedida e o servidor está a correr em localhost na porta 8000.
+
+
+
+# 8 Referências
+Durante a elaboração deste trabalho, utilizou-se como referências:
+
+[Youtube](https://www.youtube.com/) - https://www.youtube.com/  
+
+[Bash](https://www.gnu.org/software/bash/) - https://www.gnu.org/software/bash/
+
+[Node.js](https://nodejs.org/en/) - https://nodejs.org/en/  
+
+[npm](https://www.npmjs.com/) - https://www.npmjs.com/  
+
+[MySQL](https://www.mysql.com/) - https://www.mysql.com/  
+
+[Composer](https://getcomposer.org/) - https://getcomposer.org/  
+
+[NGINX](https://www.nginx.com/) - https://www.nginx.com/  
+
+[no-ip](https://www.noip.com/) - https://www.noip.com/ 
+
+[Laracasts](https://laracasts.com/) - https://laracasts.com/  
+
+[Google](https://www.google.com/) - https://www.google.com/  
 
 </div>
