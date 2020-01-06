@@ -32,6 +32,7 @@ A aplicação a ser desenvolvida deve:
 3. A base de dados da aplicação deverá conter pelo menos 5 tabelas distintas.
 4. Implementar funcionalidades de _API_.
 5. Ser desenvolvida utilizado a _framework_ [Laravel](https://www.laravel.com).
+6. Conclusão
 
 ### 1.2.2 Requisitos Extra
 Para além dos requisitos base, também foram propostos alguns requisitos extra, nomeadamente: 
@@ -130,5 +131,8 @@ Concluídas as indicações acima descritas deverá ser apresentada a seguinte m
     Laravel development server started: http://127.0.0.1:8000
 
 Por outras palavras a instalação foi bem sucedida e o servidor está a correr em localhost na porta 8000.
+
+# 6 Conclusão
+Em conclusão, este framework fornece o conhecimento mais apropriado para Sistema de Gestão de Base Dados e o desenvolvimento Front-End, recorrendo SASS, JavaScript e entre outros. Uma vez estabelecido esses conhecimentos, os programadores poderão desenvolver futuros websites com este Framework ou com outros semelhantes. 
 
 </div>
