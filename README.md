@@ -140,10 +140,10 @@ Concluídas as indicações acima descritas deverá ser apresentada a seguinte m
 Por outras palavras a instalação foi bem sucedida e o servidor está a correr em localhost na porta 8000.
 
 
-# 7 Conclusão
-Concluimos que esta _framework_ fornece todas as ferramentas necessárias para o desenvolvimento de uma aplicação _fullstack_. Facilitando o desenvolvimento da aplicação desde a conexão com a base de dados até à elaboração do _front-end_. Aprendemos ferramentas de desenvolvimento tais como SASS, JavaScript, Node entre outras. Uma vez adquiridos estes conhecimentos, acreditamos que qualquer desenvolvimento com esta _framework_, ou _framework_ semelhante, será mais fácil no futuro.
+# 6 Conclusão
+Concluimos que esta _framework_ fornece todas as ferramentas necessárias para o desenvolvimento de uma aplicação _fullstack_. Facilitando o desenvolvimento da aplicação desde a conexão com a base de dados até à elaboração do _front-end_. Aprendemos ferramentas de desenvolvimento tais como SASS, JavaScript, Node entre outras. Uma vez adquiridos estes conhecimentos, acreditamos que qualquer desenvolvimento com esta _framework_, ou _framework_ semelhante, será mais fácil no futuro. 
 
-# 8 Referências
+# 7 Referências
 Durante a elaboração deste trabalho, utilizou-se como referências:
 
 [Youtube](https://www.youtube.com/) - https://www.youtube.com/  
