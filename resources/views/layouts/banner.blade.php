@@ -46,7 +46,11 @@
                     </div>
                 @else
                     <div class="bnt-container">
-                    
+                        <a href="{{ route('dashboard') }}">
+                                <div class="bnt">
+                                    dashboard
+                                </div>
+                            </a>
                         <a class="dropdown-item" href="{{ route('logout') }}" 
                         onclick="event.preventDefault(); 
                         document.getElementById('logout-form').submit();">

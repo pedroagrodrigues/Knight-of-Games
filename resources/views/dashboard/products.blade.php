@@ -1,6 +1,9 @@
 @extends('dashboard.dashboard')
 
 @section('content')
+@if(Auth::user()->role_id === 1)
+Não tem permissões para ver esta página!
+@else
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -32,4 +35,5 @@
         </div>
     </div>
 </div>
+@endif
 @endsection

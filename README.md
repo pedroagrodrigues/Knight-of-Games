@@ -7,6 +7,7 @@
 
 # Abstrato
 
+
 # 1 Introdução
 No âmbito da unidade curricular de Aplicações Centradas em Redes, foi proposto que os alunos desenvolvessem uma aplicação web, com o objetivo de introduzir os alunos ao que normalmente é conhecido por _full stack development_. Durante o desenvolvimento desta aplicação é dever dos alunos tomarem todas as decisões de implementação desde a base de dados até ao _front end_ do sistema. 
 
@@ -32,6 +33,7 @@ A aplicação a ser desenvolvida deve:
 3. A base de dados da aplicação deverá conter pelo menos 5 tabelas distintas.
 4. Implementar funcionalidades de _API_.
 5. Ser desenvolvida utilizado a _framework_ [Laravel](https://www.laravel.com).
+6. Conclusão
 
 ### 1.2.2 Requisitos Extra
 Para além dos requisitos base, também foram propostos alguns requisitos extra, nomeadamente: 
@@ -86,8 +88,14 @@ __RoleController__: Este controlador foi criado para poder modificar os utilizad
 
 __SocialController__: A função deste controlador implementar novos utilizadores utilizando as _APIs_ da _Google_, _Facebook_ e _Twitter_. Este controlador exige a instalação do [_Socialite_](https://laravel.com/docs/6.x/socialite#installation) através do _Composer_. 
 
+__WebsiteController__: Este controlador fornece todos os websites que existem na base de dados, cada website indica os produtos existentes. Tem 5 funções:
+  - _index_: Indica todos os websites existentes.
+  - _viewWebsite_: Fornece informação especifica do website e os produtos que distribui.
+  - _createNewWebsite_, _beforeEditWebsite_ e _editWebsite_: são funções restritas apenas para os administradores, as duas primeiras servem para criar um novo website e as últimas duas índica faz o edição para o website e talvez inserir mais alguns jogos que o tal site distribuí. 
+ 
 ## 4.1 Aspetos Relevantes
 Para a implementação deste projeto utilizou-se um [Raspberry Pi](https://www.raspberrypi.org/) a correr um servidor [NGINX](https://www.nginx.com/) e recorreu-se a um _DNS_ dinâmico utilizando a ferramenta [no-ip](https://www.noip.com/).
+
 # 5 Utilização da aplicação
 Esta aplicação foi desenvolvida recorrendo à _framework_ [Laravel](https://www.laravel.com). Por este motivo existem alguns pré-requisitos que devem ser tomados em conta antes de se proceder à instalação da mesma.
 
@@ -122,7 +130,7 @@ Uma vez tendo todos os pré-requisitos instalados na máquina servidor devem os 
 Uma vez concluídos os passos acima descridos, procede-se então à configuração do ficheiro _.env_, para tal copiar o ficheiro _.env.example_ e renomear para _.env_. Posto isto devem ser configurados os acessos à base de dados. Para tal devem ser editados os parâmetros compreendidos entre a linha 9 e a linha 14 de forma a corresponderem às configurações do _MySQL_. De seguida executar os próximos passos.
 
     php artisan key:generate
-    php artisan seed
+    php artisan db:seed
     php artisan serve
 
 Concluídas as indicações acima descritas deverá ser apresentada a seguinte mensagem no terminal:
@@ -132,6 +140,8 @@ Concluídas as indicações acima descritas deverá ser apresentada a seguinte m
 Por outras palavras a instalação foi bem sucedida e o servidor está a correr em localhost na porta 8000.
 
 
+# 7 Conclusão
+Concluimos que esta _framework_ fornece todas as ferramentas necessárias para o desenvolvimento de uma aplicação _fullstack_. Facilitando o desenvolvimento da aplicação desde a conexão com a base de dados até à elaboração do _front-end_. Aprendemos ferramentas de desenvolvimento tais como SASS, JavaScript, Node entre outras. Uma vez adquiridos estes conhecimentos, acreditamos que qualquer desenvolvimento com esta _framework_, ou _framework_ semelhante, será mais fácil no futuro.
 
 # 8 Referências
 Durante a elaboração deste trabalho, utilizou-se como referências:

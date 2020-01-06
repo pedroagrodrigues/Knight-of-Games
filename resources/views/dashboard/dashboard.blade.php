@@ -1,28 +1,33 @@
 <link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
-@if (Auth::user()->role_id ===3)
 
 <div id="hdSpace">
     <div class="member-header">
         <div id="hd">
-            <a href="/" class="logo">&nbsp;</a>
+            <a href="/" class="logo" style="color: transparent">&nbsp;</a>
 
             <div class="aro-genre-list">
                 <ul id='link-table'>
+                    @if (Auth::user()->role_id === 2 || Auth::user()->role_id === 3)
                     <li>
                         <a class="link" href="/products">
                             Produtos
                         </a>
                     </li>
+                    @endif
+                    @if (Auth::user()->role_id === 2 || Auth::user()->role_id === 3)
                     <li>
                         <a class="link" href="/companies">
                             Sites
                         </a>
                     </li>
+                    @endif
+                    @if (Auth::user()->role_id ===3)
                     <li>
                         <a class="link" href="/users">
                             Utilizadores
                         </a>
                     </li>
+                    @endif
                 </ul>
             </div>
             <div id='page-title'>
@@ -37,4 +42,3 @@
 <div class='content'>
     @yield('content')
 </div>
-@endif

@@ -24,7 +24,8 @@
 }
 
 .logo {
-  background-image: url("/images/logo.png");
+  background: url("/images/logo.png") no-repeat;
+  background-size: contain;
   line-height: 1;
   position: absolute;
   left: 45px;
