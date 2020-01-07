@@ -31,7 +31,7 @@ class UsersTableSeeder extends Seeder
 
                     [
                         'id' => 3, 
-                        'role' => 'administrator',
+                        'role' => 'admin',
                         'description' => "You were the Chose One!",
                         'created_at' => $date,
                         'updated_at' => $date 
