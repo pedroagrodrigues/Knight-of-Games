@@ -33,8 +33,13 @@
                                 {
                                     echo "Moderator<br>";
                                 }
+                                else if ($users[0]->role_id == 3) 
+                                {
+                                    echo "Admin<br>";
+                                }
                         ?>
-                        <form action="/user_update/$id" method="post">
+                        <?php $id = $users[0]->id; ?>
+                        <form action=<?php echo "/user_update/".$id; ?> method="post">
                             @csrf
                             <h4>Wanna update the user?</h4>
                             @foreach($roles as $role)
