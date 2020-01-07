@@ -53,6 +53,7 @@ Route::post('/user_update/{id}', 'UserController@updateUser')->middleware('auth'
 //-------- Genres Routes ------------//
 Route::get('/genres', 'GenreController@index');
 Route::get('/genre/{id}', 'GenreController@viewGenre');
+Route::get('/genre_create', 'GenreController@beforeCreateNewGenre')->middleware('auth');
 Route::post('/genre_create', 'GenreController@createNewGenre')->middleware('auth');
 
 //-------- Websites Routes ------------//
@@ -68,6 +69,3 @@ Route::post('/website_edit/{id}', 'WebsiteController@editWebsite')->middleware('
 Route::get('banner', function(){
         return view('/layouts/banner');
 });
-
-Route::get('/genre_create',
- 'GenreController@beforeCreateNewGenre')->middleware('auth');

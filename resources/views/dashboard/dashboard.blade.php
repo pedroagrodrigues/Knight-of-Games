@@ -17,7 +17,21 @@
                     @if (Auth::user()->role_id === 2 || Auth::user()->role_id === 3)
                     <li>
                         <a class="link" href="/companies">
+                            Companhias
+                        </a>
+                    </li>
+                    @endif
+                    @if (Auth::user()->role_id === 2 || Auth::user()->role_id === 3)
+                    <li>
+                        <a class="link" href="/websites">
                             Sites
+                        </a>
+                    </li>
+                    @endif
+                    @if (Auth::user()->role_id === 2 || Auth::user()->role_id === 3)
+                    <li>
+                        <a class="link" href="/genres">
+                            Genres
                         </a>
                     </li>
                     @endif

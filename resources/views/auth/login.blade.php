@@ -55,13 +55,13 @@
     </form>
     <div class="social-networks-wrapper">
         <div class="social-networks-services">
-            <a href="#" class="fa fa-twitter">
+            <a href="{{ url('login/twitter') }}" class="fa fa-twitter">
                 <div>Twitter</div>
             </a>
-            <a href="#" class="fa fa-facebook">
+            <a href="{{ url('login/facebook') }}" class="fa fa-facebook">
                 <div>Facebook</div>
             </a>
-            <a href="#" class="fa fa-google">
+            <a href="{{ url('login/google') }}" class="fa fa-google">
                 <div>Google</div>    
             </a>
         </div>
